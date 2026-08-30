@@ -1,0 +1,11 @@
+Cara Menguji Coba Ekstensi
+
+    Buka browser Chromium (Google Chrome / Edge / Brave).
+
+    Akses alamat chrome://extensions/.
+
+    Aktifkan Developer mode di pojok kanan atas.
+
+    Klik tombol Load unpacked di pojok kiri atas, lalu pilih folder proyekmu.
+
+    Buka tab baru dan coba akses alamat: [http://paypa1.com](http://paypa1.com) atau [http://contoh-phishing-bca.com](http://contoh-phishing-bca.com). Browser akan langsung dialihkan ke halaman peringatan blocked.html.

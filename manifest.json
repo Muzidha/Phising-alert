@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "PhishShield - Phishing Blocker",
+  "version": "1.0.0",
+  "description": "Ekstensi pelindung browser dari link phishing dan situs berbahaya secara real-time.",
+  
+  "permissions": [
+    "webNavigation",
+    "storage",
+    "tabs"
+  ],
+  
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "action": {
+    "default_title": "PhishShield Active"
+  }
+}
