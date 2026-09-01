@@ -2,6 +2,11 @@
 
 Next : integrasi API database phishing eksternal (PhishTank/Google Safe Browsing
 
+sebenernya bisa ga sih membuat extensi buat mencegah phising tapi bukan hanya berdasarkan url, soalnya bisa aja di database phistank atau google safe browsing itu belum ada jadi pake url baru, atau nggak pake link shortener jadi ga bisa kedetek sama extensi
+
+jadi aku bayanginya berdasarakan request respons nya, jadi misalkan ada transfer data secara otomatis itu ada peringatan, bukan blokir dulu tapi kaya alert tentang transparansi apa aja yang di transfer datanya dari pengguna gitu, lalu ada Machine Learningnya untuk mengidentifikasi , IPaddress , Numdot urlength dan lain lain
+
+
 Pendekatan ini sangat memungkinkan dan merupakan standar industri untuk arsitektur **Zero-Day Phishing & Exfiltration Detection**. Mengandalkan *blacklist* saja (PhishTank/Google Safe Bowsing) memang memiliki kelemahan latensi update d<Rightan rentan teknik obfuscation (link shortener, redirect chain, domain generation algorithms).
 
 ---
