@@ -1,0 +1,324 @@
+/* ============================================================
+   ui/banner.css — Gaya banner pasif & Transparency Alert
+   Dimuat ke dalam Shadow DOM oleh content.js, jadi tidak terpengaruh
+   (dan tidak memengaruhi) CSS halaman.
+   ============================================================ */
+
+:host {
+  all: initial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ps-banner,
+.ps-overlay {
+  --bg: #1a1f2e;
+  --surface: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #e2e8f0;
+  --muted: #a0aec0;
+  --warn: #f6ad55;
+  --danger: #fc8181;
+  --link: #90cdf4;
+  font: 13px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  text-align: left;
+}
+
+code {
+  font-family: ui-monospace, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.95em;
+  word-break: break-all;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+/* ---------- Banner pasif ---------- */
+
+.ps-banner {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: min(340px, calc(100vw - 32px));
+  padding: 12px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  animation: ps-slide-in 0.2s ease-out;
+}
+
+.ps-warn {
+  --accent: var(--warn);
+}
+
+.ps-danger {
+  --accent: var(--danger);
+}
+
+.ps-banner-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ps-banner-icon {
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.ps-banner-title {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.ps-banner-title strong {
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.ps-banner-title span {
+  color: var(--muted);
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ps-banner-hint {
+  margin: 8px 0 4px;
+}
+
+.ps-icon-btn {
+  padding: 0 4px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.ps-icon-btn:hover {
+  color: var(--text);
+}
+
+.ps-link-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--link);
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.ps-banner .ps-reasons {
+  margin-top: 8px;
+}
+
+.ps-reasons li {
+  position: relative;
+  padding-left: 14px;
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.ps-reasons li::before {
+  content: '•';
+  position: absolute;
+  left: 2px;
+  color: var(--accent, var(--warn));
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ---------- Transparency Alert ---------- */
+
+.ps-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  animation: ps-fade-in 0.2s ease-out;
+}
+
+.ps-modal {
+  --accent: var(--danger);
+  width: min(480px, 100%);
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--danger);
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.ps-modal-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 22px;
+}
+
+.ps-modal-head h2 {
+  margin: 0;
+  color: var(--danger);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.ps-modal-body {
+  padding: 16px 20px;
+}
+
+.ps-modal-body p {
+  margin: 0 0 8px;
+}
+
+.ps-modal-body p code {
+  color: var(--link);
+}
+
+.ps-sent {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.ps-sent li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--surface);
+  border-radius: 8px;
+}
+
+.ps-cat {
+  font-weight: 600;
+}
+
+.ps-arrow {
+  color: var(--muted);
+}
+
+.ps-dest {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.ps-section-title {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ps-modal-body .ps-reasons {
+  margin-bottom: 12px;
+}
+
+.ps-modal-body .ps-reasons li {
+  color: var(--text);
+}
+
+.ps-note {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.ps-modal-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 20px 18px;
+  border-top: 1px solid var(--border);
+}
+
+.ps-btn {
+  flex: 1 1 120px;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.ps-btn-primary {
+  background: #c53030;
+  color: #fff;
+}
+
+.ps-btn-primary:hover {
+  background: #9b2c2c;
+}
+
+.ps-btn-secondary {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.ps-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ps-btn-ghost {
+  background: none;
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+.ps-btn-ghost:hover {
+  color: var(--text);
+}
+
+@keyframes ps-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes ps-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ps-banner,
+  .ps-overlay {
+    animation: none;
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "PhishShield – Anti-Phishing Zero-Day",
+  "version": "2.0.0",
+  "description": "Deteksi phishing zero-day dengan ML lokal di browser, dan Transparency Alert yang menunjukkan data apa yang akan dikirim dan ke mana.",
+  "minimum_chrome_version": "111",
+
+  "permissions": ["storage", "webNavigation", "webRequest"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["page-hook.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": [
+        "config.js",
+        "lib/suffix-list.js",
+        "lib/domain.js",
+        "lib/storage.js",
+        "whitelist.js",
+        "sensitive.js",
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["ui/banner.css"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+
+  "action": {
+    "default_title": "PhishShield",
+    "default_popup": "ui/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}

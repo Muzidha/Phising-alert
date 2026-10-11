@@ -1,120 +1,127 @@
-# Phising-alert
+# 🛡️ PhishShield: Ekstensi Anti-Phishing Zero-Day dengan Transparansi Data
 
-Next : integrasi API database phishing eksternal (PhishTank/Google Safe Browsing
+Ekstensi browser (Chrome/Edge, Manifest V3) yang melindungi dari **phishing yang belum dikenal (zero-day)** tanpa bergantung pada blacklist:
 
-sebenernya bisa ga sih membuat extensi buat mencegah phising tapi bukan hanya berdasarkan url, soalnya bisa aja di database phistank atau google safe browsing itu belum ada jadi pake url baru, atau nggak pake link shortener jadi ga bisa kedetek sama extensi
+> *Ekstensi yang tidak cuma bilang "halaman ini bahaya", tapi menunjukkan **kenapa** dan **data apa** yang sedang dicuri, tanpa mengirim riwayat browsing kamu ke mana-mana.*
 
-jadi aku bayanginya berdasarakan request respons nya, jadi misalkan ada transfer data secara otomatis itu ada peringatan, bukan blokir dulu tapi kaya alert tentang transparansi apa aja yang di transfer datanya dari pengguna gitu, lalu ada Machine Learningnya untuk mengidentifikasi , IPaddress , Numdot urlength dan lain lain
+Rancangan lengkap: [proyek-ekstensi-anti-phishing.md](proyek-ekstensi-anti-phishing.md).
 
+## 3 Pilar
 
-Pendekatan ini sangat memungkinkan dan merupakan standar industri untuk arsitektur **Zero-Day Phishing & Exfiltration Detection**. Mengandalkan *blacklist* saja (PhishTank/Google Safe Bowsing) memang memiliki kelemahan latensi update d<Rightan rentan teknik obfuscation (link shortener, redirect chain, domain generation algorithms).
+| Pilar | Isi | File utama |
+|---|---|---|
+| **1. URL & tujuan akhir** | Lacak rantai redirect (link pendek), ekstrak fitur URL | `extension/unshortener.js`, `extension/features.js` |
+| **2. Request monitor** | Deteksi password/OTP/kartu/NIK yang dikirim ke domain lain lewat form, `fetch`, XHR | `extension/content.js`, `extension/page-hook.js`, `extension/sensitive.js` |
+| **3. ML lokal + alert transparan** | Model pohon keputusan jalan di browser → Risk Score 0–100% → banner / Transparency Alert | `extension/model/`, `extension/risk.js`, `extension/ui/` |
 
----
-
-**Arsitektur Ekstensi Deteksi Phishing & Eksfiltrasi**
-
-Arsitektur ini membagi sistem ke dalam 4 lapisan analisis di sisi browser (Chrome Extension Manifest V3):
-
-1. **Unshortening & Redirect Tracing:** Menyelesaikan URL asli sebelum diakses.
-2. **Feature Extraction & Local/API Machine Learning:** Klasifikasi probabilitas phishing berbasis pola URL, IP, dan DOM.
-3. **Network & Payload Interception:** Memonitor request keluar (outbound POST/GET) untuk data sensitif.
-4. **Transparency Alert UI:** Memberi peringatan interaktif kepada pengguna jika terdeteksi anomali.
-
----
-
-**1. Ekstraksi Fitur Machine Learning (Heuristik & Struktur)**
-
-Model Machine Learning (seperti Random Forest / LightGBM) dapat dilatih menggunakan dataset URL dengan fitur struktural berikut:
-
-* **Fitur URL:** `url_length`, `num_dots`, `num_hyphens`, `num_at_symbols`, `has_ip_in_host`, `num_subdomains`, `entropy_score`.
-* **Fitur Jaringan/Resolusi:** `is_private_ip`, `asn_reputation`, `has_punycode` (deteksi Homograph Attack).
-* **Fitur Konten/DOM (Content Script):**
-* Deteksi form password yang dikirim ke domain pihak ketiga (Cross-Domain Form Action).
-* Keberadaan iframe transparan atau hidden login input.
-* Form submission tanpa atribut HTTPS.
-
-
-
-```python
-# Contoh pipeline ekstraksi fitur URL untuk model ML
-import re
-import math
-from urllib.parse import urlparse
-
-def extract_url_features(url: str) -> dict:
-    parsed = urlparse(url)
-    hostname = parsed.hostname or ""
-    path = parsed.path or ""
-    
-    # Hitung entropy untuk deteksi DGA/obfuscated string
-    prob = [float(url.count(c)) / len(url) for c in dict.fromkeys(url)]
-    entropy = -sum([p * math.log(p, 2) for p in prob]) if url else 0
-
-    return {
-        "url_length": len(url),
-        "host_length": len(hostname),
-        "num_dots": url.count("."),
-        "num_hyphens": url.count("-"),
-        "has_at_symbol": 1 if "@" in url else 0,
-        "is_ip_address": 1 if re.match(r"^\d{1,3}(\.\d{1,3}){3}$", hostname) else 0,
-        "num_subdomains": len(hostname.split(".")) - 2 if len(hostname.split(".")) > 2 else 0,
-        "url_entropy": round(entropy, 4)
-    }
+## Struktur folder
 
 ```
-
----
-
-**2. Inspeksi Request / Response & Deteksi Eksfiltrasi Data**
-
-Pada Manifest V3, inspeksi request dilakukan menggunakan kombinasi **`declarativeNetRequest`**, **`chrome.webNavigation`**, dan **`Content Scripts`** untuk membaca data form sebelum dikirim.
-
-* **Redirect Unshortener:** Tangkap *event* navigasi awal (`chrome.webNavigation.onBeforeNavigate`). Jika domain mengarah ke shortener (misal `bit.ly`, `t.co`), resolve redirect secara background sebelum halaman utama selesai di-render.
-* **Payload Interceptor (Content Script):** Pasang listener pada event `submit` form atau AJAX `fetch`/`XMLHttpRequest` wrapper untuk mendeteksi pengiriman string sensitif (format password, NIK, credit card, email) ke domain yang memiliki *ML risk score* tinggi.
-
-```javascript
-// content-script.js: Monitor Form Submission & Alert
-document.addEventListener("submit", (event) => {
-  const form = event.target;
-  const targetAction = form.action || window.location.href;
-  const currentHost = window.location.hostname;
-  const actionHost = new URL(targetAction, window.location.origin).hostname;
-
-  // Kumpulkan tipe data yang diinput
-  const inputs = Array.from(form.querySelectorAll("input"));
-  const transmittedTypes = [];
-
-  inputs.forEach(input => {
-    if (input.type === "password") transmittedTypes.push("Password");
-    if (input.type === "email" || input.name.includes("email")) transmittedTypes.push("Email");
-    if (input.value && /\b\d{16}\b/.test(input.value)) transmittedTypes.push("Potensi Nomor Kartu/Identitas");
-  });
-
-  // Jika mengirim data sensitif ke host berbeda (Cross-Domain Data Transfer)
-  if (actionHost !== currentHost && transmittedTypes.length > 0) {
-    event.preventDefault(); // Tahan sejenak
-    
-    // Kirim pesan ke background script untuk evaluasi ML dan tampilkan modal transparansi
-    chrome.runtime.sendMessage({
-      type: "EVALUATE_OUTBOUND_DATA",
-      payload: {
-        destination: targetAction,
-        fields: transmittedTypes,
-        host: actionHost
-      }
-    }, (response) => {
-      if (response.userConsent) {
-        form.submit(); // Lanjutkan jika pengguna mengizinkan
-      }
-    });
-  }
-}, true);
-
+.
+├── extension/                 # ← folder ini yang di-"Load unpacked"
+│   ├── manifest.json          # konfigurasi MV3
+│   ├── background.js          # service worker: whitelist → redirect → fitur → ML → skor
+│   ├── content.js             # banner pasif, pantau submit form, Transparency Alert
+│   ├── page-hook.js           # (MAIN world) bungkus fetch / XHR / form.submit() milik halaman
+│   ├── sensitive.js           # kenali jenis data sensitif (tanpa menyimpan isinya)
+│   ├── features.js            # ekstraksi fitur URL (kembaran ml/features.py)
+│   ├── risk.js                # skor model + heuristik → level & alasan
+│   ├── unshortener.js         # rantai redirect & "Cek link"
+│   ├── whitelist.js           # domain tepercaya, pengecualian, analitik
+│   ├── cache.js               # cache skor per halaman (24 jam)
+│   ├── config.js              # ambang skor, poin heuristik, daftar link pendek, mock umur domain
+│   ├── lib/                   # domain.js, suffix-list.js, storage.js
+│   ├── model/
+│   │   ├── model.json         # model hasil ekspor (sekarang: PLACEHOLDER)
+│   │   └── ml-engine.js       # evaluasi pohon di browser
+│   ├── ui/
+│   │   ├── banner.css         # gaya banner & alert (di dalam Shadow DOM)
+│   │   ├── popup.html/.js/.css
+│   │   └── selftest.html/.js  # uji kecocokan Python vs JavaScript
+│   └── icons/
+├── ml/                        # pelatihan model (lihat ml/README.md)
+│   ├── train.ipynb
+│   ├── features.py
+│   ├── prepare_data.py
+│   ├── export_model.py
+│   └── data/
+├── demo/                      # demo lokal (lihat demo/README.md)
+│   ├── server.py
+│   └── fake-login/
+└── docs/arsip/                # catatan lama
 ```
 
----
+## Cara pasang ekstensi
 
-**3. Mekanisme Eksekusi Model Machine Learning**
+1. Buka `chrome://extensions` (Edge: `edge://extensions`).
+2. Aktifkan **Developer mode**.
+3. **Load unpacked** → pilih folder **`extension/`** (bukan root repo).
+4. Butuh Chrome/Edge ≥ 111 (untuk content script `world: "MAIN"`).
 
-* **Opsi A (Edge ML / Client-Side Inference):** Ekspor model (misal dari Scikit-Learn/PyTorch) ke format **ONNX** atau **TensorFlow.js**, lalu jalankan langsung di dalam *background service worker* atau *offscreen document* ekstensi. Ini menjamin privasi pengguna 100% karena data URL tidak dikirim ke server luar.
-* **Opsi B (Hybrid API Verification):** Hitung fitur dasar secara lokal di browser. Jika skor berada di ambang batas abu-abu (*gray zone*), kirim hash URL/fitur ke backend scanner untuk analisis mendalam (deep packet inspection/sandbox).)
+Sebelum model asli dilatih, ekstensi memakai **model placeholder** (pohon kecil tulisan tangan) supaya tetap bisa dicoba. Popup akan menampilkan tulisan "model placeholder".
+
+## Alur kerja
+
+```
+buka halaman
+  └─ domain di whitelist? ──ya──▶ diam
+        │ tidak
+        ▼
+  rantai redirect (webRequest, baca saja) → fitur URL → model ML → skor model
+        + heuristik (dialihkan ≥2×, link pendek, domain baru) → Risk Score
+        │
+        ├─ < 40%  🟢 Aman       → diam
+        ├─ ≥ 40%  🟡 Waspada    → banner kecil di pojok, form/request mulai dipantau
+        └─ ≥ 70%  🔴 Berbahaya  → banner merah, form/request dipantau
+                      │
+                      ▼
+        password / OTP / kartu / NIK dikirim ke domain lain?
+                      └─ya──▶ Transparency Alert: [Batalkan] [Tetap lanjut] [Percayai situs ini]
+```
+
+Ambang ada di `extension/config.js` dan bisa di-override dari `model.json` hasil training.
+
+## Melatih model
+
+Lihat **[ml/README.md](ml/README.md)**. Ringkasnya:
+
+```bash
+cd ml
+pip install -r requirements.txt
+python prepare_data.py --source phiusiil:data/raw/PhiUSIIL_Phishing_URL_Dataset.csv --require-scheme --balance
+jupyter lab train.ipynb      # jalankan semua sel → menulis extension/model/model.json
+```
+
+Lalu reload ekstensi dan buka popup → **Pengaturan & model** → **Uji kecocokan model**.
+
+## Demo
+
+Lihat **[demo/README.md](demo/README.md)**:
+
+```bash
+python3 demo/server.py
+# buka http://localhost:8000/ lalu klik link pendeknya
+```
+
+## Pembagian tugas (rancangan bagian 11)
+
+| Peran | File |
+|---|---|
+| ML Engineer | `ml/*`, `extension/features.js` (jaga kontrak fitur), `extension/model/` |
+| Extension Dev (Core) | `extension/manifest.json`, `background.js`, `unshortener.js`, `risk.js`, `cache.js`, `config.js` |
+| Extension Dev (UI/Monitor) | `extension/content.js`, `page-hook.js`, `sensitive.js`, `ui/*`, `whitelist.js` |
+| Demo & Pitch | `demo/*`, README, slide, video |
+
+## Privasi
+
+- Semua analisis berjalan **di dalam browser**; tidak ada server/backend.
+- Yang disimpan di `chrome.storage.local`: pengaturan, daftar situs tepercaya, cache skor per halaman (24 jam), dan riwayat peringatan berisi **jenis data + nama domain saja** (tidak pernah isi yang diketik).
+- Satu-satunya request jaringan dari ekstensi: tombol **Cek link** di popup (mengikuti redirect link yang kamu tempel).
+- Izin: `storage`, `webNavigation`, `webRequest` (hanya membaca, tidak memblokir), akses ke halaman `http/https`.
+
+## Keterbatasan & future work
+
+- Halaman yang sangat canggih bisa melewati pemantauan (iframe, `navigator.sendBeacon`, WebSocket). Ini keterbatasan cara A di rancangan 5.3; cara B (`chrome.webRequest`) bisa jadi lapisan tambahan.
+- Umur domain masih mock (`config.js`); berikutnya bisa pakai RDAP + cache.
+- Model hanya menilai URL. Analisis konten/visual halaman, dukungan Firefox, sinkronisasi pengaturan, dan dashboard statistik masuk future work.
+- Akurasi model bergantung dataset; uji juga dengan URL di luar dataset (ada di notebook).

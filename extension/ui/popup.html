@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>PhishShield</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <img src="../icons/icon-48.png" alt="" width="24" height="24">
+    <h1>PhishShield</h1>
+    <label class="switch" title="Aktifkan / matikan perlindungan">
+      <input type="checkbox" id="toggle-enabled" aria-label="Perlindungan aktif">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <section class="card" id="current">
+    <div class="row-between">
+      <span class="label">Halaman ini</span>
+      <code id="current-host">–</code>
+    </div>
+    <div class="score-row">
+      <div class="meter"><div class="meter-fill" id="score-fill"></div></div>
+      <span id="score-text" class="score-text">–</span>
+    </div>
+    <p id="level-text" class="level"></p>
+    <ul id="reason-list" class="reasons"></ul>
+    <button id="btn-trust" class="btn btn-block" type="button" hidden>Percayai situs ini</button>
+  </section>
+
+  <section class="card">
+    <span class="label">Cek link (mis. link pendek)</span>
+    <form id="check-form" class="check-form">
+      <input id="check-input" type="url" placeholder="https://bit.ly/..." required>
+      <button class="btn" type="submit">Cek</button>
+    </form>
+    <div id="check-result" class="check-result" hidden></div>
+    <p class="hint">Mengecek link akan menghubungi server link tersebut untuk mengikuti redirect-nya.</p>
+  </section>
+
+  <details class="card">
+    <summary>Riwayat peringatan <span id="log-count" class="pill"></span></summary>
+    <ul id="log-list" class="log"></ul>
+    <button id="btn-clear-log" class="btn btn-ghost btn-block" type="button">Hapus riwayat</button>
+  </details>
+
+  <details class="card">
+    <summary>Situs tepercaya milikmu</summary>
+    <ul id="trusted-list" class="trusted"></ul>
+  </details>
+
+  <details class="card">
+    <summary>Pengaturan &amp; model</summary>
+    <label class="check">
+      <input type="checkbox" id="toggle-strict">
+      <span>Mode ketat: pantau form di semua situs yang belum tepercaya, apa pun skornya</span>
+    </label>
+    <p id="model-info" class="hint"></p>
+    <button id="btn-selftest" class="btn btn-ghost btn-block" type="button">Uji kecocokan model (Python vs ekstensi)</button>
+  </details>
+
+  <script src="../config.js"></script>
+  <script src="../lib/suffix-list.js"></script>
+  <script src="../lib/domain.js"></script>
+  <script src="../lib/storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

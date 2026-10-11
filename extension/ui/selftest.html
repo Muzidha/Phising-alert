@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uji Kecocokan Model</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #fff; --border: #e2e8f0; --text: #1a202c; --muted: #64748b;
+      --ok: #2f855a; --bad: #c53030; --accent: #2b6cb0;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #11151f; --card: #1a1f2e; --border: #2d3548; --text: #e2e8f0; --muted: #a0aec0;
+        --ok: #68d391; --bad: #fc8181; --accent: #90cdf4;
+        color-scheme: dark;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px 16px; background: var(--bg); color: var(--text); font: 14px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+    main { max-width: 960px; margin: 0 auto; }
+    h1 { margin: 0 0 4px; font-size: 22px; }
+    h2 { margin: 0 0 12px; font-size: 16px; }
+    p { margin: 0 0 12px; }
+    .muted { color: var(--muted); }
+    .card { margin-bottom: 16px; padding: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; }
+    .ok { color: var(--ok); font-weight: 600; }
+    .bad { color: var(--bad); font-weight: 600; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; }
+    td.num { font-variant-numeric: tabular-nums; text-align: right; }
+    code { font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace; font-size: 12px; word-break: break-all; }
+    form { display: flex; gap: 8px; margin-bottom: 12px; }
+    input { flex: 1; min-width: 0; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font: inherit; }
+    button { padding: 8px 14px; border: 0; border-radius: 8px; background: var(--accent); color: var(--card); font: inherit; font-weight: 600; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Uji kecocokan model</h1>
+    <p class="muted">Membandingkan fitur &amp; peluang phishing yang dihitung ekstensi (JavaScript) dengan hasil Python saat model diekspor. Hasilnya harus sama (rancangan bagian 6.3 langkah 5).</p>
+
+    <section class="card">
+      <h2>Model</h2>
+      <div id="model-summary">Memuat…</div>
+    </section>
+
+    <section class="card">
+      <h2>Test vector dari Python</h2>
+      <div id="vector-summary">Memuat…</div>
+      <div class="table-wrap" id="vector-table"></div>
+    </section>
+
+    <section class="card">
+      <h2>Coba URL sendiri</h2>
+      <form id="try-form">
+        <input id="try-input" type="text" placeholder="https://contoh.com/login" required>
+        <button type="submit">Hitung</button>
+      </form>
+      <div class="table-wrap" id="try-result"></div>
+    </section>
+  </main>
+
+  <script src="../lib/suffix-list.js"></script>
+  <script src="../lib/domain.js"></script>
+  <script src="../features.js"></script>
+  <script src="../model/ml-engine.js"></script>
+  <script src="selftest.js"></script>
+</body>
+</html>
