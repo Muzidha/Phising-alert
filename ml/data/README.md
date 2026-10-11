@@ -11,7 +11,7 @@ Sumber dataset yang bisa dipakai (cek lisensi masing-masing sebelum dipakai):
 
 | Dataset | Preset `prepare_data.py` | Catatan |
 |---|---|---|
-| [PhiUSIIL Phishing URL (UCI)](https://archive.ics.uci.edu/dataset/967/phiusiil+phishing+url+dataset) | `phiusiil` | URL lengkap dengan skema. **Label 1 = legit, 0 = phishing**, cek ulang di halaman dataset. URL legit-nya kebanyakan halaman depan saja, jadi uji juga dengan URL legit yang punya path panjang. |
+| [PhiUSIIL Phishing URL (UCI)](https://archive.ics.uci.edu/dataset/967/phiusiil+phishing+url+dataset) | `phiusiil:uci` (unduh otomatis via `ucimlrepo`) atau `phiusiil:PATH` | **Direkomendasikan.** 235.795 URL lengkap dengan skema. Di dataset aslinya **label 1 = legit, 0 = phishing** (dibalik otomatis). URL legit-nya kebanyakan halaman depan saja, jadi uji juga dengan URL legit yang punya path panjang. |
 | [Malicious URLs dataset (Kaggle)](https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset) | `malicious-phish` | Hanya `phishing` & `benign` yang dipakai. Banyak URL tanpa `http(s)://`. |
 | [Phishing Site URLs (Kaggle)](https://www.kaggle.com/datasets/taruntiwarihp/phishing-site-urls) | `phishing-site-urls` | Label `bad`/`good`. URL tanpa skema. |
 | CSV buatan sendiri | `generic` | Kolom `url`, `label`. |

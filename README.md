@@ -88,8 +88,7 @@ Lihat **[ml/README.md](ml/README.md)**. Ringkasnya:
 ```bash
 cd ml
 pip install -r requirements.txt
-python prepare_data.py --source phiusiil:data/raw/PhiUSIIL_Phishing_URL_Dataset.csv --require-scheme --balance
-jupyter lab train.ipynb      # jalankan semua sel → menulis extension/model/model.json
+jupyter lab train.ipynb      # jalankan semua sel: unduh PhiUSIIL dari UCI → latih → tulis extension/model/model.json
 ```
 
 Lalu reload ekstensi dan buka popup → **Pengaturan & model** → **Uji kecocokan model**.

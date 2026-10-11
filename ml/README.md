@@ -24,19 +24,28 @@ source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 2. Ambil dataset
+### 2–3. Ambil dataset & rapikan jadi satu CSV
 
-Unduh salah satu dataset di [data/README.md](data/README.md) ke `ml/data/raw/`.
+**Cara tercepat:** lewati langkah ini. Sel "Muat dataset" di `train.ipynb` otomatis mengunduh PhiUSIIL dari UCI kalau `data/processed/urls.csv` belum ada.
 
-### 3. Rapikan jadi satu CSV
+Atau jalankan manual. PhiUSIIL bisa diunduh langsung dari UCI lewat [`ucimlrepo`](https://github.com/uci-ml-repo/ucimlrepo) (`fetch_ucirepo(id=967)`):
+
+```bash
+python prepare_data.py --source phiusiil:uci --require-scheme --balance
+```
+
+Unduhan mentah disimpan di `data/raw/phiusiil_uci_967.csv` supaya tidak mengunduh ulang (hapus file itu kalau ingin unduh lagi).
+
+Dari file CSV yang diunduh manual (lihat [data/README.md](data/README.md)), bisa juga digabung beberapa sumber:
 
 ```bash
 python prepare_data.py \
   --source phiusiil:data/raw/PhiUSIIL_Phishing_URL_Dataset.csv \
+  --source malicious-phish:data/raw/malicious_phish.csv \
   --require-scheme --balance
 ```
 
-- `--source PRESET:PATH` boleh diulang untuk menggabungkan beberapa dataset.
+- `--source PRESET:PATH` atau `PRESET:uci`, boleh diulang untuk menggabungkan beberapa dataset.
 - `--require-scheme` membuang URL tanpa `http(s)://` (supaya fitur `IsHTTPS` bermakna).
 - `--balance` menyamakan jumlah phishing & legit.
 - Perhatikan contoh URL yang dicetak per label, pastikan label tidak terbalik!
