@@ -1,0 +1,39 @@
+﻿waktu,url,domain,potensi_phishing_%,skor_akhir,level,banner,tepercaya,dialihkan,alasan
+2026-10-13 05:03:35,https://www.google.com/search,google.com,12.3,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:03:37,https://d21.team/,d21.team,9.5,9,aman,tidak ada,tidak,0,
+2026-10-13 05:03:45,https://tv12.lk21official.cc/,lk21official.cc,59.1,59,waspada,kuning,tidak,1,Pola alamatnya mirip situs phishing menurut model ML; Domain tidak ada di daftar situs tepercaya
+2026-10-13 05:04:01,https://www.google.com/search,google.com,12.3,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:04:23,https://www.google.com/search,google.com,12.3,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:04:31,https://play.google.com/store/apps/details,google.com,34.1,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:04:43,https://quranpedia.net/,quranpedia.net,11.5,11,aman,tidak ada,tidak,0,
+2026-10-13 05:04:53,https://www.youtube.com/,youtube.com,12.2,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:05:12,https://portal.its.ac.id/,its.ac.id,28.9,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:05:16,https://login.microsoftonline.com/1d5169ac-c7cb-4275-9764-bf8c9c364a4c/oauth2/v2.0/authorize,microsoftonline.com,81.2,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:05:18,https://portal.its.ac.id/,its.ac.id,28.9,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:05:23,https://my.its.ac.id/authorize/callback,its.ac.id,17.6,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:05:34,https://classroom.its.ac.id/my/,its.ac.id,39.3,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:05:51,https://www.google.com/search,google.com,12.3,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:05:54,https://z2.idlixku.com/,idlixku.com,27.3,27,aman,tidak ada,tidak,0,
+2026-10-13 05:06:47,http://localhost:8000/,localhost,92.9,93,berbahaya,merah,tidak,0,Koneksi tidak terenkripsi (bukan HTTPS); Domain tidak ada di daftar situs tepercaya
+2026-10-13 05:06:49,http://127.0.0.1:8000/fake-login/,127.0.0.1,100.0,100,berbahaya,merah,tidak,2,"Alamat situs berupa angka IP, bukan nama domain; Koneksi tidak terenkripsi (bukan HTTPS); Kamu dialihkan 2 kali sebelum sampai di halaman ini; Domain tidak ada di daftar situs tepercaya"
+2026-10-13 05:07:39,https://www.google.com/search,google.com,12.3,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:07:41,https://quantum.cloud.ibm.com/,ibm.com,42.9,43,waspada,kuning,tidak,0,Pola alamatnya mirip situs phishing menurut model ML; Domain tidak ada di daftar situs tepercaya
+2026-10-13 05:08:09,https://www.google.com/search,google.com,12.3,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:08:31,https://www.google.com/search,google.com,12.3,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:08:38,https://d21.team/top-movie-today,d21.team,9.5,9,aman,tidak ada,tidak,0,
+2026-10-13 05:08:50,https://www.google.com/search,google.com,12.3,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:08:52,https://www.catchplay.com/id/search/list,catchplay.com,11.5,11,aman,tidak ada,tidak,0,
+2026-10-13 05:09:05,https://www.google.com/search,google.com,12.3,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:09:11,https://www.netflix.com/id/title/80107103,netflix.com,12.2,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:09:24,https://www.google.com/search,google.com,12.3,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:09:26,https://kincir.com/movie/anime/website-anime-legal-gratis-vxd0tspzspyak/,kincir.com,12.3,12,aman,tidak ada,tidak,0,
+2026-10-13 05:10:11,https://web.whatsapp.com/,whatsapp.com,36.0,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:10:40,https://tekno.kompas.com/read/2019/10/17/09330097/aplikasi-gojek-bakal-sediakan-streaming-anime,kompas.com,36.0,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:11:21,https://www.google.com/search,google.com,12.3,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:11:24,https://bebaspedia.com/movie/nonton-anime-subtitle-indonesia-lengkap/,bebaspedia.com,11.5,11,aman,tidak ada,tidak,0,
+2026-10-13 05:11:34,https://wibuku.com/,wibuku.com,12.3,12,aman,tidak ada,tidak,0,
+2026-10-13 05:11:41,https://jpckemang.id/rekomendasi-10-aplikasi-nonton-anime-gratis-sub-indo-yang-wajib-dicoba/,jpckemang.id,11.7,12,aman,tidak ada,tidak,0,
+2026-10-13 05:12:05,https://fundingchoicesmessages.google.com/,google.com,88.2,,aman,tidak ada,ya,0,Domain ada di daftar situs tepercaya
+2026-10-13 05:12:56,https://lifestyle.bisnis.com/read/20261006/254/2010150/bukan-lk21-atau-idlix-ini-8-situs-nonton-film-legal-yang-aman,bisnis.com,59.1,59,waspada,kuning,tidak,0,Pola alamatnya mirip situs phishing menurut model ML; Domain tidak ada di daftar situs tepercaya
+2026-10-13 05:13:23,https://lifestyle.bisnis.com/read/20261006/254/2010150/bukan-lk21-atau-idlix-ini-8-situs-nonton-film-legal-yang-aman,bisnis.com,59.1,59,waspada,kuning,tidak,0,Pola alamatnya mirip situs phishing menurut model ML; Domain tidak ada di daftar situs tepercaya
+2026-10-13 05:13:53,https://anireel.wondershare.com/tips-and-tricks/free-anime-streaming.html,wondershare.com,73.5,74,berbahaya,merah,tidak,0,Pola alamatnya mirip situs phishing menurut model ML; Domain tidak ada di daftar situs tepercaya
