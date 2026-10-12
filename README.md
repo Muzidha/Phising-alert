@@ -81,6 +81,8 @@ buka halaman
 
 Ambang ada di `extension/config.js` dan bisa di-override dari `model.json` hasil training.
 
+Model dilatih dalam mode **berbasis host** (`url_scope: "host"`): yang dinilai hanya `skema://host/` dengan `www.` dibuang. Alasannya, di dataset PhiUSIIL semua URL legit tidak punya path, sehingga model URL penuh belajar "punya path = phishing". Detailnya ada di [ml/README.md](ml/README.md#cakupan-url-url_scope).
+
 ## Melatih model
 
 Lihat **[ml/README.md](ml/README.md)**. Ringkasnya:

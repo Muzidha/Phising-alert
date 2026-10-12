@@ -60,6 +60,10 @@ EDGE_CASE_URLS = [
     'https://example.com/a b"c<d>',
     'https://a.b.c.d.example.co.id/x-y-z?a=1&b=2&&c',
     'https://integra.its.ac.id/',
+    'https://WWW.Contoh.co.id/a/b?c=d',
+    'http://user@www.example.com:8080/x',
+    'https://www.com/',
+    'https://www.abc.github.io/login',
     'https://abc.github.io/login',
     'http://127.0.0.1:8000/fake-login/',
     'http://login-kampus-verifikasi.free-host.test:8000/fake-login/',
@@ -144,8 +148,8 @@ def predict_from_payload(payload: dict, X: np.ndarray) -> np.ndarray:
 # Fitur
 # ------------------------------------------------------------
 
-def features_frame(urls: Iterable[str], feature_names: list[str]) -> pd.DataFrame:
-    rows = [r for r in F.extract_many(urls) if r is not None]
+def features_frame(urls: Iterable[str], feature_names: list[str], scope: str = 'full') -> pd.DataFrame:
+    rows = [r for r in F.extract_many(urls, scope) if r is not None]
     return pd.DataFrame(rows, columns=F.FEATURE_NAMES)[feature_names].astype(np.int64)
 
 
@@ -176,19 +180,23 @@ def export_bundle(bundle: dict, out_path: Path = DEFAULT_MODEL_OUT, verify_X: pd
     """
     bundle = {
         'model': estimator, 'features': [...],
+        'url_scope': 'host',                        # 'full' atau 'host' (default 'full')
         'thresholds': {'warn': 40, 'danger': 70},   # opsional, skala 0–100
         'metrics': {...}, 'dataset': {...}, 'created_at': '...'
     }
     """
     model = bundle['model']
     feature_names = list(bundle['features'])
+    scope = bundle.get('url_scope', 'full')
+    if scope not in F.URL_SCOPES:
+        raise ValueError(f'url_scope harus salah satu dari {F.URL_SCOPES}, dapat: {scope!r}')
     unknown = [f for f in feature_names if f not in F.FEATURE_NAMES]
     if unknown:
         raise ValueError(f'Fitur {unknown} tidak ada di features.py / features.js')
 
     pos = positive_index(model)
     trees = [tree_to_dict(e, pos) for e in estimators_of(model)]
-    fingerprint = json.dumps({'features': feature_names, 'trees': trees}, separators=(',', ':'))
+    fingerprint = json.dumps({'features': feature_names, 'url_scope': scope, 'trees': trees}, separators=(',', ':'))
     model_id = hashlib.sha256(fingerprint.encode()).hexdigest()[:12]
 
     payload = {
@@ -196,6 +204,7 @@ def export_bundle(bundle: dict, out_path: Path = DEFAULT_MODEL_OUT, verify_X: pd
         'model_id': model_id,
         'model_type': type(model).__name__,
         'placeholder': False,
+        'url_scope': scope,
         'features': feature_names,
         'positive_label': 1,
         'metadata': {
@@ -212,7 +221,7 @@ def export_bundle(bundle: dict, out_path: Path = DEFAULT_MODEL_OUT, verify_X: pd
     if thresholds:
         payload['thresholds'] = {'warn': int(thresholds['warn']), 'danger': int(thresholds['danger'])}
 
-    check_frames = [features_frame(EDGE_CASE_URLS, feature_names)]
+    check_frames = [features_frame(EDGE_CASE_URLS, feature_names, scope)]
     if verify_X is not None:
         check_frames.append(verify_X[feature_names].astype(np.int64))
     check_payload(model, payload, pd.concat(check_frames, ignore_index=True))
@@ -224,7 +233,7 @@ def export_bundle(bundle: dict, out_path: Path = DEFAULT_MODEL_OUT, verify_X: pd
 
     size = len(text.encode('utf-8'))
     print(f'✓ Model tersimpan: {out_path} ({size / 1024:.0f} KB, {len(trees)} pohon, '
-          f'{payload["metadata"]["n_nodes"]:,} node, model_id {model_id})')
+          f'{payload["metadata"]["n_nodes"]:,} node, url_scope {scope}, model_id {model_id})')
     if size > SIZE_WARNING_BYTES:
         print('⚠️ File model besar. Kecilkan max_depth / n_estimators atau naikkan min_samples_leaf.')
     return payload
@@ -234,12 +243,13 @@ def write_test_vectors(bundle: dict, payload: dict, urls: Iterable[str],
                        out_path: Path = DEFAULT_VECTORS_OUT, include_edge_cases: bool = True) -> None:
     """Simpan URL + fitur + peluang versi Python, untuk dibandingkan di ui/selftest.html."""
     model = bundle['model']
+    scope = payload.get('url_scope', 'full')
     all_urls = list(dict.fromkeys(list(urls) + (EDGE_CASE_URLS if include_edge_cases else [])))
 
     rows = []
     for url in all_urls:
         try:
-            rows.append((url, F.canonicalize(url).href, F.extract_features(url)))
+            rows.append((url, F.canonicalize(url, scope).href, F.extract_features(url, scope)))
         except (ValueError, TypeError):
             continue
 
@@ -250,6 +260,7 @@ def write_test_vectors(bundle: dict, payload: dict, urls: Iterable[str],
         'model_id': payload['model_id'],
         'generated_at': _now(),
         'tolerance': 1e-6,
+        'url_scope': scope,
         'feature_names': F.FEATURE_NAMES,
         'vectors': [
             {'url': url, 'canonical': href, 'features': feats, 'proba': float(p)}
@@ -266,9 +277,9 @@ def load_bundle(path: Path) -> dict:
     obj = joblib.load(path)
     if isinstance(obj, dict) and 'model' in obj:
         return obj
-    # Estimator mentah tanpa metadata
+    # Estimator mentah tanpa metadata (url_scope tidak diketahui → 'full')
     names = getattr(obj, 'feature_names_in_', None)
-    return {'model': obj, 'features': list(names) if names is not None else list(F.CORE_FEATURES)}
+    return {'model': obj, 'features': list(names) if names is not None else list(F.CORE_FEATURES), 'url_scope': 'full'}
 
 
 def main() -> None:
@@ -283,7 +294,8 @@ def main() -> None:
     args = parser.parse_args()
 
     bundle = load_bundle(args.model)
-    verify_X = features_frame(sample_urls(args.data, args.n_verify, args.seed), list(bundle['features']))
+    scope = bundle.get('url_scope', 'full')
+    verify_X = features_frame(sample_urls(args.data, args.n_verify, args.seed), list(bundle['features']), scope)
     payload = export_bundle(bundle, args.out, verify_X)
     write_test_vectors(bundle, payload, sample_urls(args.data, args.n_vectors, args.seed + 1), args.vectors_out)
 

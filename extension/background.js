@@ -78,13 +78,14 @@ async function analyzeUrl(url, { redirectChain = [url] } = {}) {
 
   let cached = await PS.cache.get(url);
   if (!cached || cached.modelId !== model.model_id) {
-    const features = PS.features.extractFeatures(url);
+    const features = PS.features.extractFeatures(url, model.url_scope);
     cached = { modelId: model.model_id, features, modelProba: PS.ml.predictProba(model, features) };
     await PS.cache.set(url, cached);
   }
 
   const verdict = PS.risk.buildVerdict({
     features: cached.features,
+    urlScope: model.url_scope,
     modelProba: cached.modelProba,
     redirectChain,
     domainAgeDays: getDomainAgeDays(parsed.hostname),
@@ -141,6 +142,7 @@ const HANDLERS = {
         placeholder: !!model.placeholder,
         modelId: model.model_id,
         modelType: model.model_type,
+        urlScope: model.url_scope,
         features: model.features,
         nTrees: model.trees.length,
         metadata: model.metadata || {},

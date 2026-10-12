@@ -3,6 +3,8 @@
 //
 // Format model.json ("phishshield-trees-v1") dibuat oleh ml/export_model.py:
 //   features : urutan nama fitur yang dipakai model
+//   url_scope: 'full' (seluruh URL) atau 'host' (hanya skema + host);
+//              kalau tidak ada dianggap 'full'
 //   trees    : satu pohon (Decision Tree) atau banyak (Random Forest).
 //              Tiap pohon = array paralel seperti tree_ di scikit-learn:
 //              children_left / children_right (-1 = daun), feature,
@@ -29,6 +31,10 @@
       if (!PS.features.FEATURE_NAMES.includes(name)) {
         throw new Error(`Fitur "${name}" tidak bisa dihitung di ekstensi (cek features.js)`);
       }
+    }
+    if (model.url_scope === undefined) model.url_scope = 'full';
+    if (!PS.features.URL_SCOPES.includes(model.url_scope)) {
+      throw new Error(`url_scope "${model.url_scope}" tidak dikenal (harus ${PS.features.URL_SCOPES.join(' / ')})`);
     }
     return model;
   }

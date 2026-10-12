@@ -1,8 +1,9 @@
 {
  "format": "phishshield-test-vectors-v1",
- "model_id": "e571bd653dad",
- "generated_at": "2026-10-11T21:16:30",
+ "model_id": "c79eecd155bc",
+ "generated_at": "2026-10-12T18:33:45",
  "tolerance": 1e-06,
+ "url_scope": "host",
  "feature_names": [
   "URLLength",
   "NumDots",
@@ -19,203 +20,13 @@
  ],
  "vectors": [
   {
-   "url": "https://www.lisantewahdo.org",
-   "canonical": "https://www.lisantewahdo.org/",
-   "features": {
-    "URLLength": 29,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 20,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.04479626849165168
-  },
-  {
-   "url": "https://www.coiffurecloe.be",
-   "canonical": "https://www.coiffurecloe.be/",
-   "features": {
-    "URLLength": 28,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 19,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.045042508838867096
-  },
-  {
-   "url": "https://www.houseoftravel.net",
-   "canonical": "https://www.houseoftravel.net/",
-   "features": {
-    "URLLength": 30,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 21,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.0453914870418337
-  },
-  {
-   "url": "https://www.quetecomo.es",
-   "canonical": "https://www.quetecomo.es/",
-   "features": {
-    "URLLength": 25,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 16,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.03720095285895001
-  },
-  {
-   "url": "https://www.revistas.usp.br",
-   "canonical": "https://www.revistas.usp.br/",
-   "features": {
-    "URLLength": 28,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 19,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.043480663671341395
-  },
-  {
-   "url": "https://www.kientruc360.info",
-   "canonical": "https://www.kientruc360.info/",
-   "features": {
-    "URLLength": 29,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 20,
-    "PathLength": 1,
-    "NumDigits": 3,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.04479626849165168
-  },
-  {
-   "url": "https://www.battleshipnc.com",
-   "canonical": "https://www.battleshipnc.com/",
-   "features": {
-    "URLLength": 29,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 20,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.04479626849165168
-  },
-  {
-   "url": "https://www.scoresonthedoors.org.uk",
-   "canonical": "https://www.scoresonthedoors.org.uk/",
-   "features": {
-    "URLLength": 36,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 27,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.21537597153031032
-  },
-  {
-   "url": "https://www.gsmklic.cz",
-   "canonical": "https://www.gsmklic.cz/",
-   "features": {
-    "URLLength": 23,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 14,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.03842533279478926
-  },
-  {
-   "url": "https://www.ozdealcentre.com.au",
-   "canonical": "https://www.ozdealcentre.com.au/",
-   "features": {
-    "URLLength": 32,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 23,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.09131949246605421
-  },
-  {
-   "url": "https://www.erdemir.com.tr",
-   "canonical": "https://www.erdemir.com.tr/",
+   "url": "https://www.radiotronics.co.uk",
+   "canonical": "https://radiotronics.co.uk/",
    "features": {
     "URLLength": 27,
-    "NumDots": 3,
+    "NumDots": 2,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -225,244 +36,54 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.046531093364547096
+   "proba": 0.4141079837581921
   },
   {
-   "url": "https://www.eleonordecasanovas.com",
-   "canonical": "https://www.eleonordecasanovas.com/",
+   "url": "https://www.excelroofingnc.com",
+   "canonical": "https://excelroofingnc.com/",
    "features": {
-    "URLLength": 35,
-    "NumDots": 2,
+    "URLLength": 27,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 26,
+    "HostLength": 18,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.09369564811151872
+   "proba": 0.11851134564601029
   },
   {
-   "url": "https://www.horseworldeu.com",
-   "canonical": "https://www.horseworldeu.com/",
+   "url": "https://www.thailandtravelhub.com",
+   "canonical": "https://thailandtravelhub.com/",
    "features": {
-    "URLLength": 29,
-    "NumDots": 2,
+    "URLLength": 30,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 20,
+    "HostLength": 21,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.04479626849165168
+   "proba": 0.11784640490981353
   },
   {
-   "url": "https://www.customfitsolutionsmv.com",
-   "canonical": "https://www.customfitsolutionsmv.com/",
-   "features": {
-    "URLLength": 37,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 28,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.13339291772086698
-  },
-  {
-   "url": "https://www.alexandrialockett.com",
-   "canonical": "https://www.alexandrialockett.com/",
-   "features": {
-    "URLLength": 34,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 25,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.0824632994481877
-  },
-  {
-   "url": "https://www.raskakcija.lt",
-   "canonical": "https://www.raskakcija.lt/",
-   "features": {
-    "URLLength": 26,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 17,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.047399763333880865
-  },
-  {
-   "url": "https://www.museumand.org",
-   "canonical": "https://www.museumand.org/",
-   "features": {
-    "URLLength": 26,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 17,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.047399763333880865
-  },
-  {
-   "url": "https://www.bonvital.com",
-   "canonical": "https://www.bonvital.com/",
-   "features": {
-    "URLLength": 25,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 16,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.03720095285895001
-  },
-  {
-   "url": "https://www.stabilityjournal.org",
-   "canonical": "https://www.stabilityjournal.org/",
-   "features": {
-    "URLLength": 33,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 24,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.07295465453584764
-  },
-  {
-   "url": "https://www.riverbed.com",
-   "canonical": "https://www.riverbed.com/",
-   "features": {
-    "URLLength": 25,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 16,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.03720095285895001
-  },
-  {
-   "url": "https://www.passage4.de",
-   "canonical": "https://www.passage4.de/",
-   "features": {
-    "URLLength": 24,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 15,
-    "PathLength": 1,
-    "NumDigits": 1,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.03871376763594192
-  },
-  {
-   "url": "https://www.dagensmedisin.no",
-   "canonical": "https://www.dagensmedisin.no/",
-   "features": {
-    "URLLength": 29,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 20,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.04479626849165168
-  },
-  {
-   "url": "https://www.theprogressreport.ca",
-   "canonical": "https://www.theprogressreport.ca/",
-   "features": {
-    "URLLength": 33,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 24,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.07295465453584764
-  },
-  {
-   "url": "https://www.livablecity.org",
-   "canonical": "https://www.livablecity.org/",
+   "url": "https://www.aquaexpeditions.com",
+   "canonical": "https://aquaexpeditions.com/",
    "features": {
     "URLLength": 28,
-    "NumDots": 2,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -472,16 +93,244 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.045042508838867096
+   "proba": 0.11821831712739161
   },
   {
-   "url": "https://www.guc.ac.bw",
-   "canonical": "https://www.guc.ac.bw/",
+   "url": "https://www.cutter.com",
+   "canonical": "https://cutter.com/",
    "features": {
-    "URLLength": 22,
-    "NumDots": 3,
+    "URLLength": 19,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 10,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12338095724951184
+  },
+  {
+   "url": "https://www.speakap.com",
+   "canonical": "https://speakap.com/",
+   "features": {
+    "URLLength": 20,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12231929969891044
+  },
+  {
+   "url": "https://www.savannahga.gov",
+   "canonical": "https://savannahga.gov/",
+   "features": {
+    "URLLength": 23,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 14,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1146821323650229
+  },
+  {
+   "url": "https://www.portlandmercury.com",
+   "canonical": "https://portlandmercury.com/",
+   "features": {
+    "URLLength": 28,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 19,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11821831712739161
+  },
+  {
+   "url": "https://www.qpg.geog.cam.ac.uk",
+   "canonical": "https://qpg.geog.cam.ac.uk/",
+   "features": {
+    "URLLength": 27,
+    "NumDots": 4,
     "HasIP": 0,
     "SubdomainCount": 2,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.3038543201303446
+  },
+  {
+   "url": "https://www.studentcenter.gatech.edu",
+   "canonical": "https://studentcenter.gatech.edu/",
+   "features": {
+    "URLLength": 33,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 24,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.7510701210074396
+  },
+  {
+   "url": "https://www.bellasolboards.com",
+   "canonical": "https://bellasolboards.com/",
+   "features": {
+    "URLLength": 27,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11851134564601029
+  },
+  {
+   "url": "https://www.echealthcare.com",
+   "canonical": "https://echealthcare.com/",
+   "features": {
+    "URLLength": 25,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 16,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11503408468199051
+  },
+  {
+   "url": "https://www.childsplaycharity.org",
+   "canonical": "https://childsplaycharity.org/",
+   "features": {
+    "URLLength": 30,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 21,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11784640490981353
+  },
+  {
+   "url": "https://www.anifotograflari.com",
+   "canonical": "https://anifotograflari.com/",
+   "features": {
+    "URLLength": 28,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 19,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11821831712739161
+  },
+  {
+   "url": "https://www.email-format.com",
+   "canonical": "https://email-format.com/",
+   "features": {
+    "URLLength": 25,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 1,
+    "IsHTTPS": 1,
+    "HostLength": 16,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.16105606465396485
+  },
+  {
+   "url": "https://www.hydefoundation.org",
+   "canonical": "https://hydefoundation.org/",
+   "features": {
+    "URLLength": 27,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11851134564601029
+  },
+  {
+   "url": "https://www.happiness.com",
+   "canonical": "https://happiness.com/",
+   "features": {
+    "URLLength": 22,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -491,35 +340,73 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.02990121678180318
+   "proba": 0.11478629228624428
   },
   {
-   "url": "https://www.stegencounty.org",
-   "canonical": "https://www.stegencounty.org/",
+   "url": "https://www.eatwashington.com",
+   "canonical": "https://eatwashington.com/",
    "features": {
-    "URLLength": 29,
-    "NumDots": 2,
+    "URLLength": 26,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 20,
+    "HostLength": 17,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.04479626849165168
+   "proba": 0.1157294322946293
   },
   {
-   "url": "https://www.audiopixels.com.au",
-   "canonical": "https://www.audiopixels.com.au/",
+   "url": "https://www.modique.com",
+   "canonical": "https://modique.com/",
+   "features": {
+    "URLLength": 20,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12231929969891044
+  },
+  {
+   "url": "https://www.mangerbouger.fr",
+   "canonical": "https://mangerbouger.fr/",
+   "features": {
+    "URLLength": 24,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 15,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11177949746230921
+  },
+  {
+   "url": "https://www.pacificatlanticadr.com",
+   "canonical": "https://pacificatlanticadr.com/",
    "features": {
     "URLLength": 31,
-    "NumDots": 3,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -529,54 +416,16 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.08693426693945587
+   "proba": 0.11777173124996919
   },
   {
-   "url": "https://www.balliol.ox.ac.uk",
-   "canonical": "https://www.balliol.ox.ac.uk/",
-   "features": {
-    "URLLength": 29,
-    "NumDots": 4,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 20,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.03093958292048652
-  },
-  {
-   "url": "https://www.panel.amazon.com",
-   "canonical": "https://www.panel.amazon.com/",
-   "features": {
-    "URLLength": 29,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 20,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.03586072600875973
-  },
-  {
-   "url": "https://www.sacm.org",
-   "canonical": "https://www.sacm.org/",
+   "url": "https://www.psandman.com",
+   "canonical": "https://psandman.com/",
    "features": {
     "URLLength": 21,
-    "NumDots": 2,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -586,11 +435,353 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.03023610041999096
+   "proba": 0.11698290013445654
   },
   {
-   "url": "https://www.vintrace.com",
-   "canonical": "https://www.vintrace.com/",
+   "url": "https://www.volleyhall.org",
+   "canonical": "https://volleyhall.org/",
+   "features": {
+    "URLLength": 23,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 14,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1146821323650229
+  },
+  {
+   "url": "https://www.cheriefresonke.com",
+   "canonical": "https://cheriefresonke.com/",
+   "features": {
+    "URLLength": 27,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11851134564601029
+  },
+  {
+   "url": "https://www.parkersmaple.com",
+   "canonical": "https://parkersmaple.com/",
+   "features": {
+    "URLLength": 25,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 16,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11503408468199051
+  },
+  {
+   "url": "https://www.aiardini.it",
+   "canonical": "https://aiardini.it/",
+   "features": {
+    "URLLength": 20,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12231929969891044
+  },
+  {
+   "url": "https://www.thesheridanpress.com",
+   "canonical": "https://thesheridanpress.com/",
+   "features": {
+    "URLLength": 29,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 20,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12125799912593892
+  },
+  {
+   "url": "https://www.chron.com",
+   "canonical": "https://chron.com/",
+   "features": {
+    "URLLength": 18,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 9,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1078785911663604
+  },
+  {
+   "url": "https://www.stack.com",
+   "canonical": "https://stack.com/",
+   "features": {
+    "URLLength": 18,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 9,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1078785911663604
+  },
+  {
+   "url": "https://www.sequentix.de",
+   "canonical": "https://sequentix.de/",
+   "features": {
+    "URLLength": 21,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 12,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11698290013445654
+  },
+  {
+   "url": "https://www.ar.ch",
+   "canonical": "https://ar.ch/",
+   "features": {
+    "URLLength": 14,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 5,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.22134999836451238
+  },
+  {
+   "url": "https://www.tamarackproductions.com",
+   "canonical": "https://tamarackproductions.com/",
+   "features": {
+    "URLLength": 32,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 23,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12384770505994505
+  },
+  {
+   "url": "https://www.wickedquick.com",
+   "canonical": "https://wickedquick.com/",
+   "features": {
+    "URLLength": 24,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 15,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11177949746230921
+  },
+  {
+   "url": "https://www.ptil.no",
+   "canonical": "https://ptil.no/",
+   "features": {
+    "URLLength": 16,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 7,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.09295422487596358
+  },
+  {
+   "url": "https://www.bydekorasyon.com",
+   "canonical": "https://bydekorasyon.com/",
+   "features": {
+    "URLLength": 25,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 16,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11503408468199051
+  },
+  {
+   "url": "https://www.boojummex.com",
+   "canonical": "https://boojummex.com/",
+   "features": {
+    "URLLength": 22,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 13,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11478629228624428
+  },
+  {
+   "url": "https://www.rmhccanada.ca",
+   "canonical": "https://rmhccanada.ca/",
+   "features": {
+    "URLLength": 22,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 13,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11478629228624428
+  },
+  {
+   "url": "https://www.wunc.org",
+   "canonical": "https://wunc.org/",
+   "features": {
+    "URLLength": 17,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 8,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.09450776062432123
+  },
+  {
+   "url": "https://www.seeconds.com",
+   "canonical": "https://seeconds.com/",
+   "features": {
+    "URLLength": 21,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 12,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11698290013445654
+  },
+  {
+   "url": "https://www.team-lab.com",
+   "canonical": "https://team-lab.com/",
+   "features": {
+    "URLLength": 21,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 1,
+    "IsHTTPS": 1,
+    "HostLength": 12,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.13452180953904985
+  },
+  {
+   "url": "https://www.kavlaoved.org.il",
+   "canonical": "https://kavlaoved.org.il/",
    "features": {
     "URLLength": 25,
     "NumDots": 2,
@@ -605,11 +796,220 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.03720095285895001
+   "proba": 0.3603111334867944
   },
   {
-   "url": "https://www.stll.fi",
-   "canonical": "https://www.stll.fi/",
+   "url": "https://www.portevergladeswebcam.com",
+   "canonical": "https://portevergladeswebcam.com/",
+   "features": {
+    "URLLength": 33,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 24,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12692336534005672
+  },
+  {
+   "url": "https://www.thebugoutbagguide.com",
+   "canonical": "https://thebugoutbagguide.com/",
+   "features": {
+    "URLLength": 30,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 21,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11784640490981353
+  },
+  {
+   "url": "https://www.mathwords.com",
+   "canonical": "https://mathwords.com/",
+   "features": {
+    "URLLength": 22,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 13,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11478629228624428
+  },
+  {
+   "url": "https://www.bostonemissions.com",
+   "canonical": "https://bostonemissions.com/",
+   "features": {
+    "URLLength": 28,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 19,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11821831712739161
+  },
+  {
+   "url": "https://www.stagewest.org",
+   "canonical": "https://stagewest.org/",
+   "features": {
+    "URLLength": 22,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 13,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11478629228624428
+  },
+  {
+   "url": "https://www.inmendoza.com",
+   "canonical": "https://inmendoza.com/",
+   "features": {
+    "URLLength": 22,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 13,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11478629228624428
+  },
+  {
+   "url": "https://www.mms.com",
+   "canonical": "https://mms.com/",
+   "features": {
+    "URLLength": 16,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 7,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.09295422487596358
+  },
+  {
+   "url": "https://www.historicsantafe.org",
+   "canonical": "https://historicsantafe.org/",
+   "features": {
+    "URLLength": 28,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 19,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11821831712739161
+  },
+  {
+   "url": "https://www.apicur.io",
+   "canonical": "https://apicur.io/",
+   "features": {
+    "URLLength": 18,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 9,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1078785911663604
+  },
+  {
+   "url": "https://www.islamhelpline.com",
+   "canonical": "https://islamhelpline.com/",
+   "features": {
+    "URLLength": 26,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 17,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1157294322946293
+  },
+  {
+   "url": "https://www.francespalmerpottery.com",
+   "canonical": "https://francespalmerpottery.com/",
+   "features": {
+    "URLLength": 33,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 24,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12692336534005672
+  },
+  {
+   "url": "https://www.lums.edu.pk",
+   "canonical": "https://lums.edu.pk/",
    "features": {
     "URLLength": 20,
     "NumDots": 2,
@@ -624,149 +1024,35 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.027038176085130632
+   "proba": 0.1267489904808687
   },
   {
-   "url": "https://www.apimondia2013.com.ua",
-   "canonical": "https://www.apimondia2013.com.ua/",
-   "features": {
-    "URLLength": 33,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 24,
-    "PathLength": 1,
-    "NumDigits": 4,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.11477976749177543
-  },
-  {
-   "url": "https://www.choosingwisdom.org",
-   "canonical": "https://www.choosingwisdom.org/",
-   "features": {
-    "URLLength": 31,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 22,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.06235637418510374
-  },
-  {
-   "url": "https://www.linenservice.com",
-   "canonical": "https://www.linenservice.com/",
-   "features": {
-    "URLLength": 29,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 20,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.04479626849165168
-  },
-  {
-   "url": "https://www.birdguides.com",
-   "canonical": "https://www.birdguides.com/",
-   "features": {
-    "URLLength": 27,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 18,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.09763843138563644
-  },
-  {
-   "url": "https://www.fintechnews.org",
-   "canonical": "https://www.fintechnews.org/",
-   "features": {
-    "URLLength": 28,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 19,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.045042508838867096
-  },
-  {
-   "url": "https://www.7elements.co.uk",
-   "canonical": "https://www.7elements.co.uk/",
-   "features": {
-    "URLLength": 28,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 19,
-    "PathLength": 1,
-    "NumDigits": 1,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.06346335123727749
-  },
-  {
-   "url": "https://www.aroos118.com",
-   "canonical": "https://www.aroos118.com/",
+   "url": "https://www.solarreviews.com",
+   "canonical": "https://solarreviews.com/",
    "features": {
     "URLLength": 25,
-    "NumDots": 2,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
     "HostLength": 16,
     "PathLength": 1,
-    "NumDigits": 3,
+    "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.03720095285895001
+   "proba": 0.11503408468199051
   },
   {
-   "url": "https://www.kimonoboy.com",
-   "canonical": "https://www.kimonoboy.com/",
+   "url": "https://www.situations.org.uk",
+   "canonical": "https://situations.org.uk/",
    "features": {
     "URLLength": 26,
     "NumDots": 2,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -776,71 +1062,52 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.047399763333880865
+   "proba": 0.33689815228901465
   },
   {
-   "url": "https://www.mahigold.com",
-   "canonical": "https://www.mahigold.com/",
+   "url": "https://www.meioemensagem.com.br",
+   "canonical": "https://meioemensagem.com.br/",
    "features": {
-    "URLLength": 25,
+    "URLLength": 29,
     "NumDots": 2,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 16,
+    "HostLength": 20,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.03720095285895001
+   "proba": 0.389130685077807
   },
   {
-   "url": "https://www.sallyscottages.co.uk",
-   "canonical": "https://www.sallyscottages.co.uk/",
+   "url": "https://www.vitasumarte.com",
+   "canonical": "https://vitasumarte.com/",
    "features": {
-    "URLLength": 33,
-    "NumDots": 3,
+    "URLLength": 24,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 24,
+    "HostLength": 15,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.11688470502494312
+   "proba": 0.11177949746230921
   },
   {
-   "url": "https://www.new-buildhousing.com.au",
-   "canonical": "https://www.new-buildhousing.com.au/",
-   "features": {
-    "URLLength": 36,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 1,
-    "IsHTTPS": 1,
-    "HostLength": 27,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.2649053513672784
-  },
-  {
-   "url": "https://www.gov.uk",
-   "canonical": "https://www.gov.uk/",
+   "url": "https://www.gaggle.net",
+   "canonical": "https://gaggle.net/",
    "features": {
     "URLLength": 19,
-    "NumDots": 2,
+    "NumDots": 1,
     "HasIP": 0,
     "SubdomainCount": 0,
     "HasAtSymbol": 0,
@@ -852,16 +1119,16 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.8216941575360969
+   "proba": 0.12338095724951184
   },
   {
-   "url": "https://www.tst.jus.br",
-   "canonical": "https://www.tst.jus.br/",
+   "url": "https://www.chinesehsc.org",
+   "canonical": "https://chinesehsc.org/",
    "features": {
     "URLLength": 23,
-    "NumDots": 3,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 2,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -871,16 +1138,111 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.030339510424241097
+   "proba": 0.1146821323650229
   },
   {
-   "url": "https://www.kriptorya.com",
-   "canonical": "https://www.kriptorya.com/",
+   "url": "https://www.0x00sec.org",
+   "canonical": "https://0x00sec.org/",
+   "features": {
+    "URLLength": 20,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 3,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12231929969891044
+  },
+  {
+   "url": "https://www.ronberk.com",
+   "canonical": "https://ronberk.com/",
+   "features": {
+    "URLLength": 20,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12231929969891044
+  },
+  {
+   "url": "https://www.raberstoragebarns.com",
+   "canonical": "https://raberstoragebarns.com/",
+   "features": {
+    "URLLength": 30,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 21,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11784640490981353
+  },
+  {
+   "url": "https://www.pinkoffice.com",
+   "canonical": "https://pinkoffice.com/",
+   "features": {
+    "URLLength": 23,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 14,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1146821323650229
+  },
+  {
+   "url": "https://www.artmanila.com",
+   "canonical": "https://artmanila.com/",
+   "features": {
+    "URLLength": 22,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 13,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11478629228624428
+  },
+  {
+   "url": "https://www.liftandaccess.com",
+   "canonical": "https://liftandaccess.com/",
    "features": {
     "URLLength": 26,
-    "NumDots": 2,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -890,49 +1252,87 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.047399763333880865
+   "proba": 0.1157294322946293
   },
   {
-   "url": "https://www.euromoney.com",
-   "canonical": "https://www.euromoney.com/",
+   "url": "https://www.nggovernorsforum.org",
+   "canonical": "https://nggovernorsforum.org/",
    "features": {
-    "URLLength": 26,
-    "NumDots": 2,
+    "URLLength": 29,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 17,
+    "HostLength": 20,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.047399763333880865
+   "proba": 0.12125799912593892
   },
   {
-   "url": "https://www.biblioblog.fr",
-   "canonical": "https://www.biblioblog.fr/",
+   "url": "https://www.ensemble.co",
+   "canonical": "https://ensemble.co/",
    "features": {
-    "URLLength": 26,
-    "NumDots": 2,
+    "URLLength": 20,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 17,
+    "HostLength": 11,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.047399763333880865
+   "proba": 0.12231929969891044
   },
   {
-   "url": "https://www.babynamestamil.com",
-   "canonical": "https://www.babynamestamil.com/",
+   "url": "https://www.earlytelevision.org",
+   "canonical": "https://earlytelevision.org/",
+   "features": {
+    "URLLength": 28,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 19,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11821831712739161
+  },
+  {
+   "url": "https://www.capsulecomputers.com.au",
+   "canonical": "https://capsulecomputers.com.au/",
+   "features": {
+    "URLLength": 32,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 23,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.4848443283786945
+  },
+  {
+   "url": "https://www.library.torranceca.gov",
+   "canonical": "https://library.torranceca.gov/",
    "features": {
     "URLLength": 31,
     "NumDots": 2,
@@ -947,16 +1347,35 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.06235637418510374
+   "proba": 0.7272045110243005
   },
   {
-   "url": "https://www.mgchemicals.com",
-   "canonical": "https://www.mgchemicals.com/",
+   "url": "https://www.charvel.com",
+   "canonical": "https://charvel.com/",
+   "features": {
+    "URLLength": 20,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12231929969891044
+  },
+  {
+   "url": "https://www.kniftyknittings.com",
+   "canonical": "https://kniftyknittings.com/",
    "features": {
     "URLLength": 28,
-    "NumDots": 2,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -966,643 +1385,92 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.045042508838867096
+   "proba": 0.11821831712739161
   },
   {
-   "url": "https://www.cabin-decor.com",
-   "canonical": "https://www.cabin-decor.com/",
+   "url": "https://www.preservationnj.org",
+   "canonical": "https://preservationnj.org/",
    "features": {
-    "URLLength": 28,
-    "NumDots": 2,
+    "URLLength": 27,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11851134564601029
+  },
+  {
+   "url": "https://www.artshaitian.com",
+   "canonical": "https://artshaitian.com/",
+   "features": {
+    "URLLength": 24,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 15,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11177949746230921
+  },
+  {
+   "url": "https://www.fmeter.ru",
+   "canonical": "https://fmeter.ru/",
+   "features": {
+    "URLLength": 18,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 9,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1078785911663604
+  },
+  {
+   "url": "https://www.winterthurer-zeitung.ch",
+   "canonical": "https://winterthurer-zeitung.ch/",
+   "features": {
+    "URLLength": 32,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 1,
     "IsHTTPS": 1,
-    "HostLength": 19,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.07743835152181061
-  },
-  {
-   "url": "https://www.mybig5.work",
-   "canonical": "https://www.mybig5.work/",
-   "features": {
-    "URLLength": 24,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 15,
-    "PathLength": 1,
-    "NumDigits": 1,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.03871376763594192
-  },
-  {
-   "url": "https://www.stopcovid19.jp",
-   "canonical": "https://www.stopcovid19.jp/",
-   "features": {
-    "URLLength": 27,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 18,
-    "PathLength": 1,
-    "NumDigits": 2,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.09763843138563644
-  },
-  {
-   "url": "https://www.champagnecomedy.com",
-   "canonical": "https://www.champagnecomedy.com/",
-   "features": {
-    "URLLength": 32,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
     "HostLength": 23,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.0672353061692645
+   "proba": 0.22847067482658268
   },
   {
-   "url": "https://www.anncleeves.com",
-   "canonical": "https://www.anncleeves.com/",
-   "features": {
-    "URLLength": 27,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 18,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.09763843138563644
-  },
-  {
-   "url": "https://www.nnc.kz",
-   "canonical": "https://www.nnc.kz/",
-   "features": {
-    "URLLength": 19,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 10,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.026733384528569562
-  },
-  {
-   "url": "https://www.mghclaycenter.org",
-   "canonical": "https://www.mghclaycenter.org/",
-   "features": {
-    "URLLength": 30,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 21,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.0453914870418337
-  },
-  {
-   "url": "https://www.theonering.net",
-   "canonical": "https://www.theonering.net/",
-   "features": {
-    "URLLength": 27,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 18,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.09763843138563644
-  },
-  {
-   "url": "https://www.tna.gov.tw",
-   "canonical": "https://www.tna.gov.tw/",
-   "features": {
-    "URLLength": 23,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 14,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.030339510424241097
-  },
-  {
-   "url": "https://www.predatorcollection.com",
-   "canonical": "https://www.predatorcollection.com/",
-   "features": {
-    "URLLength": 35,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 26,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.09369564811151872
-  },
-  {
-   "url": "https://www.moms1st.com",
-   "canonical": "https://www.moms1st.com/",
-   "features": {
-    "URLLength": 24,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 15,
-    "PathLength": 1,
-    "NumDigits": 1,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.03871376763594192
-  },
-  {
-   "url": "https://www.stvincentsprimary.org.uk",
-   "canonical": "https://www.stvincentsprimary.org.uk/",
-   "features": {
-    "URLLength": 37,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 28,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.2705762856457707
-  },
-  {
-   "url": "https://www.poste.it",
-   "canonical": "https://www.poste.it/",
-   "features": {
-    "URLLength": 21,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 12,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.03023610041999096
-  },
-  {
-   "url": "https://www.nuh.nhs.uk",
-   "canonical": "https://www.nuh.nhs.uk/",
-   "features": {
-    "URLLength": 23,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 14,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.030339510424241097
-  },
-  {
-   "url": "https://www.klimatupplysningen.se",
-   "canonical": "https://www.klimatupplysningen.se/",
-   "features": {
-    "URLLength": 34,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 25,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.0824632994481877
-  },
-  {
-   "url": "https://www.palatinate.org.uk",
-   "canonical": "https://www.palatinate.org.uk/",
-   "features": {
-    "URLLength": 30,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 21,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.08239624116999125
-  },
-  {
-   "url": "https://www.angloamericanplatinum.com",
-   "canonical": "https://www.angloamericanplatinum.com/",
-   "features": {
-    "URLLength": 38,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 29,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.206855132118586
-  },
-  {
-   "url": "https://www.localeclectic.com",
-   "canonical": "https://www.localeclectic.com/",
-   "features": {
-    "URLLength": 30,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 21,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.0453914870418337
-  },
-  {
-   "url": "https://www.mygooddays.org",
-   "canonical": "https://www.mygooddays.org/",
-   "features": {
-    "URLLength": 27,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 18,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.09763843138563644
-  },
-  {
-   "url": "https://www.dna.fr",
-   "canonical": "https://www.dna.fr/",
-   "features": {
-    "URLLength": 19,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 10,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.026733384528569562
-  },
-  {
-   "url": "https://www.bpdvideo.com",
-   "canonical": "https://www.bpdvideo.com/",
-   "features": {
-    "URLLength": 25,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 16,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.03720095285895001
-  },
-  {
-   "url": "https://www.wisdomlogix.com",
-   "canonical": "https://www.wisdomlogix.com/",
-   "features": {
-    "URLLength": 28,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 19,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.045042508838867096
-  },
-  {
-   "url": "https://www.vialemonde.com",
-   "canonical": "https://www.vialemonde.com/",
-   "features": {
-    "URLLength": 27,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 18,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.09763843138563644
-  },
-  {
-   "url": "https://www.historichotels.org",
-   "canonical": "https://www.historichotels.org/",
-   "features": {
-    "URLLength": 31,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 22,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.06235637418510374
-  },
-  {
-   "url": "https://www.hlrgazette.com",
-   "canonical": "https://www.hlrgazette.com/",
-   "features": {
-    "URLLength": 27,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 18,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.09763843138563644
-  },
-  {
-   "url": "https://www.aintitcool.com",
-   "canonical": "https://www.aintitcool.com/",
-   "features": {
-    "URLLength": 27,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 18,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.09763843138563644
-  },
-  {
-   "url": "https://www.afterthefiremovie.com",
-   "canonical": "https://www.afterthefiremovie.com/",
-   "features": {
-    "URLLength": 34,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 25,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.0824632994481877
-  },
-  {
-   "url": "https://www.myfootballfacts.com",
-   "canonical": "https://www.myfootballfacts.com/",
-   "features": {
-    "URLLength": 32,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 23,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.0672353061692645
-  },
-  {
-   "url": "https://www.8bluebirds.com",
-   "canonical": "https://www.8bluebirds.com/",
-   "features": {
-    "URLLength": 27,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 18,
-    "PathLength": 1,
-    "NumDigits": 1,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.09763843138563644
-  },
-  {
-   "url": "https://www.elgas.com.au",
-   "canonical": "https://www.elgas.com.au/",
-   "features": {
-    "URLLength": 25,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 16,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.04372924508143577
-  },
-  {
-   "url": "https://www.netdreamers.co.jp",
-   "canonical": "https://www.netdreamers.co.jp/",
-   "features": {
-    "URLLength": 30,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 21,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.08239624116999125
-  },
-  {
-   "url": "https://www.smartro.co.kr",
-   "canonical": "https://www.smartro.co.kr/",
-   "features": {
-    "URLLength": 26,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 17,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.042543598789711055
-  },
-  {
-   "url": "https://www.smackmellon.org",
-   "canonical": "https://www.smackmellon.org/",
-   "features": {
-    "URLLength": 28,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 19,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.045042508838867096
-  },
-  {
-   "url": "https://www.expresseats.menu",
-   "canonical": "https://www.expresseats.menu/",
+   "url": "https://www.rupunzelsroom.com.au",
+   "canonical": "https://rupunzelsroom.com.au/",
    "features": {
     "URLLength": 29,
     "NumDots": 2,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -1612,73 +1480,54 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.04479626849165168
+   "proba": 0.389130685077807
   },
   {
-   "url": "https://www.australianflying.com.au",
-   "canonical": "https://www.australianflying.com.au/",
+   "url": "https://www.rakai.go.ug",
+   "canonical": "https://rakai.go.ug/",
    "features": {
-    "URLLength": 36,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 27,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.21537597153031032
-  },
-  {
-   "url": "https://www.rbmojournal.com",
-   "canonical": "https://www.rbmojournal.com/",
-   "features": {
-    "URLLength": 28,
+    "URLLength": 20,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 19,
+    "HostLength": 11,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.045042508838867096
+   "proba": 0.1267489904808687
   },
   {
-   "url": "https://www.excellence-mag.com",
-   "canonical": "https://www.excellence-mag.com/",
+   "url": "https://www.cine.estamosrodando.com",
+   "canonical": "https://cine.estamosrodando.com/",
    "features": {
-    "URLLength": 31,
+    "URLLength": 32,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
-    "NumHyphens": 1,
+    "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 22,
+    "HostLength": 23,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.20988906523643397
+   "proba": 0.735090031269817
   },
   {
-   "url": "https://www.miaegypt.org",
-   "canonical": "https://www.miaegypt.org/",
+   "url": "https://www.danishred.com.au",
+   "canonical": "https://danishred.com.au/",
    "features": {
     "URLLength": 25,
     "NumDots": 2,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -1688,187 +1537,92 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.03720095285895001
+   "proba": 0.2692995357311051
   },
   {
-   "url": "https://www.ourismantravel.com",
-   "canonical": "https://www.ourismantravel.com/",
+   "url": "https://www.beginningwithi.com",
+   "canonical": "https://beginningwithi.com/",
    "features": {
-    "URLLength": 31,
-    "NumDots": 2,
+    "URLLength": 27,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 22,
+    "HostLength": 18,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.06235637418510374
+   "proba": 0.11851134564601029
   },
   {
-   "url": "https://www.wordspy.com",
-   "canonical": "https://www.wordspy.com/",
+   "url": "https://www.dinesh.com",
+   "canonical": "https://dinesh.com/",
    "features": {
-    "URLLength": 24,
-    "NumDots": 2,
+    "URLLength": 19,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 15,
+    "HostLength": 10,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.03871376763594192
+   "proba": 0.12338095724951184
   },
   {
-   "url": "https://www.mizapparels.com.sg",
-   "canonical": "https://www.mizapparels.com.sg/",
+   "url": "https://www.matfoundrygroup.com",
+   "canonical": "https://matfoundrygroup.com/",
    "features": {
-    "URLLength": 31,
-    "NumDots": 3,
+    "URLLength": 28,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 22,
+    "HostLength": 19,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.08693426693945587
+   "proba": 0.11821831712739161
   },
   {
-   "url": "https://www.familyleisure.com",
-   "canonical": "https://www.familyleisure.com/",
+   "url": "https://www.countingouts.com",
+   "canonical": "https://countingouts.com/",
    "features": {
-    "URLLength": 30,
-    "NumDots": 2,
+    "URLLength": 25,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 21,
+    "HostLength": 16,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.0453914870418337
+   "proba": 0.11503408468199051
   },
   {
-   "url": "https://www.chuggentertainment.com",
-   "canonical": "https://www.chuggentertainment.com/",
-   "features": {
-    "URLLength": 35,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 26,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.09369564811151872
-  },
-  {
-   "url": "https://www.teachingcitizenship.org.uk",
-   "canonical": "https://www.teachingcitizenship.org.uk/",
-   "features": {
-    "URLLength": 39,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 30,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.3958491164003616
-  },
-  {
-   "url": "https://www.coxenterprises.com",
-   "canonical": "https://www.coxenterprises.com/",
-   "features": {
-    "URLLength": 31,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 22,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.06235637418510374
-  },
-  {
-   "url": "https://www.sfsite.com",
-   "canonical": "https://www.sfsite.com/",
-   "features": {
-    "URLLength": 23,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 14,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.03842533279478926
-  },
-  {
-   "url": "https://www.dicklanevelodrome.com",
-   "canonical": "https://www.dicklanevelodrome.com/",
-   "features": {
-    "URLLength": 34,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 25,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.0824632994481877
-  },
-  {
-   "url": "https://www.popdoggie.com",
-   "canonical": "https://www.popdoggie.com/",
+   "url": "https://www.lucknampark.co.uk",
+   "canonical": "https://lucknampark.co.uk/",
    "features": {
     "URLLength": 26,
     "NumDots": 2,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -1878,35 +1632,111 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.047399763333880865
+   "proba": 0.33689815228901465
   },
   {
-   "url": "https://www.perpetualbliss.me",
-   "canonical": "https://www.perpetualbliss.me/",
+   "url": "https://www.psymate.eu",
+   "canonical": "https://psymate.eu/",
    "features": {
-    "URLLength": 30,
-    "NumDots": 2,
+    "URLLength": 19,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 21,
+    "HostLength": 10,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.0453914870418337
+   "proba": 0.12338095724951184
   },
   {
-   "url": "https://www.tidetablechart.com",
-   "canonical": "https://www.tidetablechart.com/",
+   "url": "https://www.lemonchecks.com",
+   "canonical": "https://lemonchecks.com/",
+   "features": {
+    "URLLength": 24,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 15,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11177949746230921
+  },
+  {
+   "url": "https://www.thetravelalmanac.com",
+   "canonical": "https://thetravelalmanac.com/",
+   "features": {
+    "URLLength": 29,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 20,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12125799912593892
+  },
+  {
+   "url": "https://www.radioascolta.it",
+   "canonical": "https://radioascolta.it/",
+   "features": {
+    "URLLength": 24,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 15,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11177949746230921
+  },
+  {
+   "url": "https://www.arqbackup.com",
+   "canonical": "https://arqbackup.com/",
+   "features": {
+    "URLLength": 22,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 13,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11478629228624428
+  },
+  {
+   "url": "https://www.experiencefestival.com",
+   "canonical": "https://experiencefestival.com/",
    "features": {
     "URLLength": 31,
-    "NumDots": 2,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
@@ -1916,125 +1746,467 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.06235637418510374
+   "proba": 0.11777173124996919
   },
   {
-   "url": "http://www.googledraive.com",
-   "canonical": "http://www.googledraive.com/",
+   "url": "https://www.nicedit.com",
+   "canonical": "https://nicedit.com/",
    "features": {
-    "URLLength": 28,
+    "URLLength": 20,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12231929969891044
+  },
+  {
+   "url": "https://www.journey.agency",
+   "canonical": "https://journey.agency/",
+   "features": {
+    "URLLength": 23,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 14,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1146821323650229
+  },
+  {
+   "url": "https://www.innertemple.org.uk",
+   "canonical": "https://innertemple.org.uk/",
+   "features": {
+    "URLLength": 27,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.4141079837581921
+  },
+  {
+   "url": "https://www.linqto.me",
+   "canonical": "https://linqto.me/",
+   "features": {
+    "URLLength": 18,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 9,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1078785911663604
+  },
+  {
+   "url": "https://www.elementarybr.org",
+   "canonical": "https://elementarybr.org/",
+   "features": {
+    "URLLength": 25,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 16,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11503408468199051
+  },
+  {
+   "url": "https://www.rideautrail.org",
+   "canonical": "https://rideautrail.org/",
+   "features": {
+    "URLLength": 24,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 15,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11177949746230921
+  },
+  {
+   "url": "https://www.tfdsupplies.com",
+   "canonical": "https://tfdsupplies.com/",
+   "features": {
+    "URLLength": 24,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 15,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11177949746230921
+  },
+  {
+   "url": "https://www.cummingrestoration.com",
+   "canonical": "https://cummingrestoration.com/",
+   "features": {
+    "URLLength": 31,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 22,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11777173124996919
+  },
+  {
+   "url": "https://www.buscamiviaje.com",
+   "canonical": "https://buscamiviaje.com/",
+   "features": {
+    "URLLength": 25,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 16,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11503408468199051
+  },
+  {
+   "url": "https://yhff-92b2b.web.app/",
+   "canonical": "https://yhff-92b2b.web.app/",
+   "features": {
+    "URLLength": 27,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 1,
+    "IsHTTPS": 1,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 3,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.682317525807351
+  },
+  {
+   "url": "http://www.sofa.rs",
+   "canonical": "http://sofa.rs/",
+   "features": {
+    "URLLength": 15,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 7,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9542368460483831
+  },
+  {
+   "url": "http://www.pikohost.ir",
+   "canonical": "http://pikohost.ir/",
+   "features": {
+    "URLLength": 19,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9542368460483831
+  },
+  {
+   "url": "http://www.a0678326.xsph.ru",
+   "canonical": "http://a0678326.xsph.ru/",
+   "features": {
+    "URLLength": 24,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 0,
-    "HostLength": 20,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "http://www.f0566266.xsph.ru",
-   "canonical": "http://www.f0566266.xsph.ru/",
-   "features": {
-    "URLLength": 28,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 20,
+    "HostLength": 16,
     "PathLength": 1,
     "NumDigits": 7,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.9873089508399525
   },
   {
-   "url": "http://www.saisoen-co-jp.aesconse.gkzemp.top/jp.php",
-   "canonical": "http://www.saisoen-co-jp.aesconse.gkzemp.top/jp.php",
+   "url": "https://consolesecudigital.firebaseapp.com/",
+   "canonical": "https://consolesecudigital.firebaseapp.com/",
    "features": {
-    "URLLength": 51,
-    "NumDots": 5,
+    "URLLength": 43,
+    "NumDots": 2,
     "HasIP": 0,
-    "SubdomainCount": 3,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 34,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.8143309946434
+  },
+  {
+   "url": "http://rough-tree-5642.on.fleek.co/",
+   "canonical": "http://rough-tree-5642.on.fleek.co/",
+   "features": {
+    "URLLength": 35,
+    "NumDots": 3,
+    "HasIP": 0,
+    "SubdomainCount": 2,
     "HasAtSymbol": 0,
     "NumHyphens": 2,
     "IsHTTPS": 0,
-    "HostLength": 37,
-    "PathLength": 7,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9999136442141624
-  },
-  {
-   "url": "http://www.itransformtraining.online",
-   "canonical": "http://www.itransformtraining.online/",
-   "features": {
-    "URLLength": 37,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 29,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 1.0
-  },
-  {
-   "url": "http://www.etzndtcvqvyxajpcgwkzsoweaubilflh.com",
-   "canonical": "http://www.etzndtcvqvyxajpcgwkzsoweaubilflh.com/",
-   "features": {
-    "URLLength": 48,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 40,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9964354703674834
-  },
-  {
-   "url": "http://www.w5886.com",
-   "canonical": "http://www.w5886.com/",
-   "features": {
-    "URLLength": 21,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 13,
+    "HostLength": 27,
     "PathLength": 1,
     "NumDigits": 4,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.9947121100419826
   },
   {
-   "url": "https://htp-102163.weeblysite.com/",
-   "canonical": "https://htp-102163.weeblysite.com/",
+   "url": "https://icxn.com.ar/wp-admin/includes/ciudadu/iniciosesion.php",
+   "canonical": "https://icxn.com.ar/",
+   "features": {
+    "URLLength": 20,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.15478096371084119
+  },
+  {
+   "url": "https://jennelcheng.com/search/usopt/login.php",
+   "canonical": "https://jennelcheng.com/",
+   "features": {
+    "URLLength": 24,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 15,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.11177949746230921
+  },
+  {
+   "url": "http://xdxjrhdfgg.square.site/",
+   "canonical": "http://xdxjrhdfgg.square.site/",
+   "features": {
+    "URLLength": 30,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 22,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.993077881971146
+  },
+  {
+   "url": "https://billowing-field-70a7.u84799i09929.workers.dev/",
+   "canonical": "https://billowing-field-70a7.u84799i09929.workers.dev/",
+   "features": {
+    "URLLength": 54,
+    "NumDots": 3,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 2,
+    "IsHTTPS": 1,
+    "HostLength": 45,
+    "PathLength": 1,
+    "NumDigits": 13,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9564255686660285
+  },
+  {
+   "url": "https://vnreintka9.web.app/",
+   "canonical": "https://vnreintka9.web.app/",
+   "features": {
+    "URLLength": 27,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 1,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.4141079837581921
+  },
+  {
+   "url": "https://pich.ecpic.repl.co/",
+   "canonical": "https://pich.ecpic.repl.co/",
+   "features": {
+    "URLLength": 27,
+    "NumDots": 3,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.3131753037126731
+  },
+  {
+   "url": "http://bafybeifsrnn7khvfvfwzto2jvxgrj7kq6j6hugnq2c6rj3fepnxkrmqw6e.ipfs.dweb.link/?filename=index2pilx.html",
+   "canonical": "http://bafybeifsrnn7khvfvfwzto2jvxgrj7kq6j6hugnq2c6rj3fepnxkrmqw6e.ipfs.dweb.link/",
+   "features": {
+    "URLLength": 82,
+    "NumDots": 3,
+    "HasIP": 0,
+    "SubdomainCount": 2,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 74,
+    "PathLength": 1,
+    "NumDigits": 9,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9897055861321704
+  },
+  {
+   "url": "http://www.partyforumseasia.com",
+   "canonical": "http://partyforumseasia.com/",
+   "features": {
+    "URLLength": 28,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 20,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9164772680396885
+  },
+  {
+   "url": "http://attnet-104624.weeblysite.com/",
+   "canonical": "http://attnet-104624.weeblysite.com/",
+   "features": {
+    "URLLength": 36,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 1,
+    "IsHTTPS": 0,
+    "HostLength": 28,
+    "PathLength": 1,
+    "NumDigits": 6,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9952716546323863
+  },
+  {
+   "url": "https://attcom-102713.square.site/",
+   "canonical": "https://attcom-102713.square.site/",
    "features": {
     "URLLength": 34,
     "NumDots": 2,
@@ -2049,11 +2221,30 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.783809234689602
+   "proba": 0.9556581025618616
   },
   {
-   "url": "https://ed0da847-7eef-4bf3-810c-911558839835.id.repl.co",
-   "canonical": "https://ed0da847-7eef-4bf3-810c-911558839835.id.repl.co/",
+   "url": "http://www.business4good.eu",
+   "canonical": "http://business4good.eu/",
+   "features": {
+    "URLLength": 24,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 16,
+    "PathLength": 1,
+    "NumDigits": 1,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9294070817141677
+  },
+  {
+   "url": "https://1803b987-9144-48cc-9c22-fcfc4214cc53.id.repl.co/",
+   "canonical": "https://1803b987-9144-48cc-9c22-fcfc4214cc53.id.repl.co/",
    "features": {
     "URLLength": 56,
     "NumDots": 3,
@@ -2068,239 +2259,182 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9883438023871955
+   "proba": 0.9564986596910562
   },
   {
-   "url": "https://os1-0utlookfolders-drive.web.app/",
-   "canonical": "https://os1-0utlookfolders-drive.web.app/",
+   "url": "http://www.baghyra.com",
+   "canonical": "http://baghyra.com/",
    "features": {
-    "URLLength": 41,
-    "NumDots": 2,
+    "URLLength": 19,
+    "NumDots": 1,
     "HasIP": 0,
     "SubdomainCount": 0,
     "HasAtSymbol": 0,
-    "NumHyphens": 2,
-    "IsHTTPS": 1,
-    "HostLength": 32,
-    "PathLength": 1,
-    "NumDigits": 2,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9835619572500583
-  },
-  {
-   "url": "https://vbnmkjhh.wixsite.com/my-site-1",
-   "canonical": "https://vbnmkjhh.wixsite.com/my-site-1",
-   "features": {
-    "URLLength": 38,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 2,
-    "IsHTTPS": 1,
-    "HostLength": 20,
-    "PathLength": 10,
-    "NumDigits": 1,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9810342263637203
-  },
-  {
-   "url": "http://xserver.mequieromeordeno.com.ar/cgi-bin/20230206_121747",
-   "canonical": "http://xserver.mequieromeordeno.com.ar/cgi-bin/20230206_121747",
-   "features": {
-    "URLLength": 62,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 1,
+    "NumHyphens": 0,
     "IsHTTPS": 0,
-    "HostLength": 31,
-    "PathLength": 24,
-    "NumDigits": 14,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 1.0
+   "proba": 0.9542368460483831
   },
   {
-   "url": "http://ato-mygov1.com/a/",
-   "canonical": "http://ato-mygov1.com/a/",
+   "url": "http://spam-detection.com/login",
+   "canonical": "http://spam-detection.com/",
    "features": {
-    "URLLength": 24,
+    "URLLength": 26,
     "NumDots": 1,
     "HasIP": 0,
     "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 1,
     "IsHTTPS": 0,
-    "HostLength": 14,
-    "PathLength": 3,
-    "NumDigits": 1,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 1.0
+   "proba": 0.9887799016014384
   },
   {
-   "url": "https://sfk4-u.firebaseapp.com/",
-   "canonical": "https://sfk4-u.firebaseapp.com/",
+   "url": "http://www.citybridgesc.at",
+   "canonical": "http://citybridgesc.at/",
    "features": {
-    "URLLength": 31,
+    "URLLength": 23,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 15,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9294070817141677
+  },
+  {
+   "url": "http://www.top.guiadeoportunidades.com.br",
+   "canonical": "http://top.guiadeoportunidades.com.br/",
+   "features": {
+    "URLLength": 38,
+    "NumDots": 3,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 30,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9896778549121582
+  },
+  {
+   "url": "https://which0x0045.web.app/",
+   "canonical": "https://which0x0045.web.app/",
+   "features": {
+    "URLLength": 28,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 0,
     "HasAtSymbol": 0,
-    "NumHyphens": 1,
+    "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 22,
+    "HostLength": 19,
     "PathLength": 1,
-    "NumDigits": 1,
+    "NumDigits": 5,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9381700284297317
+   "proba": 0.3839819989201326
   },
   {
-   "url": "https://sbcglobalteriuojr4.webflow.io/",
-   "canonical": "https://sbcglobalteriuojr4.webflow.io/",
+   "url": "https://www.grupounico.com.co/incomplete/square-rd971-new-detail-thank/",
+   "canonical": "https://grupounico.com.co/",
    "features": {
-    "URLLength": 38,
+    "URLLength": 26,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 29,
-    "PathLength": 1,
-    "NumDigits": 1,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.206855132118586
-  },
-  {
-   "url": "https://sv210472.wixsite.com/my-site-1",
-   "canonical": "https://sv210472.wixsite.com/my-site-1",
-   "features": {
-    "URLLength": 38,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 2,
-    "IsHTTPS": 1,
-    "HostLength": 20,
-    "PathLength": 10,
-    "NumDigits": 7,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9810342263637203
-  },
-  {
-   "url": "http://www.compumaq.com",
-   "canonical": "http://www.compumaq.com/",
-   "features": {
-    "URLLength": 24,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 16,
+    "HostLength": 17,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.43709856435088246
   },
   {
-   "url": "http://www.r7p0ol1ecazxk12yv6nv1yn0i7m.net",
-   "canonical": "http://www.r7p0ol1ecazxk12yv6nv1yn0i7m.net/",
-   "features": {
-    "URLLength": 43,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 35,
-    "PathLength": 1,
-    "NumDigits": 9,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9823348368375202
-  },
-  {
-   "url": "http://www.erstin.com",
-   "canonical": "http://www.erstin.com/",
-   "features": {
-    "URLLength": 22,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 14,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "http://www.severalheroes.com",
-   "canonical": "http://www.severalheroes.com/",
-   "features": {
-    "URLLength": 29,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 21,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "https://aol-109913.weeblysite.com/",
-   "canonical": "https://aol-109913.weeblysite.com/",
+   "url": "https://xcv354t.cvberty65.repl.co/",
+   "canonical": "https://xcv354t.cvberty65.repl.co/",
    "features": {
     "URLLength": 34,
-    "NumDots": 2,
+    "NumDots": 3,
     "HasIP": 0,
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
-    "NumHyphens": 1,
+    "NumHyphens": 0,
     "IsHTTPS": 1,
     "HostLength": 25,
     "PathLength": 1,
-    "NumDigits": 6,
+    "NumDigits": 5,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.783809234689602
+   "proba": 0.7790926944196445
   },
   {
-   "url": "http://pancakeswap.yahoosites.com",
-   "canonical": "http://pancakeswap.yahoosites.com/",
+   "url": "https://qmy3smp4nculh69oficrppcsyyrw58cyzy6rbjiaxc3psl.ipfs.dweb.link/",
+   "canonical": "https://qmy3smp4nculh69oficrppcsyyrw58cyzy6rbjiaxc3psl.ipfs.dweb.link/",
+   "features": {
+    "URLLength": 70,
+    "NumDots": 3,
+    "HasIP": 0,
+    "SubdomainCount": 2,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 61,
+    "PathLength": 1,
+    "NumDigits": 8,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.8933336131682238
+  },
+  {
+   "url": "http://www.najsnjdndjdjdjsnsnsnndnd.link",
+   "canonical": "http://najsnjdndjdjdjsnsnsnndnd.link/",
+   "features": {
+    "URLLength": 37,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 29,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9407107043346028
+  },
+  {
+   "url": "http://walleetconnected.iceiy.com",
+   "canonical": "http://walleetconnected.iceiy.com/",
    "features": {
     "URLLength": 34,
     "NumDots": 2,
@@ -2315,35 +2449,301 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.9905897790556307
   },
   {
-   "url": "https://fleek.ipfs.io/ipfs/qmdfon5aqeoqq5q8fvurnrhatetgc1tuwfms95kzbitqzs/hxw/",
-   "canonical": "https://fleek.ipfs.io/ipfs/qmdfon5aqeoqq5q8fvurnrhatetgc1tuwfms95kzbitqzs/hxw/",
+   "url": "http://www.ultralacelike.org",
+   "canonical": "http://ultralacelike.org/",
    "features": {
-    "URLLength": 78,
+    "URLLength": 25,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 17,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9294070817141677
+  },
+  {
+   "url": "http://www.jiefx.oss-ap-southeast-3.aliyuncs.com",
+   "canonical": "http://jiefx.oss-ap-southeast-3.aliyuncs.com/",
+   "features": {
+    "URLLength": 45,
+    "NumDots": 3,
+    "HasIP": 0,
+    "SubdomainCount": 2,
+    "HasAtSymbol": 0,
+    "NumHyphens": 3,
+    "IsHTTPS": 0,
+    "HostLength": 37,
+    "PathLength": 1,
+    "NumDigits": 1,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9958871732694038
+  },
+  {
+   "url": "http://www.bredabeeld.nl",
+   "canonical": "http://bredabeeld.nl/",
+   "features": {
+    "URLLength": 21,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 13,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.941914863345706
+  },
+  {
+   "url": "https://syac-5n.firebaseapp.com/",
+   "canonical": "https://syac-5n.firebaseapp.com/",
+   "features": {
+    "URLLength": 32,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 1,
+    "IsHTTPS": 1,
+    "HostLength": 23,
+    "PathLength": 1,
+    "NumDigits": 1,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.7713989335266577
+  },
+  {
+   "url": "http://www.localsextoday.com",
+   "canonical": "http://localsextoday.com/",
+   "features": {
+    "URLLength": 25,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 17,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9294070817141677
+  },
+  {
+   "url": "http://www.play.vidzi.tv",
+   "canonical": "http://play.vidzi.tv/",
+   "features": {
+    "URLLength": 21,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
-    "IsHTTPS": 1,
+    "IsHTTPS": 0,
     "HostLength": 13,
-    "PathLength": 57,
-    "NumDigits": 6,
+    "PathLength": 1,
+    "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9479977074474113
+   "proba": 0.9842892437088235
   },
   {
-   "url": "http://www.suxjweyfg.ga",
-   "canonical": "http://www.suxjweyfg.ga/",
+   "url": "http://www.onlyfann.site",
+   "canonical": "http://onlyfann.site/",
    "features": {
-    "URLLength": 24,
+    "URLLength": 21,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 13,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.941914863345706
+  },
+  {
+   "url": "http://www.kueronekayacatn-co-jp.kuerocakayacoto.bi3i9g7.top/ai/?authenticated=true&amp;openid%2fgp%2fsignin%2fx%26i%3da%26oauth%3dm%26i%3fie%3dutf8%26ref_%3drhf_custrec_signin233215be5865d948cd7b44d2fcbef368542cfd4b",
+   "canonical": "http://kueronekayacatn-co-jp.kuerocakayacoto.bi3i9g7.top/",
+   "features": {
+    "URLLength": 57,
+    "NumDots": 3,
+    "HasIP": 0,
+    "SubdomainCount": 2,
+    "HasAtSymbol": 0,
+    "NumHyphens": 2,
+    "IsHTTPS": 0,
+    "HostLength": 49,
+    "PathLength": 1,
+    "NumDigits": 3,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.995882709780741
+  },
+  {
+   "url": "https://dev-alertasbhdcontacto.pantheonsite.io/",
+   "canonical": "https://dev-alertasbhdcontacto.pantheonsite.io/",
+   "features": {
+    "URLLength": 47,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 1,
+    "IsHTTPS": 1,
+    "HostLength": 38,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9569348715394498
+  },
+  {
+   "url": "https://www.smartassets-eg.net/pmzd/postale/",
+   "canonical": "https://smartassets-eg.net/",
+   "features": {
+    "URLLength": 27,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 1,
+    "IsHTTPS": 1,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.20531188592580524
+  },
+  {
+   "url": "http://www.1xuc7401yo1frqymbpbcno0059.com",
+   "canonical": "http://1xuc7401yo1frqymbpbcno0059.com/",
+   "features": {
+    "URLLength": 38,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 30,
+    "PathLength": 1,
+    "NumDigits": 10,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9407107043346028
+  },
+  {
+   "url": "https://hiti2p4avd.firebaseapp.com/",
+   "canonical": "https://hiti2p4avd.firebaseapp.com/",
+   "features": {
+    "URLLength": 35,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 26,
+    "PathLength": 1,
+    "NumDigits": 2,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.7325073775844844
+  },
+  {
+   "url": "https://bt-1044mm9ihgfyty87653tws53366.square.site/",
+   "canonical": "https://bt-1044mm9ihgfyty87653tws53366.square.site/",
+   "features": {
+    "URLLength": 51,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 1,
+    "IsHTTPS": 1,
+    "HostLength": 42,
+    "PathLength": 1,
+    "NumDigits": 15,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9574288596554992
+  },
+  {
+   "url": "http://www.vectormx.com",
+   "canonical": "http://vectormx.com/",
+   "features": {
+    "URLLength": 20,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 12,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9542368460483831
+  },
+  {
+   "url": "http://www.assotrimaran.fr",
+   "canonical": "http://assotrimaran.fr/",
+   "features": {
+    "URLLength": 23,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 15,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9294070817141677
+  },
+  {
+   "url": "http://www.apgfinancing.com",
+   "canonical": "http://apgfinancing.com/",
+   "features": {
+    "URLLength": 24,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 0,
@@ -2353,106 +2753,391 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.9294070817141677
   },
   {
-   "url": "http://www.ap2348812p.ga",
-   "canonical": "http://www.ap2348812p.ga/",
+   "url": "https://www.web11382.cweb05.gamingcontrol.de/",
+   "canonical": "https://web11382.cweb05.gamingcontrol.de/",
    "features": {
-    "URLLength": 25,
-    "NumDots": 2,
+    "URLLength": 41,
+    "NumDots": 3,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 2,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 17,
+    "IsHTTPS": 1,
+    "HostLength": 32,
     "PathLength": 1,
     "NumDigits": 7,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.84897988150859
   },
   {
-   "url": "http://43.156.237.181/interactivelogin?amp;continue=https://accounts.google.com/?&amp;followup=https://accounts.google.com/?&amp;xrealip=35.203.245.119&amp;passive=1209600&amp;xrealip=185.194.93.13&amp;ifkv=aqmjq7tal6s3orw0eqan9uspnz4aicwve2u2ajllqskamoezfsx4qeqkx5xld0pmvq19hyko0j-q",
-   "canonical": "http://43.156.237.181/interactivelogin?amp;continue=https://accounts.google.com/?&amp;followup=https://accounts.google.com/?&amp;xrealip=35.203.245.119&amp;passive=1209600&amp;xrealip=185.194.93.13&amp;ifkv=aqmjq7tal6s3orw0eqan9uspnz4aicwve2u2ajllqskamoezfsx4qeqkx5xld0pmvq19hyko0j-q",
+   "url": "http://www.twink-img.cf",
+   "canonical": "http://twink-img.cf/",
    "features": {
-    "URLLength": 283,
-    "NumDots": 13,
-    "HasIP": 1,
+    "URLLength": 20,
+    "NumDots": 1,
+    "HasIP": 0,
     "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 1,
     "IsHTTPS": 0,
-    "HostLength": 14,
-    "PathLength": 17,
-    "NumDigits": 53,
-    "NumQueryParams": 6,
+    "HostLength": 12,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 1.0
+   "proba": 0.9819263190469213
   },
   {
-   "url": "https://cloudflare-ipfs.com/ipfs/bafybeic4bb2jm54hybasjrtrvqdvek677r4qmfsggxjt6a6kt6wwu526oa/",
-   "canonical": "https://cloudflare-ipfs.com/ipfs/bafybeic4bb2jm54hybasjrtrvqdvek677r4qmfsggxjt6a6kt6wwu526oa/",
+   "url": "http://www.it.pn",
+   "canonical": "http://it.pn/",
    "features": {
-    "URLLength": 93,
+    "URLLength": 13,
     "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 5,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9514975585702174
+  },
+  {
+   "url": "http://www.ccleaner.top",
+   "canonical": "http://ccleaner.top/",
+   "features": {
+    "URLLength": 20,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 12,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9542368460483831
+  },
+  {
+   "url": "http://www.qstride.com",
+   "canonical": "http://qstride.com/",
+   "features": {
+    "URLLength": 19,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9542368460483831
+  },
+  {
+   "url": "https://bafybeiclfqlxg4ojpto4qvzq54n7cnzaz32irmvus4rdx6fmaof4m7wbie.ipfs.dweb.link/",
+   "canonical": "https://bafybeiclfqlxg4ojpto4qvzq54n7cnzaz32irmvus4rdx6fmaof4m7wbie.ipfs.dweb.link/",
+   "features": {
+    "URLLength": 83,
+    "NumDots": 3,
+    "HasIP": 0,
+    "SubdomainCount": 2,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 74,
+    "PathLength": 1,
+    "NumDigits": 11,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.8933336131682238
+  },
+  {
+   "url": "http://www.dgsxc.oss-us-east-1.aliyuncs.com",
+   "canonical": "http://dgsxc.oss-us-east-1.aliyuncs.com/",
+   "features": {
+    "URLLength": 40,
+    "NumDots": 3,
+    "HasIP": 0,
+    "SubdomainCount": 2,
+    "HasAtSymbol": 0,
+    "NumHyphens": 3,
+    "IsHTTPS": 0,
+    "HostLength": 32,
+    "PathLength": 1,
+    "NumDigits": 1,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9958871732694038
+  },
+  {
+   "url": "http://www.micros0ff.com",
+   "canonical": "http://micros0ff.com/",
+   "features": {
+    "URLLength": 21,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 13,
+    "PathLength": 1,
+    "NumDigits": 1,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.941914863345706
+  },
+  {
+   "url": "http://1inch-io-stage-app-euc1.s3-website.eu-central-1.amazonaws.com/index.html",
+   "canonical": "http://1inch-io-stage-app-euc1.s3-website.eu-central-1.amazonaws.com/",
+   "features": {
+    "URLLength": 69,
+    "NumDots": 4,
+    "HasIP": 0,
+    "SubdomainCount": 3,
+    "HasAtSymbol": 0,
+    "NumHyphens": 7,
+    "IsHTTPS": 0,
+    "HostLength": 61,
+    "PathLength": 1,
+    "NumDigits": 4,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9959368276593202
+  },
+  {
+   "url": "https://anz-ref7136.web.app/",
+   "canonical": "https://anz-ref7136.web.app/",
+   "features": {
+    "URLLength": 28,
+    "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 1,
     "IsHTTPS": 1,
     "HostLength": 19,
-    "PathLength": 66,
-    "NumDigits": 14,
+    "PathLength": 1,
+    "NumDigits": 4,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9888204386717061
+   "proba": 0.682224741968356
   },
   {
-   "url": "http://www.charsantosart.com",
-   "canonical": "http://www.charsantosart.com/",
+   "url": "https://att-mail-101888.square.site/",
+   "canonical": "https://att-mail-101888.square.site/",
    "features": {
-    "URLLength": 29,
+    "URLLength": 36,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
+    "NumHyphens": 2,
+    "IsHTTPS": 1,
+    "HostLength": 27,
+    "PathLength": 1,
+    "NumDigits": 6,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9580877264069161
+  },
+  {
+   "url": "http://www.x4ab92d0c566e95306019e4cc3a3d7140d.ws",
+   "canonical": "http://x4ab92d0c566e95306019e4cc3a3d7140d.ws/",
+   "features": {
+    "URLLength": 45,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 0,
-    "HostLength": 21,
+    "HostLength": 37,
+    "PathLength": 1,
+    "NumDigits": 22,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9629382192567781
+  },
+  {
+   "url": "http://www.urbanstyle.in",
+   "canonical": "http://urbanstyle.in/",
+   "features": {
+    "URLLength": 21,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 13,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.941914863345706
   },
   {
-   "url": "http://www.powerrembo.ru",
-   "canonical": "http://www.powerrembo.ru/",
+   "url": "http://www.wellnessscientific.com",
+   "canonical": "http://wellnessscientific.com/",
    "features": {
-    "URLLength": 25,
-    "NumDots": 2,
+    "URLLength": 30,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 0,
-    "HostLength": 17,
+    "HostLength": 22,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.9164772680396885
   },
   {
-   "url": "http://www.mibbpersonales.com",
-   "canonical": "http://www.mibbpersonales.com/",
+   "url": "http://gaincelo.com",
+   "canonical": "http://gaincelo.com/",
+   "features": {
+    "URLLength": 20,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 12,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9542368460483831
+  },
+  {
+   "url": "http://www.itransformtraining.online",
+   "canonical": "http://itransformtraining.online/",
+   "features": {
+    "URLLength": 33,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 25,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9164772680396885
+  },
+  {
+   "url": "http://thevillagesoforleans-access-pdf.ml/secure/document/authentication/",
+   "canonical": "http://thevillagesoforleans-access-pdf.ml/",
+   "features": {
+    "URLLength": 42,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 2,
+    "IsHTTPS": 0,
+    "HostLength": 34,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9721322230858802
+  },
+  {
+   "url": "http://account-checks-dkb.serveusers.com/banking/access/",
+   "canonical": "http://account-checks-dkb.serveusers.com/",
+   "features": {
+    "URLLength": 41,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 2,
+    "IsHTTPS": 0,
+    "HostLength": 33,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9956499782389144
+  },
+  {
+   "url": "https://boumedremerese.firebaseapp.com/",
+   "canonical": "https://boumedremerese.firebaseapp.com/",
+   "features": {
+    "URLLength": 39,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 30,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.7760151590361123
+  },
+  {
+   "url": "http://www.ip-api.com",
+   "canonical": "http://ip-api.com/",
+   "features": {
+    "URLLength": 18,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 1,
+    "IsHTTPS": 0,
+    "HostLength": 10,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9761814266300821
+  },
+  {
+   "url": "http://lerhqkfese.duckdns.org",
+   "canonical": "http://lerhqkfese.duckdns.org/",
    "features": {
     "URLLength": 30,
     "NumDots": 2,
@@ -2467,51 +3152,13 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.993077881971146
   },
   {
-   "url": "http://www.f0595957.xsph.ru",
-   "canonical": "http://www.f0595957.xsph.ru/",
+   "url": "https://auto2000jayakarta.id/456214/43qtwefferfasd/otp2.html",
+   "canonical": "https://auto2000jayakarta.id/",
    "features": {
-    "URLLength": 28,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 20,
-    "PathLength": 1,
-    "NumDigits": 7,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "https://www.udsfinanzas.com/wp-includes/sitefr/ca/d0c61a8fbdc1b9e/rgn.php?particulier",
-   "canonical": "https://www.udsfinanzas.com/wp-includes/sitefr/ca/d0c61a8fbdc1b9e/rgn.php?particulier",
-   "features": {
-    "URLLength": 85,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 1,
-    "IsHTTPS": 1,
-    "HostLength": 19,
-    "PathLength": 46,
-    "NumDigits": 6,
-    "NumQueryParams": 1,
-    "HasPunycode": 0
-   },
-   "proba": 0.9873155067706267
-  },
-  {
-   "url": "https://steamconmmunrtiy.com/profiles/765611983644799542",
-   "canonical": "https://steamconmmunrtiy.com/profiles/765611983644799542",
-   "features": {
-    "URLLength": 56,
+    "URLLength": 29,
     "NumDots": 1,
     "HasIP": 0,
     "SubdomainCount": 0,
@@ -2519,610 +3166,249 @@
     "NumHyphens": 0,
     "IsHTTPS": 1,
     "HostLength": 20,
-    "PathLength": 28,
-    "NumDigits": 18,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9754796459012927
-  },
-  {
-   "url": "https://review-appeal-status-100249821.web.app/",
-   "canonical": "https://review-appeal-status-100249821.web.app/",
-   "features": {
-    "URLLength": 47,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 3,
-    "IsHTTPS": 1,
-    "HostLength": 38,
     "PathLength": 1,
-    "NumDigits": 9,
+    "NumDigits": 4,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9883772787487773
+   "proba": 0.12125799912593892
   },
   {
-   "url": "https://bnfpyonline--markenasmindt.repl.co/index1.html",
-   "canonical": "https://bnfpyonline--markenasmindt.repl.co/index1.html",
-   "features": {
-    "URLLength": 54,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 2,
-    "IsHTTPS": 1,
-    "HostLength": 34,
-    "PathLength": 12,
-    "NumDigits": 1,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887496377212536
-  },
-  {
-   "url": "https://albafireworks.al/",
-   "canonical": "https://albafireworks.al/",
-   "features": {
-    "URLLength": 25,
-    "NumDots": 1,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 16,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9209950859413679
-  },
-  {
-   "url": "http://www.bayilik.com",
-   "canonical": "http://www.bayilik.com/",
-   "features": {
-    "URLLength": 23,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 15,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "http://www.docxpcgle.epizy.com",
-   "canonical": "http://www.docxpcgle.epizy.com/",
-   "features": {
-    "URLLength": 31,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 23,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "https://btinternet-104102.weeblysite.com/",
-   "canonical": "https://btinternet-104102.weeblysite.com/",
-   "features": {
-    "URLLength": 41,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 1,
-    "IsHTTPS": 1,
-    "HostLength": 32,
-    "PathLength": 1,
-    "NumDigits": 6,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.7804612909567633
-  },
-  {
-   "url": "https://maildinshaakckjnw24.web.app/",
-   "canonical": "https://maildinshaakckjnw24.web.app/",
-   "features": {
-    "URLLength": 36,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 27,
-    "PathLength": 1,
-    "NumDigits": 2,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.906423927419139
-  },
-  {
-   "url": "https://kodsms-803680-logowanie.magdach.pl/kmasuw/ksiis/f11aa6c75c0e604308bbfdca2f301d17/login/",
-   "canonical": "https://kodsms-803680-logowanie.magdach.pl/kmasuw/ksiis/f11aa6c75c0e604308bbfdca2f301d17/login/",
-   "features": {
-    "URLLength": 95,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 2,
-    "IsHTTPS": 1,
-    "HostLength": 34,
-    "PathLength": 53,
-    "NumDigits": 24,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9839339484277492
-  },
-  {
-   "url": "http://www.tru-chent.ml",
-   "canonical": "http://www.tru-chent.ml/",
-   "features": {
-    "URLLength": 24,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 1,
-    "IsHTTPS": 0,
-    "HostLength": 16,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 1.0
-  },
-  {
-   "url": "https://mail1.goggle.workers.dev/",
-   "canonical": "https://mail1.goggle.workers.dev/",
-   "features": {
-    "URLLength": 33,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 24,
-    "PathLength": 1,
-    "NumDigits": 1,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.11688470502494312
-  },
-  {
-   "url": "http://u1962097.cp.regruhosting.ru/",
-   "canonical": "http://u1962097.cp.regruhosting.ru/",
-   "features": {
-    "URLLength": 35,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 27,
-    "PathLength": 1,
-    "NumDigits": 7,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "http://www.video.sexyhub.co",
-   "canonical": "http://www.video.sexyhub.co/",
-   "features": {
-    "URLLength": 28,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 20,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "https://www.moneycointv.com/unknown/73185838cf19873a4/",
-   "canonical": "https://www.moneycointv.com/unknown/73185838cf19873a4/",
-   "features": {
-    "URLLength": 54,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 19,
-    "PathLength": 27,
-    "NumDigits": 14,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9435978673989529
-  },
-  {
-   "url": "http://www.googlmap.asia",
-   "canonical": "http://www.googlmap.asia/",
-   "features": {
-    "URLLength": 25,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 17,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "https://www.mihn.com.vn/wp-content/plugins/ch/swiis1/swiis/xsms.php",
-   "canonical": "https://www.mihn.com.vn/wp-content/plugins/ch/swiis1/swiis/xsms.php",
-   "features": {
-    "URLLength": 67,
-    "NumDots": 4,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 1,
-    "IsHTTPS": 1,
-    "HostLength": 15,
-    "PathLength": 44,
-    "NumDigits": 1,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9886000793478559
-  },
-  {
-   "url": "http://www.xn--qrq721bqkkzt3b.net",
-   "canonical": "http://www.xn--qrq721bqkkzt3b.net/",
+   "url": "http://www.daddy.gostudyantivirus.com",
+   "canonical": "http://daddy.gostudyantivirus.com/",
    "features": {
     "URLLength": 34,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
-    "NumHyphens": 2,
+    "NumHyphens": 0,
     "IsHTTPS": 0,
     "HostLength": 26,
     "PathLength": 1,
-    "NumDigits": 4,
+    "NumDigits": 0,
     "NumQueryParams": 0,
-    "HasPunycode": 1
+    "HasPunycode": 0
    },
-   "proba": 0.9930004894762604
+   "proba": 0.9905897790556307
   },
   {
-   "url": "http://www.achauthorization.pages.dev",
-   "canonical": "http://www.achauthorization.pages.dev/",
+   "url": "http://www.riccardoolivier.com",
+   "canonical": "http://riccardoolivier.com/",
    "features": {
-    "URLLength": 38,
+    "URLLength": 27,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 19,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9164772680396885
+  },
+  {
+   "url": "https://infowebsms-appelmessagerie.web.app/",
+   "canonical": "https://infowebsms-appelmessagerie.web.app/",
+   "features": {
+    "URLLength": 43,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 1,
+    "IsHTTPS": 1,
+    "HostLength": 34,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.8790672881207898
+  },
+  {
+   "url": "https://wobbzxanzka.worzooxahajg.repl.co/",
+   "canonical": "https://wobbzxanzka.worzooxahajg.repl.co/",
+   "features": {
+    "URLLength": 41,
     "NumDots": 3,
     "HasIP": 0,
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 30,
+    "IsHTTPS": 1,
+    "HostLength": 32,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9806914729526194
+   "proba": 0.8892538735211997
   },
   {
-   "url": "https://reunion-la-departementale.firebaseapp.com/",
-   "canonical": "https://reunion-la-departementale.firebaseapp.com/",
+   "url": "http://www.kuerennkaycoato-co-jp.kuercnokayccata.khtqts.top/ai/",
+   "canonical": "http://kuerennkaycoato-co-jp.kuercnokayccata.khtqts.top/",
    "features": {
-    "URLLength": 50,
-    "NumDots": 2,
+    "URLLength": 56,
+    "NumDots": 3,
     "HasIP": 0,
-    "SubdomainCount": 0,
+    "SubdomainCount": 2,
     "HasAtSymbol": 0,
     "NumHyphens": 2,
-    "IsHTTPS": 1,
-    "HostLength": 41,
+    "IsHTTPS": 0,
+    "HostLength": 48,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887736878535668
+   "proba": 0.995882709780741
   },
   {
-   "url": "https://required-information.wikaba.com/",
-   "canonical": "https://required-information.wikaba.com/",
-   "features": {
-    "URLLength": 40,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 1,
-    "IsHTTPS": 1,
-    "HostLength": 31,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.8509687611629947
-  },
-  {
-   "url": "http://co49323.tw1.ru/docs/login/ologin.php",
-   "canonical": "http://co49323.tw1.ru/docs/login/ologin.php",
+   "url": "https://sp435739.sitebeat.crazydomains.com/",
+   "canonical": "https://sp435739.sitebeat.crazydomains.com/",
    "features": {
     "URLLength": 43,
     "NumDots": 3,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 2,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 14,
-    "PathLength": 22,
+    "IsHTTPS": 1,
+    "HostLength": 34,
+    "PathLength": 1,
     "NumDigits": 6,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9855065494105532
+   "proba": 0.8739333554298092
   },
   {
-   "url": "https://att-109867-102828.weeblysite.com/",
-   "canonical": "https://att-109867-102828.weeblysite.com/",
+   "url": "http://www.xn--7qs986d0jj.com",
+   "canonical": "http://xn--7qs986d0jj.com/",
    "features": {
-    "URLLength": 41,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 2,
-    "IsHTTPS": 1,
-    "HostLength": 32,
-    "PathLength": 1,
-    "NumDigits": 12,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.8806983374857145
-  },
-  {
-   "url": "http://www.f0516527.xsph.ru",
-   "canonical": "http://www.f0516527.xsph.ru/",
-   "features": {
-    "URLLength": 28,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 20,
-    "PathLength": 1,
-    "NumDigits": 7,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "https://account-appeal-form-1000812478.firebaseapp.com/",
-   "canonical": "https://account-appeal-form-1000812478.firebaseapp.com/",
-   "features": {
-    "URLLength": 55,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 3,
-    "IsHTTPS": 1,
-    "HostLength": 46,
-    "PathLength": 1,
-    "NumDigits": 10,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9888204386717061
-  },
-  {
-   "url": "https://exchange4free.com/remote/mandate/4jya9anuerrpmikrph7-j5pl9nyz_uw1bc7q1vvmmhw",
-   "canonical": "https://exchange4free.com/remote/mandate/4jya9anuerrpmikrph7-j5pl9nyz_uw1bc7q1vvmmhw",
-   "features": {
-    "URLLength": 84,
+    "URLLength": 26,
     "NumDots": 1,
     "HasIP": 0,
     "SubdomainCount": 0,
     "HasAtSymbol": 0,
-    "NumHyphens": 1,
-    "IsHTTPS": 1,
-    "HostLength": 17,
-    "PathLength": 59,
-    "NumDigits": 9,
+    "NumHyphens": 2,
+    "IsHTTPS": 0,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 5,
+    "NumQueryParams": 0,
+    "HasPunycode": 1
+   },
+   "proba": 0.9887799016014384
+  },
+  {
+   "url": "http://www.lefongplaza.com",
+   "canonical": "http://lefongplaza.com/",
+   "features": {
+    "URLLength": 23,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 15,
+    "PathLength": 1,
+    "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9888204386717061
+   "proba": 0.9294070817141677
   },
   {
-   "url": "http://www.44qxqx.com",
-   "canonical": "http://www.44qxqx.com/",
+   "url": "https://htmrsdre.firebaseapp.com/",
+   "canonical": "https://htmrsdre.firebaseapp.com/",
    "features": {
-    "URLLength": 22,
+    "URLLength": 33,
     "NumDots": 2,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 14,
-    "PathLength": 1,
-    "NumDigits": 2,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "http://www.paypal.kenkenuae.com",
-   "canonical": "http://www.paypal.kenkenuae.com/",
-   "features": {
-    "URLLength": 32,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
+    "IsHTTPS": 1,
     "HostLength": 24,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.5129897102145675
   },
   {
-   "url": "http://axieinfinity-axsstake.shop",
-   "canonical": "http://axieinfinity-axsstake.shop/",
+   "url": "http://www.sitepalace.com",
+   "canonical": "http://sitepalace.com/",
    "features": {
-    "URLLength": 34,
+    "URLLength": 22,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 14,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9294070817141677
+  },
+  {
+   "url": "https://dev-ficohsalarelojerhn.pantheonsite.io/",
+   "canonical": "https://dev-ficohsalarelojerhn.pantheonsite.io/",
+   "features": {
+    "URLLength": 47,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 1,
+    "IsHTTPS": 1,
+    "HostLength": 38,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9569348715394498
+  },
+  {
+   "url": "http://www.oracle-java.cf",
+   "canonical": "http://oracle-java.cf/",
+   "features": {
+    "URLLength": 22,
     "NumDots": 1,
     "HasIP": 0,
     "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 1,
     "IsHTTPS": 0,
-    "HostLength": 26,
+    "HostLength": 14,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 1.0
+   "proba": 0.9887799016014384
   },
   {
-   "url": "http://www.northernaurora.vn/media/fer/",
-   "canonical": "http://www.northernaurora.vn/media/fer/",
-   "features": {
-    "URLLength": 39,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 21,
-    "PathLength": 11,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9823348368375202
-  },
-  {
-   "url": "http://www.ventouse-carrosserie.com",
-   "canonical": "http://www.ventouse-carrosserie.com/",
-   "features": {
-    "URLLength": 36,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 1,
-    "IsHTTPS": 0,
-    "HostLength": 28,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9948275862068966
-  },
-  {
-   "url": "https://25a9ff8c.sibforms.com/serve/muieabml7xzdnzmndyc5h_8ekpmefnvnzus4ysumkolld3ahgtdymbukvvit2vphokx0a7begqf0ayodsasbr-xhica9bk-htywaihf3tmzj0vmmnf4ectpu08kqc3rjwlkhm7u8rwcs33rc3skc5viupcmov7bblvzck43huner_mprjmy2up-yltcjus8rno2g0yxs6hiqbplt",
-   "canonical": "https://25a9ff8c.sibforms.com/serve/muieabml7xzdnzmndyc5h_8ekpmefnvnzus4ysumkolld3ahgtdymbukvvit2vphokx0a7begqf0ayodsasbr-xhica9bk-htywaihf3tmzj0vmmnf4ectpu08kqc3rjwlkhm7u8rwcs33rc3skc5viupcmov7bblvzck43huner_mprjmy2up-yltcjus8rno2g0yxs6hiqbplt",
-   "features": {
-    "URLLength": 244,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 3,
-    "IsHTTPS": 1,
-    "HostLength": 21,
-    "PathLength": 215,
-    "NumDigits": 34,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9832924463862797
-  },
-  {
-   "url": "http://www.winetalk-9ff2d.appspot.com",
-   "canonical": "http://www.winetalk-9ff2d.appspot.com/",
-   "features": {
-    "URLLength": 38,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 1,
-    "IsHTTPS": 0,
-    "HostLength": 30,
-    "PathLength": 1,
-    "NumDigits": 2,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9882575757575758
-  },
-  {
-   "url": "http://www.vikppsod.com",
-   "canonical": "http://www.vikppsod.com/",
+   "url": "http://www.upskirtflash.com",
+   "canonical": "http://upskirtflash.com/",
    "features": {
     "URLLength": 24,
-    "NumDots": 2,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 0,
@@ -3132,144 +3418,106 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.9294070817141677
   },
   {
-   "url": "https://bafkreifjr3vmsdkemaskenifttszpkl4bdo5g2hf2ghctawqhcnzb2w4qm.ipfs.cf-ipfs.com/",
-   "canonical": "https://bafkreifjr3vmsdkemaskenifttszpkl4bdo5g2hf2ghctawqhcnzb2w4qm.ipfs.cf-ipfs.com/",
+   "url": "https://www.webfun.website",
+   "canonical": "https://webfun.website/",
    "features": {
-    "URLLength": 85,
-    "NumDots": 3,
+    "URLLength": 23,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 2,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 14,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1146821323650229
+  },
+  {
+   "url": "https://coenbasecam-xqlgen.godaddysites.com/",
+   "canonical": "https://coenbasecam-xqlgen.godaddysites.com/",
+   "features": {
+    "URLLength": 44,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 1,
     "HasAtSymbol": 0,
     "NumHyphens": 1,
     "IsHTTPS": 1,
-    "HostLength": 76,
+    "HostLength": 35,
     "PathLength": 1,
-    "NumDigits": 7,
+    "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9845823075931311
+   "proba": 0.9475392869118107
   },
   {
-   "url": "http://www.pal4u.net",
-   "canonical": "http://www.pal4u.net/",
+   "url": "https://mail-109439.weeblysite.com/",
+   "canonical": "https://mail-109439.weeblysite.com/",
    "features": {
-    "URLLength": 21,
+    "URLLength": 35,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 13,
+    "NumHyphens": 1,
+    "IsHTTPS": 1,
+    "HostLength": 26,
     "PathLength": 1,
-    "NumDigits": 1,
+    "NumDigits": 6,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.9444780875363219
   },
   {
-   "url": "http://glscap.jlynch.microsoft.passwordupdate.licsurat.in/glscap/3mail@b.c",
-   "canonical": "http://glscap.jlynch.microsoft.passwordupdate.licsurat.in/glscap/3mail@b.c",
-   "features": {
-    "URLLength": 74,
-    "NumDots": 6,
-    "HasIP": 0,
-    "SubdomainCount": 4,
-    "HasAtSymbol": 1,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 50,
-    "PathLength": 17,
-    "NumDigits": 1,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 1.0
-  },
-  {
-   "url": "http://www.digi.beeppool.org",
-   "canonical": "http://www.digi.beeppool.org/",
+   "url": "https://track-id0909.web.app/",
+   "canonical": "https://track-id0909.web.app/",
    "features": {
     "URLLength": 29,
-    "NumDots": 3,
+    "NumDots": 2,
     "HasIP": 0,
-    "SubdomainCount": 2,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 21,
+    "NumHyphens": 1,
+    "IsHTTPS": 1,
+    "HostLength": 20,
     "PathLength": 1,
-    "NumDigits": 0,
+    "NumDigits": 4,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.6685835688363698
   },
   {
-   "url": "https://szertyf45fd.web.app/",
-   "canonical": "https://szertyf45fd.web.app/",
+   "url": "https://www.inadaptada.es/mb/line/f/l/",
+   "canonical": "https://inadaptada.es/",
    "features": {
-    "URLLength": 28,
-    "NumDots": 2,
+    "URLLength": 22,
+    "NumDots": 1,
     "HasIP": 0,
     "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 19,
+    "HostLength": 13,
     "PathLength": 1,
-    "NumDigits": 2,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9064255865990649
-  },
-  {
-   "url": "https://business-request-appeal-9694169.web.app/",
-   "canonical": "https://business-request-appeal-9694169.web.app/",
-   "features": {
-    "URLLength": 48,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 3,
-    "IsHTTPS": 1,
-    "HostLength": 39,
-    "PathLength": 1,
-    "NumDigits": 7,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9883328343043328
-  },
-  {
-   "url": "https://www.muetterinitiative.com/jp",
-   "canonical": "https://www.muetterinitiative.com/jp",
-   "features": {
-    "URLLength": 36,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 25,
-    "PathLength": 3,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.10551278309386175
+   "proba": 0.11478629228624428
   },
   {
-   "url": "https://maildinshaakckjnw364.web.app/",
-   "canonical": "https://maildinshaakckjnw364.web.app/",
+   "url": "https://maildinshaakckjnw468.web.app/",
+   "canonical": "https://maildinshaakckjnw468.web.app/",
    "features": {
     "URLLength": 37,
     "NumDots": 2,
@@ -3284,11 +3532,125 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9206663396153988
+   "proba": 0.7945087569192911
   },
   {
-   "url": "http://ahtanaqq.world/",
-   "canonical": "http://ahtanaqq.world/",
+   "url": "http://www.j411df4ec758d2618f776a33774d0e53cb.ws",
+   "canonical": "http://j411df4ec758d2618f776a33774d0e53cb.ws/",
+   "features": {
+    "URLLength": 45,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 37,
+    "PathLength": 1,
+    "NumDigits": 22,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9629382192567781
+  },
+  {
+   "url": "https://deltafi.netlify.app/",
+   "canonical": "https://deltafi.netlify.app/",
+   "features": {
+    "URLLength": 28,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 19,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.3839819989201326
+  },
+  {
+   "url": "http://216c0eb7-60ff-4f14-9f95-3c4537d5e005.usrfiles.com/html/0e472f_4d9b2a88f72eb4191a8eb158b004ca1f.html",
+   "canonical": "http://216c0eb7-60ff-4f14-9f95-3c4537d5e005.usrfiles.com/",
+   "features": {
+    "URLLength": 57,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 4,
+    "IsHTTPS": 0,
+    "HostLength": 49,
+    "PathLength": 1,
+    "NumDigits": 22,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.995783440409177
+  },
+  {
+   "url": "http://www.blackcreekwatershed.com",
+   "canonical": "http://blackcreekwatershed.com/",
+   "features": {
+    "URLLength": 31,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 23,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9164772680396885
+  },
+  {
+   "url": "http://www.akmedic.com",
+   "canonical": "http://akmedic.com/",
+   "features": {
+    "URLLength": 19,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9542368460483831
+  },
+  {
+   "url": "https://quyy01.webwave.dev/",
+   "canonical": "https://quyy01.webwave.dev/",
+   "features": {
+    "URLLength": 27,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 18,
+    "PathLength": 1,
+    "NumDigits": 2,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.7106272957197718
+  },
+  {
+   "url": "http://www.valid8.network",
+   "canonical": "http://valid8.network/",
    "features": {
     "URLLength": 22,
     "NumDots": 1,
@@ -3299,96 +3661,20 @@
     "IsHTTPS": 0,
     "HostLength": 14,
     "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "http://www.orpitn.fburl.fun",
-   "canonical": "http://www.orpitn.fburl.fun/",
-   "features": {
-    "URLLength": 28,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 20,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "https://ipfs.io/ipfs/qmbyxrdvj85bjtxg8r2wq3tq3jcajyq9qfp5bnnxtctahu/",
-   "canonical": "https://ipfs.io/ipfs/qmbyxrdvj85bjtxg8r2wq3tq3jcajyq9qfp5bnnxtctahu/",
-   "features": {
-    "URLLength": 68,
-    "NumDots": 1,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 7,
-    "PathLength": 53,
-    "NumDigits": 8,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9754796459012927
-  },
-  {
-   "url": "https://cutt.ly/n1nehde",
-   "canonical": "https://cutt.ly/n1nehde",
-   "features": {
-    "URLLength": 23,
-    "NumDots": 1,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 7,
-    "PathLength": 8,
     "NumDigits": 1,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9209950859413679
+   "proba": 0.9294070817141677
   },
   {
-   "url": "https://banreservaspersonal.banreservasnue.repl.co/",
-   "canonical": "https://banreservaspersonal.banreservasnue.repl.co/",
-   "features": {
-    "URLLength": 51,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 42,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9574997160722833
-  },
-  {
-   "url": "http://azuki.com.co/",
-   "canonical": "http://azuki.com.co/",
+   "url": "http://www.taogu.org.cn",
+   "canonical": "http://taogu.org.cn/",
    "features": {
     "URLLength": 20,
     "NumDots": 2,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 0,
@@ -3398,144 +3684,201 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.9949817322157748
   },
   {
-   "url": "https://1b7ac3f9-cedc-4b64-b984-25bc8dd9bb7b.id.repl.co/step2.php",
-   "canonical": "https://1b7ac3f9-cedc-4b64-b984-25bc8dd9bb7b.id.repl.co/step2.php",
+   "url": "http://bak-aave.com",
+   "canonical": "http://bak-aave.com/",
    "features": {
-    "URLLength": 65,
-    "NumDots": 4,
+    "URLLength": 20,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
-    "NumHyphens": 4,
-    "IsHTTPS": 1,
-    "HostLength": 47,
-    "PathLength": 10,
-    "NumDigits": 16,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887286695029915
-  },
-  {
-   "url": "https://vihotec.adjustenergy.es/search",
-   "canonical": "https://vihotec.adjustenergy.es/search",
-   "features": {
-    "URLLength": 38,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 23,
-    "PathLength": 7,
+    "NumHyphens": 1,
+    "IsHTTPS": 0,
+    "HostLength": 12,
+    "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.206855132118586
+   "proba": 0.9819263190469213
   },
   {
-   "url": "http://bafkreif3l3rxmeh5hfncthz2kzffzszpwz3eisubyf5u7k3tuiynh4yy2e.ipfs.w3s.link/",
-   "canonical": "http://bafkreif3l3rxmeh5hfncthz2kzffzszpwz3eisubyf5u7k3tuiynh4yy2e.ipfs.w3s.link/",
+   "url": "http://suncoastroofersupply.com",
+   "canonical": "http://suncoastroofersupply.com/",
    "features": {
-    "URLLength": 81,
+    "URLLength": 32,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 24,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9164772680396885
+  },
+  {
+   "url": "https://juno-webmail-109902.weeblysite.com/",
+   "canonical": "https://juno-webmail-109902.weeblysite.com/",
+   "features": {
+    "URLLength": 43,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 2,
+    "IsHTTPS": 1,
+    "HostLength": 34,
+    "PathLength": 1,
+    "NumDigits": 6,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9577120075790193
+  },
+  {
+   "url": "https://www.kuerennkayccato-co-jp.kuerennkayccato.kvzcny.top/ai/?authenticated=true&amp;openid/gp/signin/x&amp;i=a&amp;oauth=m&amp;i?ie=utf8&amp;ref_=rhf_custrec_signin05f42ca370ad8c8143150ecb7293a65eddb27152",
+   "canonical": "https://kuerennkayccato-co-jp.kuerennkayccato.kvzcny.top/",
+   "features": {
+    "URLLength": 57,
     "NumDots": 3,
     "HasIP": 0,
     "SubdomainCount": 2,
     "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 73,
-    "PathLength": 1,
-    "NumDigits": 11,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9999563318777293
-  },
-  {
-   "url": "http://mail.deliverylifesupport.com/public/8il38qi9k3ggvxtk3xwk0hk9yhmffnmc",
-   "canonical": "http://mail.deliverylifesupport.com/public/8il38qi9k3ggvxtk3xwk0hk9yhmffnmc",
-   "features": {
-    "URLLength": 75,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 28,
-    "PathLength": 40,
-    "NumDigits": 8,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.996828287426967
-  },
-  {
-   "url": "http://www.antiforadoly.biz",
-   "canonical": "http://www.antiforadoly.biz/",
-   "features": {
-    "URLLength": 28,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 20,
+    "NumHyphens": 2,
+    "IsHTTPS": 1,
+    "HostLength": 48,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.9543186939997104
   },
   {
-   "url": "http://www.sighe-engh.ml",
-   "canonical": "http://www.sighe-engh.ml/",
+   "url": "https://quotemyprojectnow8877533.web.app/",
+   "canonical": "https://quotemyprojectnow8877533.web.app/",
    "features": {
-    "URLLength": 25,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 1,
-    "IsHTTPS": 0,
-    "HostLength": 17,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 1.0
-  },
-  {
-   "url": "https://tnaconstructionllc.com/carta.php",
-   "canonical": "https://tnaconstructionllc.com/carta.php",
-   "features": {
-    "URLLength": 40,
+    "URLLength": 41,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 22,
-    "PathLength": 10,
+    "HostLength": 32,
+    "PathLength": 1,
+    "NumDigits": 7,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.7944612032484032
+  },
+  {
+   "url": "https://lespetitesmaisonsarin.fr/wp-content/plugins/duplicator/ctrls/ctrl/",
+   "canonical": "https://lespetitesmaisonsarin.fr/",
+   "features": {
+    "URLLength": 33,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 24,
+    "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9478751397648494
+   "proba": 0.12692336534005672
   },
   {
-   "url": "http://www.mokawafm.com",
-   "canonical": "http://www.mokawafm.com/",
+   "url": "http://www.contradasantacaterina.com",
+   "canonical": "http://contradasantacaterina.com/",
+   "features": {
+    "URLLength": 33,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 25,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9164772680396885
+  },
+  {
+   "url": "https://www.its.ac.id/informatika/id/beranda/",
+   "canonical": "https://its.ac.id/",
+   "features": {
+    "URLLength": 18,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 9,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1422594460073786
+  },
+  {
+   "url": "https://github.com/scikit-learn/scikit-learn/blob/main/README.rst",
+   "canonical": "https://github.com/",
+   "features": {
+    "URLLength": 19,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 10,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.12338095724951184
+  },
+  {
+   "url": "https://id.wikipedia.org/wiki/Institut_Teknologi_Sepuluh_Nopember",
+   "canonical": "https://id.wikipedia.org/",
+   "features": {
+    "URLLength": 25,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 1,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 16,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.3603111334867944
+  },
+  {
+   "url": "https://docs.python.org/3/library/urllib.parse.html#url-parsing",
+   "canonical": "https://docs.python.org/",
    "features": {
     "URLLength": 24,
     "NumDots": 2,
@@ -3543,37 +3886,18 @@
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 16,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "https://mochicatcollection.web.app/",
-   "canonical": "https://mochicatcollection.web.app/",
-   "features": {
-    "URLLength": 35,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
     "IsHTTPS": 1,
-    "HostLength": 26,
+    "HostLength": 15,
     "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.8951331966481385
+   "proba": 0.3409738110502863
   },
   {
-   "url": "https://bonkcoin.live/",
-   "canonical": "https://bonkcoin.live/",
+   "url": "https://www.tokopedia.com/search?st=product&q=laptop%20gaming",
+   "canonical": "https://tokopedia.com/",
    "features": {
     "URLLength": 22,
     "NumDots": 1,
@@ -3588,374 +3912,89 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9209950859413679
+   "proba": 0.11478629228624428
   },
   {
-   "url": "http://www.citrix.globalowa.com",
-   "canonical": "http://www.citrix.globalowa.com/",
-   "features": {
-    "URLLength": 32,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 2,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 24,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9887092692289995
-  },
-  {
-   "url": "https://steamncomnmunilty.ru/tradeoffer/new/?partner=113134",
-   "canonical": "https://steamncomnmunilty.ru/tradeoffer/new/?partner=113134",
-   "features": {
-    "URLLength": 59,
-    "NumDots": 1,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 20,
-    "PathLength": 16,
-    "NumDigits": 6,
-    "NumQueryParams": 1,
-    "HasPunycode": 0
-   },
-   "proba": 0.9754796459012927
-  },
-  {
-   "url": "https://meta-business-appeal-100-29589.firebaseapp.com/",
-   "canonical": "https://meta-business-appeal-100-29589.firebaseapp.com/",
-   "features": {
-    "URLLength": 55,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 4,
-    "IsHTTPS": 1,
-    "HostLength": 46,
-    "PathLength": 1,
-    "NumDigits": 8,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9888204386717061
-  },
-  {
-   "url": "https://bcr-25.jimdosite.com/",
-   "canonical": "https://bcr-25.jimdosite.com/",
+   "url": "https://news.ycombinator.com/item?id=1",
+   "canonical": "https://news.ycombinator.com/",
    "features": {
     "URLLength": 29,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 20,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.5909779999945586
+  },
+  {
+   "url": "https://bpjs-kesehatan.go.id/",
+   "canonical": "https://bpjs-kesehatan.go.id/",
+   "features": {
+    "URLLength": 29,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
     "NumHyphens": 1,
     "IsHTTPS": 1,
     "HostLength": 20,
     "PathLength": 1,
-    "NumDigits": 2,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.06871886095814458
-  },
-  {
-   "url": "http://1mygovpolicy.gotdns.com/index2.html",
-   "canonical": "http://1mygovpolicy.gotdns.com/index2.html",
-   "features": {
-    "URLLength": 42,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 23,
-    "PathLength": 12,
-    "NumDigits": 2,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9855065494105532
-  },
-  {
-   "url": "http://www.4xy8vc8iimpr1928p701evak6y.com",
-   "canonical": "http://www.4xy8vc8iimpr1928p701evak6y.com/",
-   "features": {
-    "URLLength": 42,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 34,
-    "PathLength": 1,
-    "NumDigits": 11,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9823348368375202
-  },
-  {
-   "url": "https://chimesweepstakes62.godaddysites.com/",
-   "canonical": "https://chimesweepstakes62.godaddysites.com/",
-   "features": {
-    "URLLength": 44,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 35,
-    "PathLength": 1,
-    "NumDigits": 2,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.6320288689963909
-  },
-  {
-   "url": "http://www.iyiqian.com",
-   "canonical": "http://www.iyiqian.com/",
-   "features": {
-    "URLLength": 23,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 15,
-    "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.6685835688363698
   },
   {
-   "url": "https://webmail-104854.weeblysite.com/",
-   "canonical": "https://webmail-104854.weeblysite.com/",
+   "url": "https://scikit-learn.org/stable/modules/tree.html",
+   "canonical": "https://scikit-learn.org/",
    "features": {
-    "URLLength": 38,
-    "NumDots": 2,
+    "URLLength": 25,
+    "NumDots": 1,
     "HasIP": 0,
-    "SubdomainCount": 1,
+    "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 1,
-    "IsHTTPS": 1,
-    "HostLength": 29,
-    "PathLength": 1,
-    "NumDigits": 6,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.7921702490490876
-  },
-  {
-   "url": "http://www.amazcazzm-co-jp.amazzcocn.shangtuke.cn/",
-   "canonical": "http://www.amazcazzm-co-jp.amazzcocn.shangtuke.cn/",
-   "features": {
-    "URLLength": 50,
-    "NumDots": 4,
-    "HasIP": 0,
-    "SubdomainCount": 3,
-    "HasAtSymbol": 0,
-    "NumHyphens": 2,
-    "IsHTTPS": 0,
-    "HostLength": 42,
-    "PathLength": 1,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 1.0
-  },
-  {
-   "url": "https://kargonova.com/js.html?email=user@calstatela.edu",
-   "canonical": "https://kargonova.com/js.html?email=user@calstatela.edu",
-   "features": {
-    "URLLength": 55,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 1,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 13,
-    "PathLength": 8,
-    "NumDigits": 0,
-    "NumQueryParams": 1,
-    "HasPunycode": 0
-   },
-   "proba": 0.9888230457804964
-  },
-  {
-   "url": "http://ciagenesis.com.br/gvnh/mygov/personal.html",
-   "canonical": "http://ciagenesis.com.br/gvnh/mygov/personal.html",
-   "features": {
-    "URLLength": 49,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 0,
-    "HostLength": 17,
-    "PathLength": 25,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 1.0
-  },
-  {
-   "url": "https://www.its.ac.id/informatika/id/beranda/",
-   "canonical": "https://www.its.ac.id/informatika/id/beranda/",
-   "features": {
-    "URLLength": 45,
-    "NumDots": 3,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 13,
-    "PathLength": 24,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.8414550069848726
-  },
-  {
-   "url": "https://github.com/scikit-learn/scikit-learn/blob/main/README.rst",
-   "canonical": "https://github.com/scikit-learn/scikit-learn/blob/main/README.rst",
-   "features": {
-    "URLLength": 65,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 0,
-    "HasAtSymbol": 0,
-    "NumHyphens": 2,
-    "IsHTTPS": 1,
-    "HostLength": 10,
-    "PathLength": 47,
-    "NumDigits": 0,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9888204386717061
-  },
-  {
-   "url": "https://id.wikipedia.org/wiki/Institut_Teknologi_Sepuluh_Nopember",
-   "canonical": "https://id.wikipedia.org/wiki/Institut_Teknologi_Sepuluh_Nopember",
-   "features": {
-    "URLLength": 65,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
     "IsHTTPS": 1,
     "HostLength": 16,
-    "PathLength": 41,
+    "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9479977074474113
-  },
-  {
-   "url": "https://docs.python.org/3/library/urllib.parse.html#url-parsing",
-   "canonical": "https://docs.python.org/3/library/urllib.parse.html",
-   "features": {
-    "URLLength": 51,
-    "NumDots": 4,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 15,
-    "PathLength": 28,
-    "NumDigits": 1,
-    "NumQueryParams": 0,
-    "HasPunycode": 0
-   },
-   "proba": 0.9665430298142114
-  },
-  {
-   "url": "https://www.tokopedia.com/search?st=product&q=laptop%20gaming",
-   "canonical": "https://www.tokopedia.com/search?st=product&q=laptop%20gaming",
-   "features": {
-    "URLLength": 61,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 17,
-    "PathLength": 7,
-    "NumDigits": 2,
-    "NumQueryParams": 2,
-    "HasPunycode": 0
-   },
-   "proba": 0.9479977074474113
-  },
-  {
-   "url": "https://news.ycombinator.com/item?id=1",
-   "canonical": "https://news.ycombinator.com/item?id=1",
-   "features": {
-    "URLLength": 38,
-    "NumDots": 2,
-    "HasIP": 0,
-    "SubdomainCount": 1,
-    "HasAtSymbol": 0,
-    "NumHyphens": 0,
-    "IsHTTPS": 1,
-    "HostLength": 20,
-    "PathLength": 5,
-    "NumDigits": 1,
-    "NumQueryParams": 1,
-    "HasPunycode": 0
-   },
-   "proba": 0.206855132118586
+   "proba": 0.16105606465396485
   },
   {
    "url": "http://192.168.10.5/login/verify.php",
-   "canonical": "http://192.168.10.5/login/verify.php",
+   "canonical": "http://192.168.10.5/",
    "features": {
-    "URLLength": 36,
-    "NumDots": 4,
+    "URLLength": 20,
+    "NumDots": 3,
     "HasIP": 1,
     "SubdomainCount": 0,
     "HasAtSymbol": 0,
     "NumHyphens": 0,
     "IsHTTPS": 0,
     "HostLength": 12,
-    "PathLength": 17,
+    "PathLength": 1,
     "NumDigits": 9,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9999952482775005
+   "proba": 1.0
   },
   {
    "url": "http://secure-login-bank-update.example-verify.com/account/confirm",
-   "canonical": "http://secure-login-bank-update.example-verify.com/account/confirm",
+   "canonical": "http://secure-login-bank-update.example-verify.com/",
    "features": {
-    "URLLength": 66,
+    "URLLength": 51,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
@@ -3963,18 +4002,18 @@
     "NumHyphens": 4,
     "IsHTTPS": 0,
     "HostLength": 43,
-    "PathLength": 16,
+    "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9965318917029372
+   "proba": 0.995783440409177
   },
   {
    "url": "https://login.secure.account.verify.example.xyz/signin?session=8f7a6c",
-   "canonical": "https://login.secure.account.verify.example.xyz/signin?session=8f7a6c",
+   "canonical": "https://login.secure.account.verify.example.xyz/",
    "features": {
-    "URLLength": 69,
+    "URLLength": 48,
     "NumDots": 5,
     "HasIP": 0,
     "SubdomainCount": 4,
@@ -3982,18 +4021,18 @@
     "NumHyphens": 0,
     "IsHTTPS": 1,
     "HostLength": 39,
-    "PathLength": 7,
-    "NumDigits": 3,
-    "NumQueryParams": 1,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9749033983556937
+   "proba": 0.9138715166669122
   },
   {
    "url": "http://bank.example@203.0.113.7/login",
-   "canonical": "http://bank.example@203.0.113.7/login",
+   "canonical": "http://bank.example@203.0.113.7/",
    "features": {
-    "URLLength": 37,
+    "URLLength": 32,
     "NumDots": 4,
     "HasIP": 1,
     "SubdomainCount": 0,
@@ -4001,31 +4040,31 @@
     "NumHyphens": 0,
     "IsHTTPS": 0,
     "HostLength": 11,
-    "PathLength": 6,
+    "PathLength": 1,
     "NumDigits": 8,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9999952482775005
+   "proba": 0.9845555555555555
   },
   {
    "url": "http://login-kampus-verifikasi.free-host.test:8000/fake-login/",
-   "canonical": "http://login-kampus-verifikasi.free-host.test:8000/fake-login/",
+   "canonical": "http://login-kampus-verifikasi.free-host.test:8000/",
    "features": {
-    "URLLength": 62,
+    "URLLength": 51,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
     "HasAtSymbol": 0,
-    "NumHyphens": 4,
+    "NumHyphens": 3,
     "IsHTTPS": 0,
     "HostLength": 38,
-    "PathLength": 12,
+    "PathLength": 1,
     "NumDigits": 4,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9965318917029372
+   "proba": 0.995783440409177
   },
   {
    "url": "HTTP://Example.COM",
@@ -4044,13 +4083,13 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9885471026843576
+   "proba": 0.9542368460483831
   },
   {
    "url": "example.com/path?q=1#bagian",
-   "canonical": "http://example.com/path?q=1",
+   "canonical": "http://example.com/",
    "features": {
-    "URLLength": 27,
+    "URLLength": 19,
     "NumDots": 1,
     "HasIP": 0,
     "SubdomainCount": 0,
@@ -4058,12 +4097,12 @@
     "NumHyphens": 0,
     "IsHTTPS": 0,
     "HostLength": 11,
-    "PathLength": 5,
-    "NumDigits": 1,
-    "NumQueryParams": 1,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.9542368460483831
   },
   {
    "url": "https://example.com:443/",
@@ -4082,7 +4121,7 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9209950859413679
+   "proba": 0.12231929969891044
   },
   {
    "url": "http://example.com./",
@@ -4101,13 +4140,13 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9878711841731668
+   "proba": 0.9949817322157748
   },
   {
    "url": "https://example.com/?",
-   "canonical": "https://example.com/?",
+   "canonical": "https://example.com/",
    "features": {
-    "URLLength": 21,
+    "URLLength": 20,
     "NumDots": 1,
     "HasIP": 0,
     "SubdomainCount": 0,
@@ -4120,13 +4159,13 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9209950859413679
+   "proba": 0.12231929969891044
   },
   {
    "url": "https://user@evil.example.com/login",
-   "canonical": "https://user@evil.example.com/login",
+   "canonical": "https://user@evil.example.com/",
    "features": {
-    "URLLength": 35,
+    "URLLength": 30,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 1,
@@ -4134,12 +4173,12 @@
     "NumHyphens": 0,
     "IsHTTPS": 1,
     "HostLength": 16,
-    "PathLength": 6,
+    "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.3543664619836683
+   "proba": 0.6336443575702816
   },
   {
    "url": "http://user:@example.com/",
@@ -4158,7 +4197,7 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9887092692289995
+   "proba": 0.9294070817141677
   },
   {
    "url": "http://0x7f.1/",
@@ -4177,13 +4216,13 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9989533139053298
+   "proba": 1.0
   },
   {
    "url": "http://[::1]:8080/a/../b",
-   "canonical": "http://[::1]:8080/b",
+   "canonical": "http://[::1]:8080/",
    "features": {
-    "URLLength": 19,
+    "URLLength": 18,
     "NumDots": 0,
     "HasIP": 1,
     "SubdomainCount": 0,
@@ -4191,18 +4230,18 @@
     "NumHyphens": 0,
     "IsHTTPS": 0,
     "HostLength": 3,
-    "PathLength": 2,
+    "PathLength": 1,
     "NumDigits": 5,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9998654730352367
+   "proba": 0.9654569444469447
   },
   {
    "url": "https://münchen.de/straße",
-   "canonical": "https://xn--mnchen-3ya.de/stra%C3%9Fe",
+   "canonical": "https://xn--mnchen-3ya.de/",
    "features": {
-    "URLLength": 37,
+    "URLLength": 26,
     "NumDots": 1,
     "HasIP": 0,
     "SubdomainCount": 0,
@@ -4210,12 +4249,12 @@
     "NumHyphens": 3,
     "IsHTTPS": 1,
     "HostLength": 17,
-    "PathLength": 12,
-    "NumDigits": 3,
+    "PathLength": 1,
+    "NumDigits": 1,
     "NumQueryParams": 0,
     "HasPunycode": 1
    },
-   "proba": 0.9669720370172151
+   "proba": 0.4361373310918018
   },
   {
    "url": "https://xn--pple-43d.com/",
@@ -4234,13 +4273,13 @@
     "NumQueryParams": 0,
     "HasPunycode": 1
    },
-   "proba": 0.9527395277720349
+   "proba": 0.45644795954046996
   },
   {
    "url": "https://example.com/a b\"c<d>",
-   "canonical": "https://example.com/a%20b%22c%3Cd%3E",
+   "canonical": "https://example.com/",
    "features": {
-    "URLLength": 36,
+    "URLLength": 20,
     "NumDots": 1,
     "HasIP": 0,
     "SubdomainCount": 0,
@@ -4248,31 +4287,31 @@
     "NumHyphens": 0,
     "IsHTTPS": 1,
     "HostLength": 11,
-    "PathLength": 17,
-    "NumDigits": 6,
+    "PathLength": 1,
+    "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.920993426761442
+   "proba": 0.12231929969891044
   },
   {
    "url": "https://a.b.c.d.example.co.id/x-y-z?a=1&b=2&&c",
-   "canonical": "https://a.b.c.d.example.co.id/x-y-z?a=1&b=2&&c",
+   "canonical": "https://a.b.c.d.example.co.id/",
    "features": {
-    "URLLength": 46,
+    "URLLength": 30,
     "NumDots": 6,
     "HasIP": 0,
     "SubdomainCount": 4,
     "HasAtSymbol": 0,
-    "NumHyphens": 2,
+    "NumHyphens": 0,
     "IsHTTPS": 1,
     "HostLength": 21,
-    "PathLength": 6,
-    "NumDigits": 2,
-    "NumQueryParams": 3,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9639509912690117
+   "proba": 0.633356548721503
   },
   {
    "url": "https://integra.its.ac.id/",
@@ -4291,13 +4330,70 @@
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.042543598789711055
+   "proba": 0.30007099875058546
   },
   {
-   "url": "https://abc.github.io/login",
-   "canonical": "https://abc.github.io/login",
+   "url": "https://WWW.Contoh.co.id/a/b?c=d",
+   "canonical": "https://contoh.co.id/",
    "features": {
-    "URLLength": 27,
+    "URLLength": 21,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 12,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.16433798011082512
+  },
+  {
+   "url": "http://user@www.example.com:8080/x",
+   "canonical": "http://user@example.com:8080/",
+   "features": {
+    "URLLength": 29,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 1,
+    "NumHyphens": 0,
+    "IsHTTPS": 0,
+    "HostLength": 11,
+    "PathLength": 1,
+    "NumDigits": 4,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.9164772680396885
+  },
+  {
+   "url": "https://www.com/",
+   "canonical": "https://www.com/",
+   "features": {
+    "URLLength": 16,
+    "NumDots": 1,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 7,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.09295422487596358
+  },
+  {
+   "url": "https://www.abc.github.io/login",
+   "canonical": "https://abc.github.io/",
+   "features": {
+    "URLLength": 22,
     "NumDots": 2,
     "HasIP": 0,
     "SubdomainCount": 0,
@@ -4305,31 +4401,50 @@
     "NumHyphens": 0,
     "IsHTTPS": 1,
     "HostLength": 13,
-    "PathLength": 6,
+    "PathLength": 1,
     "NumDigits": 0,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9064255865990649
+   "proba": 0.1699930058855359
+  },
+  {
+   "url": "https://abc.github.io/login",
+   "canonical": "https://abc.github.io/",
+   "features": {
+    "URLLength": 22,
+    "NumDots": 2,
+    "HasIP": 0,
+    "SubdomainCount": 0,
+    "HasAtSymbol": 0,
+    "NumHyphens": 0,
+    "IsHTTPS": 1,
+    "HostLength": 13,
+    "PathLength": 1,
+    "NumDigits": 0,
+    "NumQueryParams": 0,
+    "HasPunycode": 0
+   },
+   "proba": 0.1699930058855359
   },
   {
    "url": "http://127.0.0.1:8000/fake-login/",
-   "canonical": "http://127.0.0.1:8000/fake-login/",
+   "canonical": "http://127.0.0.1:8000/",
    "features": {
-    "URLLength": 33,
+    "URLLength": 22,
     "NumDots": 3,
     "HasIP": 1,
     "SubdomainCount": 0,
     "HasAtSymbol": 0,
-    "NumHyphens": 1,
+    "NumHyphens": 0,
     "IsHTTPS": 0,
     "HostLength": 9,
-    "PathLength": 12,
+    "PathLength": 1,
     "NumDigits": 10,
     "NumQueryParams": 0,
     "HasPunycode": 0
    },
-   "proba": 0.9999952482775005
+   "proba": 1.0
   }
  ]
 }

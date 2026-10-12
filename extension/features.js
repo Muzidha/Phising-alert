@@ -7,6 +7,11 @@
 //
 // Semua fitur bilangan bulat supaya perbandingan "x <= threshold" di
 // JavaScript dan scikit-learn memberi hasil yang identik.
+//
+// Cakupan URL (scope), diambil dari "url_scope" di model.json:
+//   'full'  seluruh URL dinilai (tanpa #fragment).
+//   'host'  hanya skema://[userinfo@]host[:port]/, awalan "www." dibuang;
+//           path & query diabaikan (lihat penjelasan di ml/features.py).
 // ============================================================
 
 (function (PS) {
@@ -31,21 +36,33 @@
     'HasPunycode',    // ada label "xn--" (domain berhuruf mirip)
   ];
 
+  const URL_SCOPES = ['full', 'host'];
   const SCHEME_RE = /^[a-z][a-z0-9+.-]*:\/\//i;
 
+  /** "www.contoh.com" → "contoh.com" (sama dengan strip_www di ml/features.py). */
+  function stripWww(host) {
+    return host.startsWith('www.') && host.slice(4).includes('.') ? host.slice(4) : host;
+  }
+
   /** URL kanonik: dinormalisasi oleh parser URL browser, tanpa #fragment. */
-  function canonicalUrl(input) {
+  function canonicalUrl(input, scope = 'full') {
+    if (!URL_SCOPES.includes(scope)) throw new Error(`scope tidak dikenal: ${scope}`);
     let s = String(input).trim();
     if (!SCHEME_RE.test(s)) s = 'http://' + s; // sama dengan ml/features.py
     const u = new URL(s);
     u.hash = '';
+    if (scope === 'host') {
+      if (!u.hostname.startsWith('[')) u.hostname = stripWww(u.hostname);
+      u.pathname = '/';
+      u.search = '';
+    }
     return u;
   }
 
   const countChar = (s, ch) => s.split(ch).length - 1;
 
-  function extractFeatures(input) {
-    const u = canonicalUrl(input);
+  function extractFeatures(input, scope = 'full') {
+    const u = canonicalUrl(input, scope);
     const href = u.href;
     const host = normalizeHost(u.hostname);
     const hostIsIp = isIpAddress(host);
@@ -68,5 +85,5 @@
     };
   }
 
-  PS.features = { FEATURE_NAMES, canonicalUrl, extractFeatures };
+  PS.features = { FEATURE_NAMES, URL_SCOPES, canonicalUrl, extractFeatures };
 })(globalThis.PhishShield = globalThis.PhishShield || {});

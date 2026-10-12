@@ -41,7 +41,7 @@
     model = await PS.ml.loadModel();
     const meta = model.metadata || {};
     $('model-summary').replaceChildren(
-      el('p', '', `ID: ${model.model_id} · tipe: ${model.model_type} · ${model.trees.length} pohon`),
+      el('p', '', `ID: ${model.model_id} · tipe: ${model.model_type} · ${model.trees.length} pohon · cakupan URL: ${model.url_scope}`),
       el('p', '', `Fitur: ${model.features.join(', ')}`),
       model.placeholder
         ? el('p', 'bad', 'Ini MODEL PLACEHOLDER (belum dilatih). Jalankan ml/train.ipynb atau ml/export_model.py.')
@@ -67,6 +67,7 @@
     }
 
     const tolerance = typeof data.tolerance === 'number' ? data.tolerance : DEFAULT_TOLERANCE;
+    const scope = data.url_scope || 'full'; // cakupan yang dipakai Python saat membuat test vector
     const failures = [];
     let maxDiff = 0;
 
@@ -74,8 +75,8 @@
       let feats;
       let canonical;
       try {
-        feats = PS.features.extractFeatures(vec.url);
-        canonical = PS.features.canonicalUrl(vec.url).href;
+        feats = PS.features.extractFeatures(vec.url, scope);
+        canonical = PS.features.canonicalUrl(vec.url, scope).href;
       } catch (err) {
         failures.push({ url: vec.url, problem: `URL gagal diparse di JS: ${err.message}` });
         continue;
@@ -97,7 +98,7 @@
     }
 
     const summary = [
-      el('p', '', `${data.vectors.length} URL diuji (dibuat ${data.generated_at || '?'}).`),
+      el('p', '', `${data.vectors.length} URL diuji (dibuat ${data.generated_at || '?'}, cakupan URL: ${scope}).`),
       failures.length === 0
         ? el('p', 'ok', `✓ Semua cocok. Selisih peluang terbesar: ${maxDiff.toExponential(2)}`)
         : el('p', 'bad', `✗ ${failures.length} URL tidak cocok. Periksa ml/features.py vs features.js.`),
@@ -121,10 +122,11 @@
     const out = $('try-result');
     try {
       const url = $('try-input').value;
-      const feats = PS.features.extractFeatures(url);
+      const scope = model ? model.url_scope : 'full';
+      const feats = PS.features.extractFeatures(url, scope);
       const rows = PS.features.FEATURE_NAMES.map((name) => [name, feats[name], model && model.features.includes(name) ? 'dipakai model' : '']);
-      const parts = [el('p', '', 'URL kanonik: '), table(['Fitur', 'Nilai', ''], rows)];
-      parts[0].append(el('code', '', PS.features.canonicalUrl(url).href));
+      const parts = [el('p', '', `URL yang dinilai model (cakupan ${scope}): `), table(['Fitur', 'Nilai', ''], rows)];
+      parts[0].append(el('code', '', PS.features.canonicalUrl(url, scope).href));
       if (model) {
         const proba = PS.ml.predictProba(model, feats);
         parts.push(el('p', '', `Peluang phishing (model saja, tanpa heuristik redirect/umur domain): ${(proba * 100).toFixed(2)}%`));

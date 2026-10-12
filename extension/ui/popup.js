@@ -170,7 +170,8 @@
       const m = info.metadata.metrics || {};
       const pct = (x) => (typeof x === 'number' ? `${(x * 100).toFixed(1)}%` : '–');
       box.textContent =
-        `Model: ${info.modelType} (${info.nTrees} pohon, ${info.features.length} fitur), dibuat ${info.metadata.created_at || '?'}. ` +
+        `Model: ${info.modelType} (${info.nTrees} pohon, ${info.features.length} fitur, ` +
+        `${info.urlScope === 'host' ? 'menilai nama domain' : 'menilai URL penuh'}), dibuat ${info.metadata.created_at || '?'}. ` +
         `Precision ${pct(m.precision)}, recall ${pct(m.recall)}, false positive ${pct(m.false_positive_rate)}.`;
     }
   }

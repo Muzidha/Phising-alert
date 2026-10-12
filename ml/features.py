@@ -11,6 +11,13 @@ kosong, buang port default, punycode, percent-encoding, dll). Fungsi
 `canonicalize` meniru perilaku itu supaya URL mentah dari dataset
 menghasilkan angka yang sama dengan `location.href` di browser.
 
+Cakupan URL (`scope`), disimpan di model.json sebagai "url_scope":
+  'full'  seluruh URL dinilai (tanpa #fragment).
+  'host'  hanya skema://[userinfo@]host[:port]/, dengan awalan "www." dibuang.
+          Path & query diabaikan. Dipakai karena di dataset PhiUSIIL semua URL
+          legit berbentuk https://www.domain tanpa path, sehingga model mode
+          'full' belajar "punya path / tanpa www = phishing".
+
 Hanya memakai library standar Python.
 """
 
@@ -44,6 +51,7 @@ FEATURE_NAMES = [
     'HasPunycode',     # ada label "xn--"
 ]
 CORE_FEATURES = FEATURE_NAMES[:7]
+URL_SCOPES = ('full', 'host')
 
 _SCHEME_RE = re.compile(r'^[a-zA-Z][a-zA-Z0-9+.-]*://')
 _IPV4_RE = re.compile(r'([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})')
@@ -175,8 +183,21 @@ def _remove_dot_segments(path: str) -> str:
     return '/' + '/'.join(out)
 
 
-def canonicalize(url: str) -> CanonicalUrl:
+def strip_www(host: str) -> str:
+    """'www.contoh.com' → 'contoh.com' (sama dengan stripWww di features.js)."""
+    if host.startswith('www.') and '.' in host[4:]:
+        return host[4:]
+    return host
+
+
+def _check_scope(scope: str) -> None:
+    if scope not in URL_SCOPES:
+        raise ValueError(f'scope harus salah satu dari {URL_SCOPES}, dapat: {scope!r}')
+
+
+def canonicalize(url: str, scope: str = 'full') -> CanonicalUrl:
     """Raise ValueError kalau URL tidak valid (baris seperti itu dibuang saat training)."""
+    _check_scope(scope)
     s = re.sub(r'[\t\n\r]', '', str(url)).strip()
     if not _SCHEME_RE.match(s):
         s = 'http://' + s  # sama dengan features.js
@@ -197,6 +218,8 @@ def canonicalize(url: str) -> CanonicalUrl:
         host_out = f'[{host}]'
     else:
         host = _whatwg_ipv4(host) or _to_ascii(host)
+        if scope == 'host':
+            host = strip_www(host)
         host_out = host
     if port is not None and port != _DEFAULT_PORTS[scheme]:
         host_out += f':{port}'
@@ -209,19 +232,31 @@ def canonicalize(url: str) -> CanonicalUrl:
             userinfo += ':' + quote(password, safe=_USERINFO_SAFE)
     netloc = f'{userinfo}@{host_out}' if userinfo else host_out
 
-    path = quote(_remove_dot_segments(parts.path or '/'), safe=_PATH_SAFE)
-    has_query = '?' in s.split('://', 1)[1]
-    query = quote(parts.query, safe=_QUERY_SAFE)
+    if scope == 'host':
+        path, query, has_query = '/', '', False
+    else:
+        path = quote(_remove_dot_segments(parts.path or '/'), safe=_PATH_SAFE)
+        has_query = '?' in s.split('://', 1)[1]
+        query = quote(parts.query, safe=_QUERY_SAFE)
     href = f'{scheme}://{netloc}{path}' + (f'?{query}' if has_query else '')
     return CanonicalUrl(href=href, scheme=scheme, host=host, path=path, query=query)
+
+
+def try_canonical(url: str, scope: str = 'full') -> str | None:
+    """URL kanonik sebagai string, atau None kalau tidak valid."""
+    _check_scope(scope)
+    try:
+        return canonicalize(url, scope).href
+    except (ValueError, TypeError):
+        return None
 
 
 # ------------------------------------------------------------
 # Fitur
 # ------------------------------------------------------------
 
-def extract_features(url: str) -> dict[str, int]:
-    c = canonicalize(url)
+def extract_features(url: str, scope: str = 'full') -> dict[str, int]:
+    c = canonicalize(url, scope)
     href = c.href
     host = normalize_host(c.host)
     host_is_ip = is_ip_address(host)
@@ -242,21 +277,30 @@ def extract_features(url: str) -> dict[str, int]:
     }
 
 
-def try_extract(url: str) -> dict[str, int] | None:
+def try_extract(url: str, scope: str = 'full') -> dict[str, int] | None:
+    _check_scope(scope)  # scope salah = bug, jangan disembunyikan
     try:
-        return extract_features(url)
+        return extract_features(url, scope)
     except (ValueError, TypeError):
         return None
 
 
-def extract_many(urls: Iterable[str]) -> list[dict[str, int] | None]:
+def extract_many(urls: Iterable[str], scope: str = 'full') -> list[dict[str, int] | None]:
     """Fitur untuk banyak URL; None untuk URL yang tidak valid."""
-    return [try_extract(u) for u in urls]
+    _check_scope(scope)
+    return [try_extract(u, scope) for u in urls]
+
+
+def canonical_many(urls: Iterable[str], scope: str = 'full') -> list[str | None]:
+    """URL kanonik untuk banyak URL; None untuk URL yang tidak valid."""
+    _check_scope(scope)
+    return [try_canonical(u, scope) for u in urls]
 
 
 if __name__ == '__main__':
     import sys
 
     for arg in sys.argv[1:] or ['https://integra.its.ac.id/login', 'http://127.0.0.1:8000/fake-login/']:
-        print(canonicalize(arg).href)
-        print(json.dumps(extract_features(arg), indent=2))
+        for scope in URL_SCOPES:
+            print(f'[{scope}]', canonicalize(arg, scope).href)
+            print(json.dumps(extract_features(arg, scope)))

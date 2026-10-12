@@ -96,6 +96,19 @@ Model dilatih dengan `features.py` tapi dijalankan dengan `extension/features.js
 
 "URL kanonik" = URL yang sudah dinormalisasi seperti di browser: skema & host huruf kecil, punycode, port default dibuang, path kosong jadi `/`, `/a/../b` jadi `/b`, karakter khusus di-percent-encode, dan URL tanpa skema dianggap `http://`.
 
+### Cakupan URL (`url_scope`)
+
+Dipilih lewat `URL_SCOPE` di notebook, lalu disimpan di `model.json` supaya ekstensi memakai cara yang sama:
+
+| `url_scope` | URL yang dinilai | Contoh |
+|---|---|---|
+| `host` (default notebook) | `skema://[userinfo@]host[:port]/`, awalan `www.` dibuang, path & query diabaikan | `https://www.its.ac.id/informatika/` → `https://its.ac.id/` |
+| `full` | seluruh URL kanonik | `https://www.its.ac.id/informatika/` |
+
+**Kenapa `host`?** Di PhiUSIIL, 100% URL legit berbentuk `https://www.domain` tanpa path, sedangkan 28% URL phishing punya path dan hanya 42% yang diawali `www.`. Model mode `full` belajar jalan pintas "punya path / tanpa www = phishing": `docs.python.org/3/library/...` dapat skor 97%. Mode `host` menghilangkan jalan pintas itu, sehingga model fokus ke ciri nama domain.
+
+Sisa bias: semua URL legit di PhiUSIIL pakai HTTPS, dan hanya ±6% punya subdomain. Cek tabel "Uji dengan URL di luar dataset" di notebook.
+
 Kalau mengubah fitur:
 
 1. Ubah `features.py` **dan** `extension/features.js` (urutan & definisi sama).
@@ -111,6 +124,7 @@ Kalau mengubah fitur:
   "format": "phishshield-trees-v1",
   "model_id": "a1b2c3d4e5f6",          // hash isi model
   "model_type": "RandomForestClassifier",
+  "url_scope": "host",                 // "host" atau "full" (tidak ada = "full")
   "features": ["URLLength", "NumDots", ...],
   "thresholds": { "warn": 40, "danger": 70 },  // opsional, override extension/config.js
   "metadata": { "metrics": {...}, "created_at": "...", ... },
