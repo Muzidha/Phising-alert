@@ -1,6 +1,6 @@
 // ============================================================
 // cache.js — Cache hasil model per halaman (URL tanpa #fragment) di
-// chrome.storage.local, kedaluwarsa setelah config.cache.ttlMs.
+// browser.storage.local, kedaluwarsa setelah config.cache.ttlMs.
 // ============================================================
 
 (function (PS) {
@@ -11,7 +11,7 @@
 
   async function load() {
     if (!memory) {
-      const stored = await chrome.storage.local.get(STORAGE_KEY);
+      const stored = await browser.storage.local.get(STORAGE_KEY);
       memory = stored[STORAGE_KEY] || {};
     }
     return memory;
@@ -48,12 +48,12 @@
     const all = await load();
     all[keyFor(url)] = { ts: Date.now(), value };
     prune(all);
-    await chrome.storage.local.set({ [STORAGE_KEY]: all });
+    await browser.storage.local.set({ [STORAGE_KEY]: all });
   }
 
   async function clear() {
     memory = {};
-    await chrome.storage.local.remove(STORAGE_KEY);
+    await browser.storage.local.remove(STORAGE_KEY);
   }
 
   PS.cache = { get, set, clear };

@@ -1,5 +1,5 @@
 // ============================================================
-// lib/storage.js — Akses chrome.storage.local
+// lib/storage.js — Akses browser.storage.local
 //   settings      : { enabled, strictMode }
 //   trustedSites  : ["domain-inti", ...]  ← dari tombol "Percayai situs ini"
 //   alertLog      : riwayat Transparency Alert (TANPA isi data yang diketik)
@@ -8,7 +8,7 @@
 (function (PS) {
   'use strict';
 
-  const store = () => chrome.storage.local;
+  const store = () => browser.storage.local;
 
   async function getSettings() {
     const { settings } = await store().get('settings');

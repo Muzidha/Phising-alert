@@ -15,6 +15,12 @@
     </label>
   </header>
 
+  <section class="card warn-card" id="perm-card" hidden>
+    <strong>PhishShield belum punya izin membaca situs.</strong>
+    <p class="hint">Tanpa izin ini, halaman web tidak bisa dipantau. Biasanya terjadi di Firefox kalau akses situs dimatikan di pengaturan add-on.</p>
+    <button id="btn-grant" class="btn btn-block" type="button">Beri izin akses situs</button>
+  </section>
+
   <section class="card" id="current">
     <div class="row-between">
       <span class="label">Halaman ini</span>
@@ -60,6 +66,7 @@
     <button id="btn-selftest" class="btn btn-ghost btn-block" type="button">Uji kecocokan model (Python vs ekstensi)</button>
   </details>
 
+  <script src="../lib/compat.js"></script>
   <script src="../config.js"></script>
   <script src="../lib/suffix-list.js"></script>
   <script src="../lib/domain.js"></script>

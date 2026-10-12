@@ -74,6 +74,10 @@ ul {
   border-radius: 10px;
 }
 
+.warn-card {
+  border-color: var(--warn);
+}
+
 summary {
   cursor: pointer;
   font-weight: 600;

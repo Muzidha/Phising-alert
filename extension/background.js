@@ -1,26 +1,34 @@
 // ============================================================
-// background.js — Service worker PhishShield
+// background.js — Latar belakang PhishShield
 //
 // Alur (rancangan bagian 4):
 //   whitelist? → rantai redirect → ekstrak fitur → model ML → Risk Score
 //   → level (aman / waspada / berbahaya) → dikirim ke content script.
 //
-// Aturan MV3: jangan simpan state penting di variabel global (service worker
-// bisa dimatikan kapan saja); listener didaftarkan sinkron di top-level.
+// Jalan di dua mode:
+//   • Chrome/Edge/Opera: service worker → pustaka dimuat lewat importScripts.
+//   • Firefox/Safari: event page → pustaka sudah dimuat lewat
+//     "background.scripts" di manifest.json (importScripts tidak ada).
+// Keduanya bisa dimatikan browser saat idle, jadi jangan simpan state penting
+// di variabel global; listener didaftarkan sinkron di top-level.
 // ============================================================
 
-importScripts(
-  'config.js',
-  'lib/suffix-list.js',
-  'lib/domain.js',
-  'lib/storage.js',
-  'whitelist.js',
-  'features.js',
-  'model/ml-engine.js',
-  'risk.js',
-  'cache.js',
-  'unshortener.js'
-);
+if (typeof importScripts === 'function') {
+  // ⚠️ Daftar & urutannya harus sama dengan "background.scripts" di manifest.json
+  importScripts(
+    'lib/compat.js',
+    'config.js',
+    'lib/suffix-list.js',
+    'lib/domain.js',
+    'lib/storage.js',
+    'whitelist.js',
+    'features.js',
+    'model/ml-engine.js',
+    'risk.js',
+    'cache.js',
+    'unshortener.js'
+  );
+}
 
 const PS = globalThis.PhishShield;
 
@@ -109,8 +117,8 @@ const BADGE = {
 function setBadge(tabId, verdict) {
   const level = verdict && !verdict.trusted && !verdict.disabled ? verdict.level : 'safe';
   const style = BADGE[level];
-  chrome.action.setBadgeText({ tabId, text: style ? style.text : '' }).catch(() => {});
-  if (style) chrome.action.setBadgeBackgroundColor({ tabId, color: style.color }).catch(() => {});
+  browser.action.setBadgeText({ tabId, text: style ? style.text : '' }).catch(() => {});
+  if (style) browser.action.setBadgeBackgroundColor({ tabId, color: style.color }).catch(() => {});
 }
 
 // ============================================================
@@ -153,7 +161,7 @@ const HANDLERS = {
   },
 };
 
-chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+browser.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   const handler = HANDLERS[msg && msg.type];
   if (!handler) return false;
   Promise.resolve()
@@ -165,11 +173,11 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   return true; // sendResponse dipanggil asinkron
 });
 
-chrome.webNavigation.onCommitted.addListener((details) => {
+browser.webNavigation.onCommitted.addListener((details) => {
   if (details.frameId === 0) setBadge(details.tabId, null);
 });
 
-chrome.runtime.onInstalled.addListener(async () => {
+browser.runtime.onInstalled.addListener(async () => {
   await PS.cache.clear(); // model/fitur bisa berubah setelah update → buang skor lama
   await PS.storage.updateSettings({}); // tulis pengaturan default
 });

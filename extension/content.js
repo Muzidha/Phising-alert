@@ -32,7 +32,7 @@
   let verdictPromise = requestVerdict();
 
   function requestVerdict() {
-    return chrome.runtime
+    return browser.runtime
       .sendMessage({ type: 'GET_VERDICT', url: location.href })
       .then((v) => {
         verdict = v && !v.skipped && v.thresholds ? v : null;
@@ -68,7 +68,7 @@
     if (document.readyState === 'loading') {
       await new Promise((resolve) => document.addEventListener('DOMContentLoaded', resolve, { once: true }));
     }
-    const css = await fetch(chrome.runtime.getURL('ui/banner.css'))
+    const css = await fetch(browser.runtime.getURL('ui/banner.css'))
       .then((res) => res.text())
       .catch(() => '');
     const host = document.createElement('phishshield-ui');
@@ -323,10 +323,23 @@
   // 7. JEMBATAN DENGAN page-hook.js (fetch / XHR / form.submit() dari JS)
   // ============================================================
 
+  /**
+   * Salin data dari halaman menjadi objek biasa. Di Firefox, objek milik halaman
+   * dibungkus "Xray wrapper"; salinan JSON membuatnya aman & seragam di semua browser.
+   */
+  function readPageData(data) {
+    try {
+      return JSON.parse(JSON.stringify(data));
+    } catch {
+      return null;
+    }
+  }
+
   window.addEventListener('message', (event) => {
     if (event.source !== window) return;
-    const msg = event.data;
-    if (!msg || msg.type !== HOOK.REQ || typeof msg.id !== 'string') return;
+    if (!event.data || event.data.type !== HOOK.REQ) return;
+    const msg = readPageData(event.data);
+    if (!msg || typeof msg.id !== 'string') return;
 
     window.postMessage({ type: HOOK.ACK, id: msg.id }, '*');
     handleHookRequest(msg)
@@ -358,7 +371,7 @@
   verdictPromise.then(onVerdict);
 
   // Popup memberi tahu kalau situs baru saja dipercayai / pengaturan berubah
-  chrome.runtime.onMessage.addListener((msg) => {
+  browser.runtime.onMessage.addListener((msg) => {
     if (!msg || msg.type !== 'VERDICT_UPDATED') return;
     verdictPromise = requestVerdict();
     verdictPromise.then(async (v) => {

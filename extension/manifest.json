@@ -1,15 +1,45 @@
 {
   "manifest_version": 3,
   "name": "PhishShield – Anti-Phishing Zero-Day",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Deteksi phishing zero-day dengan ML lokal di browser, dan Transparency Alert yang menunjukkan data apa yang akan dikirim dan ke mana.",
-  "minimum_chrome_version": "111",
+  "minimum_chrome_version": "121",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "phishshield@extension.local",
+      "strict_min_version": "128.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "128.0"
+    },
+    "safari": {
+      "strict_min_version": "18.0"
+    }
+  },
 
   "permissions": ["storage", "webNavigation", "webRequest"],
   "host_permissions": ["http://*/*", "https://*/*"],
 
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "scripts": [
+      "lib/compat.js",
+      "config.js",
+      "lib/suffix-list.js",
+      "lib/domain.js",
+      "lib/storage.js",
+      "whitelist.js",
+      "features.js",
+      "model/ml-engine.js",
+      "risk.js",
+      "cache.js",
+      "unshortener.js",
+      "background.js"
+    ]
   },
 
   "content_scripts": [
@@ -22,6 +52,7 @@
     {
       "matches": ["http://*/*", "https://*/*"],
       "js": [
+        "lib/compat.js",
         "config.js",
         "lib/suffix-list.js",
         "lib/domain.js",

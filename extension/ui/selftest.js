@@ -56,7 +56,7 @@
   async function runVectors() {
     let data;
     try {
-      const res = await fetch(chrome.runtime.getURL('model/test_vectors.json'));
+      const res = await fetch(browser.runtime.getURL('model/test_vectors.json'));
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       data = await res.json();
     } catch {

@@ -42,7 +42,7 @@
   /** Muat model sekali, lalu pakai ulang. Gagal → coba lagi di panggilan berikutnya. */
   function loadModel() {
     if (!modelPromise) {
-      modelPromise = fetch(chrome.runtime.getURL(MODEL_PATH))
+      modelPromise = fetch(browser.runtime.getURL(MODEL_PATH))
         .then((res) => {
           if (!res.ok) throw new Error(`Gagal memuat ${MODEL_PATH} (HTTP ${res.status})`);
           return res.json();

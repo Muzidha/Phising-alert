@@ -2,7 +2,7 @@
 // unshortener.js — Rantai redirect & URL tujuan akhir (Pilar 1)
 //
 // 1. Pelacak otomatis: mengamati redirect navigasi utama tiap tab lewat
-//    chrome.webRequest (mode baca saja) + chrome.webNavigation (untuk
+//    browser.webRequest (mode baca saja) + browser.webNavigation (untuk
 //    client redirect seperti meta refresh / location.href). Tidak ada request
 //    tambahan, jadi tidak ada data yang dikirim ke mana pun.
 // 2. resolve(url): dipakai tombol "Cek link" di popup untuk melihat tujuan
@@ -20,10 +20,14 @@
   const tabs = new Map();
   let restored = null;
 
-  // Service worker bisa mati kapan saja; simpan salinan di storage.session.
+  // Latar belakang bisa dimatikan browser kapan saja; simpan salinan di
+  // storage.session. Browser tanpa storage.session → hanya di memori.
+  const sessionStore = browser.storage && browser.storage.session;
+
   function restore() {
     if (!restored) {
-      restored = chrome.storage.session
+      if (!sessionStore) return (restored = Promise.resolve());
+      restored = sessionStore
         .get(null)
         .then((all) => {
           for (const [key, value] of Object.entries(all)) {
@@ -38,9 +42,10 @@
   }
 
   function persist(tabId) {
+    if (!sessionStore) return;
     const key = STORE_PREFIX + tabId;
     const state = tabs.get(tabId);
-    const op = state ? chrome.storage.session.set({ [key]: state }) : chrome.storage.session.remove(key);
+    const op = state ? sessionStore.set({ [key]: state }) : sessionStore.remove(key);
     op.catch(() => {});
   }
 
@@ -64,7 +69,15 @@
   function install() {
     const filter = { urls: ['http://*/*', 'https://*/*'], types: ['main_frame'] };
 
-    chrome.webRequest.onBeforeRequest.addListener((details) => {
+    // Sebagian versi Safari tidak punya webRequest lengkap → pelacakan redirect
+    // dimatikan, fitur lain tetap jalan.
+    const webRequest = browser.webRequest;
+    if (!webRequest || !webRequest.onBeforeRequest || !webRequest.onBeforeRedirect) {
+      console.info('[PhishShield] webRequest tidak tersedia di browser ini: rantai redirect tidak dilacak.');
+      return;
+    }
+
+    webRequest.onBeforeRequest.addListener((details) => {
       handle(() => {
         if (details.tabId < 0) return;
         const prev = tabs.get(details.tabId);
@@ -80,7 +93,7 @@
       });
     }, filter);
 
-    chrome.webRequest.onBeforeRedirect.addListener((details) => {
+    webRequest.onBeforeRedirect.addListener((details) => {
       handle(() => {
         const state = tabs.get(details.tabId);
         if (!state || state.requestId !== details.requestId) return;
@@ -90,7 +103,7 @@
       });
     }, filter);
 
-    chrome.webNavigation.onCommitted.addListener((details) => {
+    browser.webNavigation.onCommitted.addListener((details) => {
       if (details.frameId !== 0) return;
       handle(() => {
         const state = tabs.get(details.tabId);
@@ -105,7 +118,7 @@
       });
     });
 
-    chrome.tabs.onRemoved.addListener((tabId) => {
+    browser.tabs.onRemoved.addListener((tabId) => {
       tabs.delete(tabId);
       persist(tabId);
     });

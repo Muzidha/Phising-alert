@@ -7,7 +7,7 @@
 
   const PS = globalThis.PhishShield;
   const $ = (id) => document.getElementById(id);
-  const send = (msg) => chrome.runtime.sendMessage(msg);
+  const send = (msg) => browser.runtime.sendMessage(msg);
 
   const LEVEL_TEXT = { safe: '🟢 Aman', warn: '🟡 Waspada', danger: '🔴 Berbahaya' };
   const DECISION_TEXT = { cancel: 'Dibatalkan', allow: 'Tetap lanjut', trust: 'Dipercayai' };
@@ -32,10 +32,27 @@
     return LEVEL_TEXT[v.level] || '';
   }
 
+  // ---------- Izin akses situs (terutama Firefox) ----------
+
+  const SITE_ACCESS = { origins: ['http://*/*', 'https://*/*'] };
+
+  async function renderPermission() {
+    if (!browser.permissions || !browser.permissions.contains) return;
+    const granted = await browser.permissions.contains(SITE_ACCESS).catch(() => true);
+    $('perm-card').hidden = granted;
+  }
+
+  $('btn-grant').addEventListener('click', async () => {
+    // permissions.request harus dipanggil langsung dari klik pengguna
+    const granted = await browser.permissions.request(SITE_ACCESS).catch(() => false);
+    await renderPermission();
+    if (granted) renderCurrent();
+  });
+
   // ---------- Halaman aktif ----------
 
   async function renderCurrent() {
-    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
     currentTab = tab || null;
     const fill = $('score-fill');
     const trustBtn = $('btn-trust');
@@ -73,7 +90,7 @@
   });
 
   function notifyTab() {
-    if (currentTab) chrome.tabs.sendMessage(currentTab.id, { type: 'VERDICT_UPDATED' }).catch(() => {});
+    if (currentTab) browser.tabs.sendMessage(currentTab.id, { type: 'VERDICT_UPDATED' }).catch(() => {});
   }
 
   // ---------- Cek link ----------
@@ -188,9 +205,10 @@
   });
 
   $('btn-selftest').addEventListener('click', () => {
-    chrome.tabs.create({ url: chrome.runtime.getURL('ui/selftest.html') });
+    browser.tabs.create({ url: browser.runtime.getURL('ui/selftest.html') });
   });
 
+  renderPermission();
   renderCurrent();
   renderLog();
   renderTrusted();
