@@ -275,6 +275,20 @@ details[open] summary {
   cursor: pointer;
 }
 
+.check + .check {
+  margin-top: 8px;
+}
+
+.row-buttons {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.row-buttons .btn {
+  flex: 1;
+}
+
 .check input {
   margin-top: 3px;
 }

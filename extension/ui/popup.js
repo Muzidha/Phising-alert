@@ -176,6 +176,7 @@
     const settings = await PS.storage.getSettings();
     $('toggle-enabled').checked = settings.enabled;
     $('toggle-strict').checked = settings.strictMode;
+    $('toggle-log-visits').checked = settings.logVisits;
 
     const info = await send({ type: 'GET_MODEL_INFO' }).catch((err) => ({ ok: false, error: err.message }));
     const box = $('model-info');
@@ -208,9 +209,66 @@
     browser.tabs.create({ url: browser.runtime.getURL('ui/selftest.html') });
   });
 
+  // ---------- Mode uji: catatan kunjungan → CSV ----------
+
+  const LEVEL_CSV = { safe: 'aman', warn: 'waspada', danger: 'berbahaya' };
+  const BANNER_CSV = { none: 'tidak ada', warn: 'kuning', danger: 'merah' };
+
+  function csvCell(value) {
+    const s = value == null ? '' : String(value);
+    return /[",\r\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+  }
+
+  function visitsToCsv(log) {
+    const header = ['waktu', 'url', 'domain', 'potensi_phishing_%', 'skor_akhir', 'level', 'banner', 'tepercaya', 'dialihkan', 'alasan'];
+    const rows = log.map((v) => {
+      const notScored = v.trusted || v.disabled; // situs tepercaya / ekstensi mati: skor tidak dipakai untuk banner
+      // potensi_phishing_% = peluang menurut model saja (semua situs); catatan lama hanya punya modelScore
+      const potensi = typeof v.modelProba === 'number' ? (v.modelProba * 100).toFixed(1) : v.modelScore;
+      return [
+        new Date(v.ts).toLocaleString('sv-SE'), // 2026-10-13 10:31:21
+        v.url,
+        v.domain,
+        potensi,
+        notScored ? '' : v.score,
+        v.disabled ? 'nonaktif' : LEVEL_CSV[v.level] || v.level,
+        BANNER_CSV[v.banner] || v.banner,
+        v.trusted ? 'ya' : 'tidak',
+        v.redirectHops,
+        (v.reasons || []).join('; '),
+      ];
+    });
+    return [header, ...rows].map((row) => row.map(csvCell).join(',')).join('\r\n');
+  }
+
+  async function renderVisits() {
+    $('visit-count').textContent = (await PS.storage.getVisitLog()).length;
+  }
+
+  $('toggle-log-visits').addEventListener('change', async (e) => {
+    await PS.storage.updateSettings({ logVisits: e.target.checked });
+  });
+
+  $('btn-export-visits').addEventListener('click', async () => {
+    const log = await PS.storage.getVisitLog();
+    // ﻿ (BOM) supaya Excel membaca UTF-8 dengan benar
+    const blob = new Blob(['﻿' + visitsToCsv(log)], { type: 'text/csv;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `phishshield-kunjungan-${new Date().toISOString().slice(0, 10)}.csv`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(link.href), 10000);
+  });
+
+  $('btn-clear-visits').addEventListener('click', async () => {
+    await PS.storage.clearVisitLog();
+    renderVisits();
+  });
+
   renderPermission();
   renderCurrent();
   renderLog();
   renderTrusted();
   renderSettings();
+  renderVisits();
 })();

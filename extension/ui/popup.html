@@ -62,6 +62,14 @@
       <input type="checkbox" id="toggle-strict">
       <span>Mode ketat: pantau form di semua situs yang belum tepercaya, apa pun skornya</span>
     </label>
+    <label class="check">
+      <input type="checkbox" id="toggle-log-visits">
+      <span>Mode uji: catat setiap situs yang dibuka beserta skor &amp; banner (disimpan lokal di browser)</span>
+    </label>
+    <div class="row-buttons">
+      <button id="btn-export-visits" class="btn btn-ghost" type="button">Unduh CSV (<span id="visit-count">0</span>)</button>
+      <button id="btn-clear-visits" class="btn btn-ghost" type="button">Hapus catatan</button>
+    </div>
     <p id="model-info" class="hint"></p>
     <button id="btn-selftest" class="btn btn-ghost btn-block" type="button">Uji kecocokan model (Python vs ekstensi)</button>
   </details>

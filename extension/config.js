@@ -15,6 +15,8 @@
       enabled: true,
       // true = pantau form di semua situs yang belum tepercaya, apa pun skornya
       strictMode: false,
+      // true = mode uji: catat setiap situs yang dibuka + skor & banner (unduh CSV di popup)
+      logVisits: false,
     },
 
     // Cache skor per halaman supaya tidak dihitung ulang terus
@@ -48,5 +50,6 @@
     },
 
     alertLogMax: 200,
+    visitLogMax: 1000,
   };
 })(globalThis.PhishShield = globalThis.PhishShield || {});

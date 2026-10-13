@@ -122,6 +122,40 @@ function setBadge(tabId, verdict) {
 }
 
 // ============================================================
+// MODE UJI: CATATAN KUNJUNGAN (unduh CSV di popup)
+// ============================================================
+
+async function logVisit(verdict) {
+  if (verdict.skipped || !(await PS.storage.getSettings()).logVisits) return;
+  let page = verdict.url;
+  try {
+    const u = new URL(verdict.url);
+    page = u.origin + u.pathname; // tanpa ?query, yang sering berisi token/data pribadi
+  } catch { /* biarkan apa adanya */ }
+  // Syarat banner sama dengan content.js
+  const banner = !verdict.trusted && !verdict.disabled && verdict.level !== 'safe' ? verdict.level : 'none';
+  // Peluang phishing menurut model untuk SEMUA situs, termasuk yang tepercaya
+  // (analyzeUrl melewati model untuk situs di whitelist, jadi hitung di sini)
+  let modelProba = null;
+  try {
+    const model = await PS.ml.loadModel();
+    modelProba = PS.ml.predictProba(model, PS.features.extractFeatures(verdict.url, model.url_scope));
+  } catch { /* model gagal dimuat → dibiarkan kosong */ }
+  await PS.storage.appendVisitLog({
+    url: page,
+    domain: verdict.domain,
+    score: verdict.score,
+    modelProba,
+    level: verdict.level,
+    banner,
+    trusted: !!verdict.trusted,
+    disabled: !!verdict.disabled,
+    redirectHops: verdict.redirectHops || 0,
+    reasons: verdict.reasons || [],
+  });
+}
+
+// ============================================================
 // PESAN DARI CONTENT SCRIPT & POPUP
 // ============================================================
 
@@ -131,7 +165,10 @@ const HANDLERS = {
     const tabId = sender.tab ? sender.tab.id : msg.tabId;
     const redirectChain = typeof tabId === 'number' ? await PS.redirects.getChain(tabId, msg.url) : [msg.url];
     const verdict = await analyzeUrl(msg.url, { redirectChain });
-    if (sender.tab && sender.frameId === 0) setBadge(tabId, verdict);
+    if (sender.tab && sender.frameId === 0) {
+      setBadge(tabId, verdict);
+      logVisit(verdict).catch(() => {});
+    }
     return verdict;
   },
 

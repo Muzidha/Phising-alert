@@ -3,6 +3,7 @@
 //   settings      : { enabled, strictMode }
 //   trustedSites  : ["domain-inti", ...]  ← dari tombol "Percayai situs ini"
 //   alertLog      : riwayat Transparency Alert (TANPA isi data yang diketik)
+//   visitLog      : mode uji — situs yang dibuka + skor & banner (hanya kalau logVisits aktif)
 // ============================================================
 
 (function (PS) {
@@ -60,6 +61,30 @@
     await store().remove('alertLog');
   }
 
+  async function getVisitLog() {
+    const { visitLog } = await store().get('visitLog');
+    return Array.isArray(visitLog) ? visitLog : [];
+  }
+
+  // Antrean: banyak tab yang dimuat bersamaan tidak saling menimpa catatan
+  let visitQueue = Promise.resolve();
+
+  function appendVisitLog(entry) {
+    visitQueue = visitQueue
+      .then(async () => {
+        const log = await getVisitLog();
+        log.push({ ts: Date.now(), ...entry });
+        if (log.length > PS.config.visitLogMax) log.splice(0, log.length - PS.config.visitLogMax);
+        await store().set({ visitLog: log });
+      })
+      .catch(() => {});
+    return visitQueue;
+  }
+
+  async function clearVisitLog() {
+    await store().remove('visitLog');
+  }
+
   PS.storage = {
     getSettings,
     updateSettings,
@@ -69,5 +94,8 @@
     getAlertLog,
     appendAlertLog,
     clearAlertLog,
+    getVisitLog,
+    appendVisitLog,
+    clearVisitLog,
   };
 })(globalThis.PhishShield = globalThis.PhishShield || {});

@@ -156,6 +156,7 @@ python3 demo/server.py
 
 - Semua analisis berjalan **di dalam browser**; tidak ada server/backend.
 - Yang disimpan di `chrome.storage.local`: pengaturan, daftar situs tepercaya, cache skor per halaman (24 jam), dan riwayat peringatan berisi **jenis data + nama domain saja** (tidak pernah isi yang diketik).
+- **Mode uji** (popup → Pengaturan & model, mati secara default): kalau dinyalakan, setiap halaman yang dibuka dicatat (URL tanpa `?query`, skor, level, banner, alasan) untuk diunduh sebagai CSV saat evaluasi/demo. Catatan ini pada dasarnya riwayat browsing, jadi matikan dan klik **Hapus catatan** setelah selesai.
 - Satu-satunya request jaringan dari ekstensi: tombol **Cek link** di popup (mengikuti redirect link yang kamu tempel).
 - Izin: `storage`, `webNavigation`, `webRequest` (hanya membaca, tidak memblokir), akses ke halaman `http/https`.
 
