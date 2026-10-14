@@ -26,7 +26,9 @@ pip install -r requirements.txt
 
 ### 2–3. Ambil dataset & rapikan jadi satu CSV
 
-**Cara tercepat:** lewati langkah ini. Sel "Muat dataset" di `train.ipynb` otomatis mengunduh PhiUSIIL dari UCI kalau `data/processed/urls.csv` belum ada.
+**Cara tercepat:** unduh dulu `malicious_phish.csv` dari [Kaggle "Malicious URLs dataset"](https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset) ke `ml/data/raw/malicious_phish.csv` (perlu akun Kaggle). Setelah itu sel "Muat dataset" di `train.ipynb` otomatis mengunduh PhiUSIIL dari UCI, menggabungkan keduanya, dan membuat ulang `data/processed/urls.csv` kalau sumbernya berubah.
+
+Kenapa dua dataset: legit PhiUSIIL hampir semuanya `https://www.domain` tanpa subdomain, sehingga model belajar "punya subdomain / http = phishing". URL legit Kaggle mengisi kekurangan itu. Karena URL Kaggle umumnya tanpa skema, fitur `IsHTTPS` dan `URLLength` tidak dipakai (diganti `HostLength`).
 
 Atau jalankan manual. PhiUSIIL bisa diunduh langsung dari UCI lewat [`ucimlrepo`](https://github.com/uci-ml-repo/ucimlrepo) (`fetch_ucirepo(id=967)`):
 

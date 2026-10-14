@@ -53,6 +53,9 @@ PRESETS = {
     # Kaggle "Malicious URLs dataset" (malicious_phish.csv); defacement/malware dibuang
     # https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset
     'malicious-phish': dict(url_col='url', label_col='type', phishing={'phishing'}, legit={'benign'}),
+    # File yang sama, hanya URL benign. URL "phishing" Kaggle kebanyakan situs normal yang diretas
+    # (tanda phishing ada di path), jadi labelnya menyesatkan untuk model yang hanya menilai host.
+    'malicious-benign': dict(url_col='url', label_col='type', phishing=set(), legit={'benign'}),
     # Kaggle "Phishing Site URLs" (phishing_site_urls.csv)
     # https://www.kaggle.com/datasets/taruntiwarihp/phishing-site-urls
     'phishing-site-urls': dict(url_col='URL', label_col='Label', phishing={'bad'}, legit={'good'}),

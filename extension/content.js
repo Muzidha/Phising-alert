@@ -235,7 +235,7 @@
       if (verdict && verdict.trusted) return true;
       if (sessionDecisions.has(destDomain)) return sessionDecisions.get(destDomain) !== 'cancel';
 
-      const reasons = [...new Set([...v.reasons, 'Data dikirim ke domain berbeda dari halaman ini', `Skor risiko: ${v.score}%`])];
+      const reasons = [...new Set([...v.reasons, 'Data dikirim ke domain berbeda dari halaman ini', `Skor risiko halaman ini: ${v.score}%`])];
       const decision = await renderAlert({ destHost, categories, reasons });
 
       if (decision === 'trust') {
@@ -355,7 +355,7 @@
       return decideOutbound({ url: String(msg.url || ''), fields: PS.sensitive.collectFormFields(form), kind: 'form-js' });
     }
     const fields = Array.isArray(msg.fields)
-      ? msg.fields.slice(0, 200).map((f) => ({ name: String(f && f.name ? f.name : ''), value: String(f && f.value != null ? f.value : '') }))
+      ? msg.fields.slice(0, 200).map((f) => ({ name: String(f && f.name ? f.name : ''), value: String(f && f.value != null ? f.value : ''), fromNetwork: true }))
       : [];
     return decideOutbound({ url: String(msg.url || ''), fields, kind: msg.kind === 'xhr' ? 'xhr' : 'fetch' });
   }

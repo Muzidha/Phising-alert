@@ -132,7 +132,7 @@
         const title = el('div');
         title.append(el('code', '', entry.page), ' → ', el('code', '', entry.destination));
         const time = new Date(entry.ts).toLocaleString('id-ID', { dateStyle: 'short', timeStyle: 'short' });
-        const meta = el('div', 'meta', `${time} · ${(entry.categories || []).join(', ')} · ${DECISION_TEXT[entry.decision] || entry.decision} · skor ${entry.score}%`);
+        const meta = el('div', 'meta', `${time} · ${(entry.categories || []).join(', ')} · ${DECISION_TEXT[entry.decision] || entry.decision} · skor halaman asal ${entry.score}%`);
         li.append(title, meta);
         return li;
       })

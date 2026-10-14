@@ -50,13 +50,17 @@
     'forms.office.com', 'onedrive.live.com',
   ];
 
-  // Tujuan analitik pihak ketiga: tidak memicu peringatan lintas-domain.
+  // Tujuan analitik & iklan pihak ketiga: tidak memicu peringatan lintas-domain.
   const ANALYTICS_DOMAINS = [
     'google-analytics.com', 'analytics.google.com', 'googletagmanager.com',
     'doubleclick.net', 'googlesyndication.com', 'facebook.net', 'hotjar.com', 'hotjar.io',
     'clarity.ms', 'segment.io', 'segment.com', 'mixpanel.com', 'amplitude.com',
     'sentry.io', 'nr-data.net', 'newrelic.com', 'datadoghq.com', 'cloudflareinsights.com',
     'plausible.io',
+    // Iklan (persetujuan cookie & lelang iklan)
+    'fundingchoicesmessages.google.com', 'rubiconproject.com', 'adnxs.com', 'pubmatic.com',
+    'openx.net', 'criteo.com', 'criteo.net', 'casalemedia.com', 'adsrvr.org',
+    'amazon-adsystem.com', 'taboola.com', 'outbrain.com',
   ];
 
   const matchesAny = (host, list) => list.some((domain) => hostMatchesDomain(host, domain));

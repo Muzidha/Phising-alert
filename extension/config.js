@@ -9,7 +9,7 @@
     // Ambang skor risiko (0–100). Ini titik awal dari rancangan (bagian 7);
     // setel ulang berdasarkan hasil uji (lihat analisis ambang di ml/train.ipynb).
     // Kalau model/model.json punya "thresholds", nilai dari model yang dipakai.
-    thresholds: { warn: 40, danger: 70 },
+    thresholds: { warn: 45, danger: 75 },
 
     defaultSettings: {
       enabled: true,

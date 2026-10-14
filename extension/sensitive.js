@@ -31,6 +31,8 @@
   // Urutan = prioritas: satu field masuk ke kategori pertama yang cocok.
   // critical: true → boleh memicu Transparency Alert. Kategori lain hanya
   // ikut ditampilkan kalau alert sudah muncul (mengurangi alert fatigue).
+  // Kartu & NIK dari isi angka saja hanya untuk field form: body fetch/XHR
+  // (fromNetwork) penuh ID & timestamp panjang dari script iklan.
   const CATEGORIES = [
     {
       id: 'password', icon: '🔒', label: 'Password', critical: true,
@@ -46,11 +48,11 @@
     },
     {
       id: 'card', icon: '💳', label: 'Nomor kartu kredit/debit', critical: true,
-      test: (f) => f.autocomplete === 'cc-number' || /card ?(number|num|no)|cc ?(number|num)|nomor kartu|no kartu|kartu kredit|credit card/.test(f.hint) || looksLikeCard(f.value),
+      test: (f) => f.autocomplete === 'cc-number' || /card ?(number|num|no)|cc ?(number|num)|nomor kartu|no kartu|kartu kredit|credit card/.test(f.hint) || (!f.fromNetwork && looksLikeCard(f.value)),
     },
     {
       id: 'nik', icon: '🪪', label: 'NIK / nomor identitas', critical: true,
-      test: (f) => /\b(nik|ktp)\b|nomor induk kependudukan|no identitas|national id/.test(f.hint) || /^[0-9]{16}$/.test(f.value.replace(/[\s-]/g, '')),
+      test: (f) => /\b(nik|ktp)\b|nomor induk kependudukan|no identitas|national id/.test(f.hint) || (!f.fromNetwork && /^[0-9]{16}$/.test(f.value.replace(/[\s-]/g, ''))),
     },
     {
       id: 'email', icon: '📧', label: 'Email', critical: false,
@@ -82,11 +84,12 @@
       autocomplete: String(raw.autocomplete || '').toLowerCase(),
       value: String(raw.value == null ? '' : raw.value).trim().slice(0, 500),
       hint: tokenize(raw.hint != null ? raw.hint : raw.name),
+      fromNetwork: raw.fromNetwork === true,
     };
   }
 
   /**
-   * @param rawFields [{ name, value, type?, autocomplete?, hint? }]
+   * @param rawFields [{ name, value, type?, autocomplete?, hint?, fromNetwork? }]
    * @returns [{ id, icon, label, critical, fieldNames }]
    */
   function detectSensitive(rawFields) {
