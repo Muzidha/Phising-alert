@@ -38,7 +38,7 @@
     // Media sosial & hiburan
     'facebook.com', 'instagram.com', 'whatsapp.com', 'x.com', 'twitter.com',
     'linkedin.com', 'tiktok.com', 'telegram.org', 'discord.com', 'reddit.com',
-    'medium.com', 'netflix.com', 'spotify.com',
+    'medium.com', 'netflix.com', 'spotify.com', '21cineplex.com',
   ];
 
   // Subdomain berisi konten buatan pengguna di domain tepercaya. Phisher sering

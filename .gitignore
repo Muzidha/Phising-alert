@@ -12,3 +12,6 @@ venv/
 ml/data/raw/
 ml/data/processed/
 ml/artifacts/
+
+# Log "Mode uji" dari popup (berisi riwayat kunjungan pribadi)
+phishshield-kunjungan-*.csv

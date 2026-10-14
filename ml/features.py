@@ -49,6 +49,7 @@ FEATURE_NAMES = [
     'NumDigits',       # jumlah digit 0-9 di URL
     'NumQueryParams',  # jumlah parameter query
     'HasPunycode',     # ada label "xn--"
+    'IsFreeHosting',   # host di layanan hosting gratis (web.app, weebly.com, ...)
 ]
 CORE_FEATURES = FEATURE_NAMES[:7]
 URL_SCOPES = ('full', 'host')
@@ -66,15 +67,26 @@ _USERINFO_SAFE = "!$%&'()*+,-._~"
 # Domain (sama dengan extension/lib/domain.js)
 # ------------------------------------------------------------
 
+def _read_json_block(name: str) -> frozenset[str]:
+    """Baca array JSON di antara penanda // @<name>-start dan // @<name>-end di suffix-list.js."""
+    text = SUFFIX_FILE.read_text(encoding='utf-8')
+    try:
+        body = text.split(f'// @{name}-start', 1)[1].split(f'// @{name}-end', 1)[0]
+    except IndexError as exc:
+        raise RuntimeError(f'Penanda @{name}-start/@{name}-end tidak ditemukan di {SUFFIX_FILE}') from exc
+    return frozenset(json.loads(body))
+
+
 @lru_cache(maxsize=1)
 def load_suffixes() -> frozenset[str]:
     """Baca daftar suffix dari extension/lib/suffix-list.js (satu sumber untuk JS & Python)."""
-    text = SUFFIX_FILE.read_text(encoding='utf-8')
-    try:
-        body = text.split('// @json-start', 1)[1].split('// @json-end', 1)[0]
-    except IndexError as exc:
-        raise RuntimeError(f'Penanda @json-start/@json-end tidak ditemukan di {SUFFIX_FILE}') from exc
-    return frozenset(json.loads(body))
+    return _read_json_block('json')
+
+
+@lru_cache(maxsize=1)
+def load_free_hosting() -> frozenset[str]:
+    """Baca daftar layanan hosting gratis dari extension/lib/suffix-list.js."""
+    return _read_json_block('hosting')
 
 
 def normalize_host(host: str) -> str:
@@ -274,6 +286,7 @@ def extract_features(url: str, scope: str = 'full') -> dict[str, int]:
         'NumDigits': sum(ch in '0123456789' for ch in href),
         'NumQueryParams': len([p for p in c.query.split('&') if p]) if c.query else 0,
         'HasPunycode': int(any(label.startswith('xn--') for label in host.split('.'))),
+        'IsFreeHosting': int(any(host == d or host.endswith('.' + d) for d in load_free_hosting())),
     }
 
 

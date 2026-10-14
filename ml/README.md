@@ -93,6 +93,7 @@ Model dilatih dengan `features.py` tapi dijalankan dengan `extension/features.js
 | `NumDigits`* | jumlah digit 0–9 |
 | `NumQueryParams`* | jumlah parameter query (dipisah `&`) |
 | `HasPunycode`* | 1 kalau ada label `xn--` |
+| `IsFreeHosting`* | 1 kalau host ada di layanan hosting gratis (daftar `freeHosting` di `extension/lib/suffix-list.js`) |
 
 \* opsional, aktifkan di sel "Pilih fitur" notebook.
 

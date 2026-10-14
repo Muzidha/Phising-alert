@@ -48,3 +48,27 @@
 ]
 // @json-end
 ;
+
+// Layanan hosting gratis/bersama untuk fitur IsFreeHosting: siapa pun bisa
+// membuat situs di subdomain-nya, jadi sering dipakai untuk halaman phishing.
+// Dipilih dari data latih (host phishing jauh lebih banyak dari legit).
+// blogspot.com, wordpress.com, translate.goog, myshopify.com sengaja tidak
+// dimasukkan karena kebanyakan legit. ml/features.py membaca array ini juga
+// (penanda hosting-start/hosting-end), jadi formatnya harus JSON valid.
+// Kalau daftar ini diubah, latih ulang model.
+globalThis.PhishShield.freeHosting =
+// @hosting-start
+[
+  "000webhostapp.com", "appspot.com", "azurewebsites.net", "backblazeb2.com",
+  "blob.core.windows.net", "ddns.net", "duckdns.org", "dweb.link",
+  "firebaseapp.com", "fleek.co", "fly.dev", "github.io", "gitlab.io",
+  "glitch.me", "godaddysites.com", "herokuapp.com", "jimdosite.com", "loca.lt",
+  "mystrikingly.com", "netlify.app", "nftstorage.link", "ngrok-free.app",
+  "ngrok.app", "ngrok.io", "onrender.com", "pages.dev", "r2.dev", "repl.co",
+  "square.site", "surge.sh", "trycloudflare.com", "vercel.app", "w3s.link",
+  "web.app", "web.core.windows.net", "webcindario.com", "webflow.io",
+  "webnode.page", "weebly.com", "weeblysite.com", "wixsite.com", "workers.dev",
+  "yolasite.com"
+]
+// @hosting-end
+;

@@ -16,6 +16,7 @@
     { when: (f) => f.HasIP === 1, text: () => 'Alamat situs berupa angka IP, bukan nama domain' },
     { when: (f) => f.HasAtSymbol === 1, text: () => 'Ada simbol "@" di alamat, trik untuk menyembunyikan domain asli' },
     { when: (f) => f.HasPunycode === 1, text: () => 'Nama domain memakai huruf "mirip" (punycode) yang bisa meniru situs lain' },
+    { when: (f) => f.IsFreeHosting === 1, text: () => 'Situs ada di layanan hosting gratis, tempat siapa pun bisa membuat halaman' },
     { when: (f) => f.SubdomainCount >= 3, text: (f) => `Terlalu banyak subdomain (${f.SubdomainCount}), sering dipakai untuk menyamar` },
     {
       when: (f, host) => f.NumHyphens >= (host ? 2 : 3),

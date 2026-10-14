@@ -17,7 +17,8 @@
 (function (PS) {
   'use strict';
 
-  const { normalizeHost, isIpAddress, getRegistrableDomain } = PS.domain;
+  const { normalizeHost, isIpAddress, getRegistrableDomain, hostMatchesDomain } = PS.domain;
+  const FREE_HOSTING = PS.freeHosting || [];
 
   const FEATURE_NAMES = [
     // Fitur inti (rancangan bagian 6.2)
@@ -34,6 +35,7 @@
     'NumDigits',      // jumlah digit 0-9 di URL
     'NumQueryParams', // jumlah parameter query
     'HasPunycode',    // ada label "xn--" (domain berhuruf mirip)
+    'IsFreeHosting',  // host di layanan hosting gratis (web.app, weebly.com, ...)
   ];
 
   const URL_SCOPES = ['full', 'host'];
@@ -82,6 +84,7 @@
       NumDigits: (href.match(/[0-9]/g) || []).length,
       NumQueryParams: query ? query.split('&').filter(Boolean).length : 0,
       HasPunycode: host.split('.').some((label) => label.startsWith('xn--')) ? 1 : 0,
+      IsFreeHosting: FREE_HOSTING.some((d) => hostMatchesDomain(host, d)) ? 1 : 0,
     };
   }
 
