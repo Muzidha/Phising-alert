@@ -45,10 +45,14 @@
       });
   }
 
-  /** Form/request dipantau kalau skor ≥ ambang "waspada" (atau mode ketat aktif). */
+  /**
+   * Form/request dipantau kalau skor ≥ ambang "monitor" (atau mode ketat aktif).
+   * Tidak pernah lebih tinggi dari "warn": halaman yang diberi banner selalu dipantau.
+   */
   function shouldMonitor(v) {
     if (!v || v.disabled || v.trusted) return false;
-    return v.strictMode || v.score >= v.thresholds.warn;
+    const monitorAt = Math.min(v.thresholds.monitor ?? v.thresholds.warn, v.thresholds.warn);
+    return v.strictMode || v.score >= monitorAt;
   }
 
   const isSameSite = (host) => getRegistrableDomain(host) === getRegistrableDomain(location.hostname);

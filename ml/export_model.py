@@ -181,7 +181,7 @@ def export_bundle(bundle: dict, out_path: Path = DEFAULT_MODEL_OUT, verify_X: pd
     bundle = {
         'model': estimator, 'features': [...],
         'url_scope': 'host',                        # 'full' atau 'host' (default 'full')
-        'thresholds': {'warn': 40, 'danger': 70},   # opsional, skala 0–100
+        'thresholds': {'warn': 40, 'danger': 70},   # opsional, skala 0–100 (+ 'monitor' opsional)
         'metrics': {...}, 'dataset': {...}, 'created_at': '...'
     }
     """
@@ -220,6 +220,8 @@ def export_bundle(bundle: dict, out_path: Path = DEFAULT_MODEL_OUT, verify_X: pd
     thresholds = bundle.get('thresholds')
     if thresholds:
         payload['thresholds'] = {'warn': int(thresholds['warn']), 'danger': int(thresholds['danger'])}
+        if 'monitor' in thresholds:
+            payload['thresholds']['monitor'] = int(thresholds['monitor'])
 
     check_frames = [features_frame(EDGE_CASE_URLS, feature_names, scope)]
     if verify_X is not None:

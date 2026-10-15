@@ -9,7 +9,10 @@
     // Ambang skor risiko (0–100). Ini titik awal dari rancangan (bagian 7);
     // setel ulang berdasarkan hasil uji (lihat analisis ambang di ml/train.ipynb).
     // Kalau model/model.json punya "thresholds", nilai dari model yang dipakai.
-    thresholds: { warn: 45, danger: 75 },
+    // monitor: mulai memantau form/request (tanpa banner). warn/danger: banner kuning/merah.
+    // Dipisah supaya Transparency Alert tetap menjangkau lebih banyak phishing, sementara
+    // banner hanya muncul di skor yang lebih yakin (lebih sedikit false positive).
+    thresholds: { monitor: 45, warn: 55, danger: 75 },
 
     defaultSettings: {
       enabled: true,
